@@ -1,6 +1,6 @@
 .container {
   max-width: 1000px;
-   font-size: 1.7rem; }
+   font-size: 1.9rem; }
 .header {
   margin-top: 6rem;
   text-align: center; }
@@ -137,7 +137,7 @@
     margin-bottom: 0; }
   .navbar-link {
     /*text-transform: lowercase;*/
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: .1rem;
     margin-right: 35px;
