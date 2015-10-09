@@ -49,8 +49,42 @@
 
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>    
 
-  <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css"> 
+      
+
+
+    <!-- Add mousewheel plugin (this is optional) -->
+  <script type="text/javascript" src="source/jquery.mousewheel-3.0.6.pack.js"></script>
+
+  <!-- Add fancyBox main JS and CSS files -->
+  <script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+   <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
   
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  Simple image gallery. Uses default settings
+       */
+
+      $('.fancybox').fancybox({
+        'width' : 900,
+      });
+
+      /*
+       *  Different effects
+       */
+
+
+
+    });
+  </script>
+
+  <style type="text/css">
+    .fancybox-custom .fancybox-skin {
+      box-shadow: 0 0 50px #222;
+    }   
+  </style>
 
 
 
@@ -96,35 +130,70 @@
     </nav> 
 
 
- <div class="docs-section">  
+ 
+<div class="docs-section">  
    <h5><strong>Singapore</strong></h5>  
-        <div class="row">
-            <div class="four columns"> <img  src='images/Singapore1.jpg' width='290'/> </div>
-            <div class="four columns"> <img  src='images/Singapore2.jpg' width='250'/> </div>
-            <div class="four columns"> <img  src='images/Singapore3.jpg' width='250'/> </div>
-        </div>
+   <p>
+     <a class="fancybox" href="images/Singapore1.JPG" data-fancybox-group="gallery1" title="Etiam quis mi eu elit temp"><img src="images/Singapore1.JPG" width='150' alt="" /></a>  &nbsp 
+
+    <a class="fancybox" href="images/Singapore2.JPG" data-fancybox-group="gallery1" title="Etiam quis mi eu elit temp"><img src="images/Singapore2.JPG" width='150' alt="" /></a>  &nbsp  
+
+     <a class="fancybox" href="images/Singapore3.JPG" data-fancybox-group="gallery1" title="Etiam quis mi eu elit temp"><img src="images/Singapore3.JPG" width='150' alt="" /></a>  &nbsp 
+
+     <a class="fancybox" href="images/Singapore4.JPG" data-fancybox-group="gallery1" title="Etiam quis mi eu elit temp"><img src="images/Singapore4.JPG" width='150' alt="" /></a>  &nbsp 
+
+    <a class="fancybox" href="images/Singapore5.JPG" data-fancybox-group="gallery1" title="Etiam quis mi eu elit temp"><img src="images/Singapore5.JPG" width='150' alt="" /></a>  &nbsp  
+
+     <a class="fancybox" href="images/Singapore6.JPG" data-fancybox-group="gallery1" title="Etiam quis mi eu elit temp"><img src="images/Singapore6.JPG" width='100' alt="" /></a>  
+
+  </p>
+       
 </div>
+
+
+
 
  <div class="docs-section">  
    <h5><strong>Thailand</strong></h5>  
-        <div class="row">
+        <!-- <div class="row">
             <div class="four columns"> <img  src='images/Thailand1.jpg' width='250'/> </div>
             <div class="four columns"> <img  src='images/Thailand2.jpg' width='250'/> </div>
             <div class="four columns"> <img  src='images/Thailand3.jpg' width='250'/> </div>
-        </div>
+        </div> -->
+
+
+         <p>
+    <a class="fancybox" href="images/Thailand1.jpg" data-fancybox-group="gallery2" title="Lorem ipsum dolor sit amet"><img src="images/Thailand1.jpg" width='250' alt="" /></a>  &nbsp  &nbsp  &nbsp  &nbsp
+
+    <a class="fancybox" href="images/Thailand2.JPG" data-fancybox-group="gallery2" title="Etiam quis mi eu elit temp"><img src="images/Thailand2.JPG" width='250' alt="" /></a>  &nbsp  &nbsp  &nbsp  &nbsp
+
+    <a class="fancybox" href="images/Thailand3.jpg" data-fancybox-group="gallery2" title="Cras neque mi, semper leon"><img src="images/Thailand3.jpg" width='250' alt="" /></a>
+
+  </p>
 </div>
 
 
  <div class="docs-section">  
-   <h5><strong>Germany</strong></h5>  
-        <div class="row">
+   <h5><strong>Germany</strong></h5> 
+    <p>
+    <a class="fancybox" href="images/Germany1.JPG" data-fancybox-group="gallery3" title="Lorem ipsum dolor sit amet"><img src="images/Germany1.JPG" width='250' alt="" /></a>  &nbsp  &nbsp  &nbsp  &nbsp
+
+    <a class="fancybox" href="images/Germany2.JPG" data-fancybox-group="gallery3" title="Etiam quis mi eu elit temp"><img src="images/Germany2.JPG" width='250' alt="" /></a>  &nbsp  &nbsp  &nbsp  &nbsp
+
+    <a class="fancybox" href="images/Germany3.JPG" data-fancybox-group="gallery3" title="Cras neque mi, semper leon"><img src="images/Germany3.JPG" width='250' alt="" /></a>
+
+  </p>
+
+       <!--  <div class="row">
             <div class="four columns"> <img  src='images/Germany1.png' width='250'/> </div>
             <div class="four columns"> <img  src='images/Germany2.png' width='250'/> </div>
             <div class="four columns"> <img  src='images/Germany3.png' width='250'/> </div>
-        </div>
+        </div> -->
+
 </div>
 
-
+    
+ 
 
 
 
@@ -132,5 +201,8 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   </div>
+
+
+  
 </body>
 </html>
