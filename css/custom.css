@@ -236,3 +236,10 @@ list-style-position: outside;
 }
 
 .file_link{background-color:#D95B43;color:#fcfcfc;padding:1px 4px;font-size:smaller}
+
+img.headshot {
+  display: inline-block;
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
