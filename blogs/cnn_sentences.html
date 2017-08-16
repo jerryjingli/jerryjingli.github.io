@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jing' blogs</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Course materials and notes for Stanford class CS231n: Convolutional Neural Networks for Visual Recognition.">
+    <link rel="canonical" href="http://cs231n.github.io/classification/">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="myblogcss.css">
+
+
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+   <!-- mathjax -->
+    <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+     <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+       <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+
+
+
+      
+    
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+<nav id="myNav"class="navbar navbar-inverse navbar-fixed-top">  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+
+
+
+
+
+      <a href="wwww.li-jing.com" class="navbar-brand page-scroll" > Home</a>
+      <a href="../blog.html" class="navbar-brand page-scroll" > All blogs</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active"><a  class="page-scroll">current page</a></li>   -->
+        <!-- <li ><a href="/tag2" class="page-scroll">Tag2</a></li>   -->     
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+  <!--   <header class="site-header">
+
+            <div class="wrap title-wrap">
+              <p class="site-title " >AAA</p>
+            </div>
+
+   </header>
+ -->
+
+     <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+
+
+  <br>
+  <header class="post-header">
+    <h1>Pytorch Implementation for Convolutional Neural Network Sentence Classification</h1>
+  </header>
+
+  <article class="post-content">
+  <p>This is a pytorch implementation for Convolutional Neural Networks for Sentence Classification.</p>
+
+
+  
+
+
+<p><strong>Dimension Analysis for Netwrok Parameters</strong>. Dimension analysis is useful for Deep Learning. Especially, we need set up some parameters based on the output of previous layers. In this example, we need to set pooling kernel sizes based on output of CNN layer. Thus, how to correctly calculate `W_1, W_2` and `W_3` is an important step in following example. </p>
+
+
+
+<p><strong>Layers:</strong>. 
+<p><strong>1. Input</strong>. The input \(X\) is the mini-batch. `X = (N,L)`,  where `N` is the size of mini-batch, `L` is the sentence length (i.e., number of words).</p>
+
+<p><strong>2. Embedding layer. </strong> <code> x = self.embed(x) </code>. Input: `(N,L)`. Parameters: `(V,D)`. Output: `(N,L,D)`. For 2-D convolution, we reshape output to `(N,1,L,D)`.</p>
+
+<p><strong>3. CNN layer. </strong> <code> x1 = F.relu(self.conv13(x)). </code> Input: `(N,1,L,D)`. Parameters: <code>nn.Conv2d(self.Cin, self.Cout, (3, self.D)) </code>, where <code>self.Cin</code>=1, <code>self.Cout</code>=`F` is the number of filters, 3 and <code>self.D</code> is kernel_size.      Output: `(N,F,W_1,1)`. <strong>The most important setp is to calculate `W_1`</code></strong>, where `W_1 = 1 +(L + 2*pad - 3 )` and `1 =1+ (D + 2*pad - self.D )`. Because there are different kernel sizes, so the output should be `(N,F,W_1,1)`, `(N,F,W_2,1)`, and `(N,F,W_3,1)`. </p>
+
+<p><strong>4. Pooling layer. </strong> <code> x1 = self.pool3(x1) </code>. Take  kernel_size ([3, <code>self.D</code>]) as an example, Input: `(N,F,W_1,1)`. Parameters: <code>nn.MaxPool2d(kernel_size=[poolsize3,1], stride= 1) </code>, where  <strong><code>poolsize3</code>`=W_1`</strong>. Because there are 3 kernel sizes, thus output: `(N,F,1,1)`, `(N,F,1,1)`, and `(N,F,1,1)`.  </p>
+
+<p><strong>5. Concatenation layer.</strong> Input: `(N,F,1,1)`, `(N,F,1,1)`, and `(N,F,1,1)`. Output: `(N,3F)`.</p>
+
+<p><strong>6. Fully-connected layer.</strong> Input: `(N,3F)`, Parameters: `(3F,C)`, where `C` is the number of classes, Output: `(N,C)`. </p>
+
+
+</br>
+<p><strong>Illustration of input and output:</strong></p>
+<div class="fig figcenter fighighlight">
+  <img src="images/cnnoutput.png" />
+  <div class="figcaption">Figure: Output for each layer.</div>
+</div>
+
+
+</br>
+<p><strong>Code</strong></p>
+<div class="language-python highlighter-rouge">
+<pre class="highlight"><code>
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.autograd import Variable
+
+class CNN_Sentence_Classification(nn.Module):
+    def __init__(self, args):
+        super(CNN_Sentence_Classification, self).__init__()
+        self.args = args
+
+        self.V = args.embed_num
+        self.D = args.embed_dim
+        self.C = args.class_num
+        self.Cin = 1
+        self.Cout = args.kernel_num
+        self.Ks = args.kernel_sizes
+        self.L =args.sent_max   
+
+        self.embed = nn.Embedding(self.V, self.D)
+
+        self.conv13 = nn.Conv2d(self.Cin, self.Cout, (3, self.D))
+        self.conv14 = nn.Conv2d(self.Cin, self.Cout, (4, self.D))
+        self.conv15 = nn.Conv2d(self.Cin, self.Cout, (5, self.D))
+
+        poolsize3 = 1+(self.L - self.Ks[0])      
+        self.pool3 = nn.MaxPool2d(kernel_size=[poolsize3,1], stride= 1)
+        poolsize4 = 1 + (self.L - self.Ks[1])
+        self.pool4 = nn.MaxPool2d(kernel_size=[poolsize4, 1], stride=1)
+        poolsize5 = 1 + (self.L - self.Ks[2])
+        self.pool5 = nn.MaxPool2d(kernel_size=[poolsize5, 1], stride=1)
+
+        self.dropout = nn.Dropout(args.dropout)
+
+
+        self.fc1 = nn.Linear(len(self.Ks) * self.Cout, self.C)
+
+
+    def forward(self, x):   # (N,L)
+        x = self.embed(x)  # (N,L,D)
+
+        k1,k2,k3 = x.size()
+
+        x = x.view([k1,1,k2,k3])  # (N,1,L,D)
+
+     
+        x1 = F.relu(self.conv13(x))
+        x1 = self.pool3(x1)
+
+        x2 = F.relu(self.conv14(x))
+        x2 = self.pool4(x2)
+
+        x3 = F.relu(self.conv15(x))
+        x3 = self.pool5(x3)
+
+        x = torch.cat((x1, x2, x3), 1)
+
+        k1,k2,k3,k4 = x.size()
+
+        x = x.view(k1,k2)
+
+        x = self.dropout(x)  # (N,len(Ks)*Co)
+        logit = self.fc1(x)  # (N,C)
+        return logit
+</code></pre>
+</div>
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-li-jing-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//www-li-jing-com.disqus.com/count.js" async></script>

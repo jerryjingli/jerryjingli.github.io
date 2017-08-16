@@ -83,7 +83,8 @@
   bottom: 5px;
   left: 5px; }
 .navbar {
-  display: none; }
+  display: none; 
+text-align: center;}
 
 /* Larger than phone */
 @media (min-width: 550px) {
@@ -114,7 +115,8 @@
 @media (min-width: 750px) {
   /* Navbar */
   .navbar + .docs-section {
-    border-top-width: 0; }
+    border-top-width: 0;
+    }
   .navbar,
   .navbar-spacer {
     display: block;
@@ -130,10 +132,11 @@
     width: 100%; }
   .navbar-list {
     list-style: none;
+    text-align: center;
     margin-bottom: 0; }
   .navbar-item {
     position: relative;
-    float: left;
+    float: right;
     margin-bottom: 0; }
   .navbar-link {
     /*text-transform: lowercase;*/
