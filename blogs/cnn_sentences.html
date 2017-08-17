@@ -4,10 +4,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jing' blogs</title>
+    <title>Jing's blogs</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Course materials and notes for Stanford class CS231n: Convolutional Neural Networks for Visual Recognition.">
     <link rel="canonical" href="http://cs231n.github.io/classification/">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
 
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -110,7 +112,7 @@
 
 <p><strong>2. Embedding layer. </strong> <code> x = self.embed(x) </code>. Input: `(N,L)`. Parameters: `(V,D)`. Output: `(N,L,D)`. For 2-D convolution, we reshape output to `(N,1,L,D)`.</p>
 
-<p><strong>3. CNN layer. </strong> <code> x1 = F.relu(self.conv13(x)). </code> Input: `(N,1,L,D)`. Parameters: <code>nn.Conv2d(self.Cin, self.Cout, (3, self.D)) </code>, where <code>self.Cin</code>=1, <code>self.Cout</code>=`F` is the number of filters, 3 and <code>self.D</code> is kernel_size.      Output: `(N,F,W_1,1)`. <strong>The most important setp is to calculate `W_1`</code></strong>, where `W_1 = 1 +(L + 2*pad - 3 )` and `1 =1+ (D + 2*pad - self.D )`. Because there are different kernel sizes, so the output should be `(N,F,W_1,1)`, `(N,F,W_2,1)`, and `(N,F,W_3,1)`. </p>
+<p><strong>3. CNN layer. </strong> <code> x1 = F.relu(self.conv13(x)). </code> Input: `(N,1,L,D)`. Parameters: <code>nn.Conv2d(self.Cin, self.Cout, (3, self.D)) </code>, where <code>self.Cin</code>=1, <code>self.Cout</code>=`F` is the number of filters, 3 and <code>self.D</code> is kernel_size.      Output: `(N,F,W_1,1)`. <strong>The most important step is to calculate `W_1`</code></strong>, where `W_1 = 1 +(L + 2*pad - 3 )` and `1 =1+ (D + 2*pad - self.D )`. Because there are different kernel sizes, so the output should be `(N,F,W_1,1)`, `(N,F,W_2,1)`, and `(N,F,W_3,1)`. </p>
 
 <p><strong>4. Pooling layer. </strong> <code> x1 = self.pool3(x1) </code>. Take  kernel_size ([3, <code>self.D</code>]) as an example, Input: `(N,F,W_1,1)`. Parameters: <code>nn.MaxPool2d(kernel_size=[poolsize3,1], stride= 1) </code>, where  <strong><code>poolsize3</code>`=W_1`</strong>. Because there are 3 kernel sizes, thus output: `(N,F,1,1)`, `(N,F,1,1)`, and `(N,F,1,1)`.  </p>
 
