@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Illustration RNN Encoder-Decoder with input and output. </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Course materials and notes for Stanford class CS231n: Convolutional Neural Networks for Visual Recognition.">
+    <link rel="canonical" href="http://cs231n.github.io/classification/">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="myblogcss.css">
+
+
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+   <!-- mathjax -->
+    <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+     <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+       <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+
+
+
+      
+    
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+<nav id="myNav"class="navbar navbar-inverse navbar-fixed-top">  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+
+
+
+
+
+      <a href="../index.html" class="navbar-brand page-scroll" > Home</a>
+      <a href="../blog.html" class="navbar-brand page-scroll" > All blogs</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active"><a  class="page-scroll">current page</a></li>   -->
+        <!-- <li ><a href="/tag2" class="page-scroll">Tag2</a></li>   -->     
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+  <!--   <header class="site-header">
+
+            <div class="wrap title-wrap">
+              <p class="site-title " >AAA</p>
+            </div>
+
+   </header>
+ -->
+
+     <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+
+
+  <br>
+  <header class="post-header">
+    <h1>Illustration RNN Encoder-Decoder with input and output</h1>
+  </header>
+
+  <article class="post-content">
+  <p>In this post, I will illustrate recurrent neural network (RNN) Encoder-Decoder with the input and output. The model architecture is based on the official tutorial of Pytorch. </p>
+
+
+  
+
+
+
+
+<p><strong>Illustration of input and output:</strong></p>
+<div class="fig figcenter fighighlight">
+  <img src="images/rnn_encoder_decoder.png" />
+  <div class="figcaption">Figure: Illustration input and output of RNN Encoder-Decoder.</div>
+</div>
+
+
+</br>
+<p><strong>Code</strong></p>
+<div class="language-python highlighter-rouge">
+<pre class="highlight"><code>
+import torch
+import torch.nn as nn
+from torch.autograd import Variable
+from torch import optim
+import torch.nn.functional as F
+from seq2seq.data_helper import use_cuda,MAX_LENGTH
+
+
+class EncoderRNN(nn.Module):
+    def __init__(self, input_size, hidden_size, embed_size, n_layers=1):
+        super(EncoderRNN, self).__init__()
+        self.n_layers = n_layers
+        self.hidden_size = hidden_size
+
+        self.embedding = nn.Embedding(input_size, embed_size)
+        self.gru = nn.GRU( embed_size,hidden_size)
+
+    def forward(self, input, hidden):
+        embedded = self.embedding(input).view(1, 1, -1)
+        output = embedded
+        for i in range(self.n_layers):
+            output, hidden = self.gru(output, hidden)
+        return output, hidden
+
+    def initHidden(self):
+        result = Variable(torch.zeros(1, 1, self.hidden_size))
+        if use_cuda:
+            return result.cuda()
+        else:
+            return result
+
+
+
+
+class AttnDecoderRNN(nn.Module):
+    def __init__(self, hidden_size, output_size, embed_size, n_layers=1, dropout_p=0.1, max_length=MAX_LENGTH):
+        super(AttnDecoderRNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.output_size = output_size
+        self.n_layers = n_layers
+        self.dropout_p = dropout_p
+        self.max_length = max_length
+        self.embed_size = embed_size
+
+        self.embedding = nn.Embedding(self.output_size, self.embed_size)
+        self.attn = nn.Linear(self.hidden_size  + self.embed_size, self.max_length)
+        self.attn_combine = nn.Linear(self.hidden_size + self.embed_size, self.hidden_size)
+        self.dropout = nn.Dropout(self.dropout_p)
+        self.gru = nn.GRU(self.hidden_size, self.hidden_size)
+        self.out = nn.Linear(self.hidden_size, self.output_size)
+
+    def forward(self, input, hidden, encoder_output, encoder_outputs):
+        embedded = self.embedding(input).view(1, 1, -1)
+        embedded = self.dropout(embedded)
+
+        attn_weights = F.softmax(
+            self.attn(torch.cat((embedded[0], hidden[0]), 1)))
+        attn_applied = torch.bmm(attn_weights.unsqueeze(0),
+                                 encoder_outputs.unsqueeze(0))
+
+        output = torch.cat((embedded[0], attn_applied[0]), 1)
+        output = self.attn_combine(output).unsqueeze(0)
+
+        for i in range(self.n_layers):
+            output = F.relu(output)
+            output, hidden = self.gru(output, hidden)
+
+        output = F.log_softmax(self.out(output[0]))
+        return output, hidden, attn_weights
+
+    def initHidden(self):
+        result = Variable(torch.zeros(1, 1, self.hidden_size))
+        if use_cuda:
+            return result.cuda()
+        else:
+            return result
+
+</code></pre>
+</div>
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-li-jing-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//www-li-jing-com.disqus.com/count.js" async></script>
