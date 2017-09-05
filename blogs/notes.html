@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My notes for some concepts</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="my notes">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="myblogcss.css">
+
+
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+   <!-- mathjax -->
+    <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+     <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+       <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: {
+    scale: 85
+  }
+});
+</script>
+      
+    
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+<nav id="myNav"class="navbar navbar-inverse navbar-fixed-top">  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+
+
+
+
+
+      <a href="../index.html" class="navbar-brand page-scroll" > Home</a>
+      <a href="../blog.html" class="navbar-brand page-scroll" > All blogs</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active"><a  class="page-scroll">current page</a></li>   -->
+        <!-- <li ><a href="/tag2" class="page-scroll">Tag2</a></li>   -->     
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+  <!--   <header class="site-header">
+
+            <div class="wrap title-wrap">
+              <p class="site-title " >AAA</p>
+            </div>
+
+   </header>
+ -->
+
+     <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+
+
+  <br>
+  <header class="post-header">
+    <h1>My notes for some concepts</h1>
+  </header>
+
+  <article class="post-content">
+  <p>There are some fundamental concepts in computer science.</p>
+
+
+
+<ul>
+  <li><a href="#entropy">Entropy</a></li>
+  <li><a href="#kl">KL</a>  
+  <li><a href="#MI">Mutual information</a> 
+  <li><a href="#cross-entropy">Cross-entropy</a> 
+  <li><a href="#IG">Feature selection: Information gain and Mutual information</a>     
+</ul>
+
+<!-- 
+<script type="math/tex; mode=display">xxx</script> -->
+  <ol>
+  
+  <p><a name="entropy"></a></p>
+  <li > <strong>Entropy </strong></li>  
+The entropy of a random variable `X` with a probability distribution `p(x)` is related to how much `p(x)` diverges from the uniform distribution on the support of `X`. The more `p(x)` diverges the lesser is entropy and vice versa. 
+
+$$H(X)= -\sum_{i=1}^{n} p(x_i) \log p(x_i)$$
+where `{x_1,x_2,...,x_n}` are the possible values for `X`.
+
+
+ 
+ <p><a name="kl"></a></p>
+ <li> <strong>Kullback-Leibler divergence </strong></li>
+<!--  CSE533 Information Theory in computer science.  -->
+ The relative entropy, also known as the Kullback-Leibler divergence, between two probability distributions on a random variable is a measure of the distance between them.
+ Given two probability distributions `p(x)` and `q(x)` over a discrete random variable `X`, the KL given by \(KL(p||q)\) is defined as follows:
+
+\[
+KL(p||q) = \sum_{x \in X} p(x) \log \frac{p(x)}{q(x)}
+\]
+where `0 \log \frac{0}{0} =0, 0\log \frac{0}{q}=0, p \log \frac{1}{0}=\infty`
+
+  <p><a name="MI"></a></p>
+ <li> <strong>Mutual information </strong></li> 
+ Mutual information is a measure of how correlated <strong>two random variables</strong> `X` and `Y` are such that the more independent the variables are the lesser is their mutual information. 
+
+ \[
+MI(X,Y) = \sum_{x,y} p(x,y) \log \frac{p(x,y)}{p(x)p(y)}
+ \]
+
+ where `p(x,y)` is the joint probability distribution, `p(x)` and `p(y)` are the marginal distribution of `X`  and `Y`.      
+
+ <p><a name="cross-entropy"></a></p>
+ <li> <strong>Cross-entropy </strong></li>
+  <!-- http://blog.csdn.net/lanchunhui/article/details/53365438
+
+       http://blog.csdn.net/lanchunhui/article/details/50970625
+
+       http://blog.csdn.net/lanchunhui/article/details/51277608
+
+       http://blog.csdn.net/rtygbwwwerr/article/details/50778098 -->
+
+ The cross-entropy for two probability distributions `p(x)` and `q(x)` over a discrete random variable `X` is defined as follows:
+\[
+H(p,q) = -\sum_{x}p(x) \log q(x)
+\]
+  
+Relation:
+ \[
+ \begin{align}
+H(p,q) & = -\sum_{x}p(x) \log q(x)  \\
+     & = -\sum_{x}p(x) \log p(x) - \sum_{x}p(x) \log \frac{q(x)}{p(x)} \\
+     & = H(p) + KL(p||q)
+\end{align}
+\]  
+
+
+<p><a name="IG"></a></p>
+ <li> <strong>Feature selection: Information gain and Mutual information</strong></li>
+Mutual information and information gain are equivalent. <br>
+Classification: If `X` is a nominal feature with `k` different values and `C` is target class with `m` classes.
+
+$$
+ \begin{align}
+MI(X,C) &= \sum_{i=1}^{k} \sum_{j=1}^{m} p(x_i,c_j) \log \frac{p(x_i,c_j)}{p(x_i)p(c_j)} \\
+        & = - \sum_{i=1}^{k} \sum_{j=1}^{m} p(x_i,c_j) \log p(c_j) + \sum_{i=1}^{k} \sum_{j=1}^{m} p(x_i,c_j) \log \frac{p(x_i,c_j)}{p(x_i)} \\
+        & = - \sum_{i=1}^{k} \sum_{j=1}^{m} p(x_i,c_j) \log p(c_j) + \sum_{i=1}^{k} \sum_{j=1}^{m} p(x_i)p(c_j|x_i) \log p(c_j|x_i) \\
+        & = -\sum_{j=1}^{m}\log p(c_j) \left(\sum_{i=1}^{k} p(x_i,c_j)\right) + \sum_{i=1}^{k} p(x_i)   \left(\sum_{j=1}^{m}p(c_j|x_i) \log p(c_j|x_i)\right)\\
+        & = -\sum_{j=1}^{m}\log p(c_j) p(c_j) -\sum_{i=1}^{k} p(x_i)H(C|X=x) \\
+        & = H(C) - H(C|X) =IG
+\end{align}
+$$
+Note that `p(y)= \sum_x p(x,y)`, and `H(Y|X)=\sum_x p(x) H(Y|X=x) = -\sum_x p(x) \sum_y p(y|x) \log p(y|x)`
+       
+</ol>
+
+
+
+
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-li-jing-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//www-li-jing-com.disqus.com/count.js" async></script>
