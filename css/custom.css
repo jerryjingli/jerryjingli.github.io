@@ -1,5 +1,5 @@
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
    font-size: 1.9rem; }
 .header {
   margin-top: 6rem;
@@ -239,6 +239,11 @@ list-style-position: outside;
 }
 
 .file_link{background-color:#D95B43;color:#fcfcfc;padding:1px 4px;font-size:smaller}
+.jpaper{background-color:#002062;color:#fcfcfc;;padding:1px 4px;font-size:smaller}
+
+.cpaper{background-color:#0E6251;color:#fcfcfc;;padding:1px 4px;font-size:smaller}
+
+
 
 img.headshot {
   display: inline-block;
@@ -249,3 +254,50 @@ img.headshot {
 
 
 .icon_link{color:#BDBDBD}
+
+
+a.back-to-top {
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #8E7881 url(../images/up-arrow.png) no-repeat center 43%;
+  background-size: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  color: #fff;
+  background-color: #8E7881;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+
+
+.border-right {
+    border-right: 1px solid #C0C0C0;
+}

@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sequence Labeling</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="my notes">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+
+
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="myblogcss.css">
+
+
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+   <!-- mathjax -->
+    <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+     <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+     <!--  <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      </script> -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+       <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: {
+    scale: 85
+  }
+});
+</script>
+      
+    
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+<nav id="myNav"class="navbar navbar-inverse navbar-fixed-top">  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+
+
+
+
+
+      <a href="../index.html" class="navbar-brand page-scroll" > Home</a>
+      <a href="../blog.html" class="navbar-brand page-scroll" > All blogs</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active"><a  class="page-scroll">current page</a></li>   -->
+        <!-- <li ><a href="/tag2" class="page-scroll">Tag2</a></li>   -->     
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+  <!--   <header class="site-header">
+
+            <div class="wrap title-wrap">
+              <p class="site-title " >AAA</p>
+            </div>
+
+   </header>
+ -->
+
+     <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+
+
+  <br>
+  <header class="post-header">
+    <h1> Sequence Labeling: HMMs, MEMMs, CRFs, Naive classification, seq2seq, Pointer-network </h1>
+  </header>
+
+    <article class="post-content">
+<i>Oct 7, 2017 by Li Jing</i> 
+
+
+<blockquote>
+  <p>This post explains the maths behind sequence labeling using HMMs, MEMMs, CRFs, Naive classification, seq2seq, Pointer-network.
+</p>
+</blockquote>
+
+
+
+
+
+  <p>Sequence labeling problem:  </br>
+  Input sequence: `x_1,x_2,...,x_m `  </br>
+  Output sequence: `y_1,y_2,...,y_m `
+
+  </p>
+
+
+
+<ul>
+  <li><a href="#hmms">Hidden Markov Models (HMMs)</a></li>
+  <li><a href="#memms">Maximum-entropy Markov Models (MEMMs) </a>  
+  <li><a href="#crf">Conditional Random Fields (CRFs)</a> 
+  <li><a href="#classification">Naive Classification</a> 
+  <li><a href="#seq2seq">Sequence-to-Sequence (seq2seq)</a> 
+  <li><a href="#pointer">Pointer Networks</a> 
+  
+</ul>
+
+
+
+
+<!-- 
+<script type="math/tex; mode=display">xxx</script> -->
+  <ol>
+  
+  <p><a name="hmms"></a></p>
+  <li > <strong>Hidden Markov Models (HMMs) </strong></li>  
+The task is to model the joint probability:
+
+\[\require{color} \colorbox{yellow}{$ p(y_1,y_2,...,y_m, x_1,x_2,...,x_m) $}= \prod\limits_{i = 1}^m p(y_i|y_{i-1}) 
+\prod\limits_{i = 1}^m {p(x_i|y_i)}  
+\]
+
+
+
+ 
+Independence Assumption:
+Consider two random Variables: `X` and`Y`, the task will be to model the joint probability:
+\[P(Y_1=y_1,...,Y_n=y_n, X_1=x_1...X_n=x_n) = P(Y_1=y_1,...,Y_n=y_n)
+P(X_1=x_1...X_n=x_n|Y_1=y_1,...,Y_n=y_n)
+ \]
+This step is exact, by the chian rule of probabilities. </br>
+
+<strong>Assumption 1</strong>:
+
+\[P(Y_1=y_1,...,Y_n=y_n) \approx \prod\limits_{i = 1}^m {P(Y_i=y_i|Y_{i-1}=y_{i-1})}
+ \]
+
+<strong>Assumption 2</strong>:
+\[
+\begin{align}
+P(X_1=x_1...X_n=x_n|Y_1=y_1,...,Y_n=y_n) &= \prod\limits_{i = 1}^m {P(X_i=x_i|X_1=x_1...X_{i-1}=x_{i-1},Y_1=y_1...Y_n=y_n)} \\
+&\approx \prod\limits_{i = 1}^m {P(X_i=x_i|Y_i=y_i)}
+
+\end{align}
+ \]
+
+That is the value for random variable <font color="red">`X_i` depends only on the value of `Y_i`</font>.
+More formally, the value for `X_i` in conditionally independent of the previous observations `X_1...X_{i-1}` and the other state values `Y_1,...Y_{i-1},Y_{i+1},...Y_n`, given the value of `Y_i`.
+
+</br>
+Estimating the parameters of the model is simple: we just read off counts from the training corpus, and then compute the maximum-likelihood estimates as described above.
+
+ <p><a name="memms"></a></p>
+ <li> <strong>Maximum-entropy Markov Models (MEMMs) </strong></li>
+<!--  CSE533 Information Theory in computer science.  -->
+The task will be to model the conditional distribution
+
+\[ \begin{align}
+p(y_1,y_2,...,y_m|x_1,x_2,...,x_m) &= \prod\limits_{i = 1}^m {p(y_i|y_1,...,y_{i-1},x_1,...,x_m)} \\
+        & \approx \prod\limits_{i = 1}^m {p(y_i|y_{i-1},x_1,...,x_m)} 
+       \end{align}\]
+
+Assumption: The state `y_i` depends only on the state `y_{i-1}`.
+
+ <p>
+<font color="red">The key advantage</font> of MEMMs is that the use of feature vectors \(\boldsymbol{F} \in \mathbb{R}^d\) allows much richer representation than those used in HMMs. </p>
+
+<p>Base on the assumption, we model each term using a log-linear model:   </p>
+
+\[ \require{color} \colorbox{yellow}{$p(y_i|y_{i-1},x_1,...,x_m) $} = \frac{\exp \left(\boldsymbol{w} \cdot \boldsymbol{F}(x_1,...x_m,i,y_{i-1},y_i) \right )}
+{\sum\nolimits_{\color{red} {y' \in \mathcal{S}}} \exp \left(\boldsymbol{w} \cdot \boldsymbol{F}(x_1,...x_m,i,y_{i-1},y') \right )  }  \]
+
+where \( \boldsymbol{F}(x_1,...x_m,i,y_{i-1},y_i) \) is a feacture vector. \(\mathcal{S}\) denotes the set of possible states. 
+\(\boldsymbol{w}\) are the parameters. 
+
+
+
+
+
+ <p><a name="crf"></a></p>
+<li> <strong>Conditional Random Fields (CRFs) </strong></li>
+
+<div class="fig figcenter ">
+  <img src= "images/CRF.png"  alt="HTML5 Icon" width="40%">
+  <div class="center">Figure: BiLSTM-CRF.</div>
+</div>
+
+The task will be to model the conditional distribution
+
+\[ p(y_1,y_2,...,y_m|x_1,x_2,...,x_m) = p(\vec y| \vec x) \]
+
+
+ <p>First, we define a feature vector \(\boldsymbol{F}(\vec x,\vec y) \in  \mathbb{R}^d \). <font color="red">CRF key idea:</font> \(\boldsymbol{F}(\vec x,\vec y)\) maps an entire input sequence \(\vec x\) paired with an entire state sequence \(\vec y\) to some \(d\)-dimensional feature vectors. 
+ \(\boldsymbol{F}(\vec x,\vec y)\) is a <font color="red">"global" feature vector </font> (it is global in the sense that it takes the entire state sequence into account).</p>
+       
+\[ 
+\boldsymbol{F}(\vec x,\vec y) = \sum\limits_i^m f(\vec x, i, y_{i-1},y_i)
+\]
+We are assuming that \(k=1,...,d\), the `k`-th global feature is:
+
+
+\[ 
+\boldsymbol{F}_k(\vec x,\vec y) = \sum\limits_i^m f_k(\vec x, i, y_{i-1},y_i)
+\]
+
+
+We can see that  \(\boldsymbol{F}_k\) is calculated by summing the <font color="red"> "local" feature vector</font> `f_k` over the `m` different state transitions in `y_1,...,y_m`.
+</br>
+We then build a log-linear model:
+\[\require{color} \colorbox{yellow}{$ p(\vec y|\vec x; \boldsymbol{w}) $}= \frac{\exp \left(\boldsymbol{w} \cdot \boldsymbol{F}(\vec x, \vec y) \right )}
+{\sum\nolimits_{\color{red} {\vec{y'} \in \mathcal{S}^m}} \exp \left(\boldsymbol{w} \cdot \boldsymbol{F}(\vec x, \vec {y'}) \right )  }  \]
+We can find that the space of possible values for \(\vec{y'} \) is \(\mathcal{S}^m\). It is very huge. 
+
+</br>
+<strong>Parameter Estimation in CRFs.</strong>
+</br>
+We have `n` training examples, \({(\vec {x^j}, \vec {y^j})}_{j=1}^n\).
+Each instance \(\vec{x^j}\) is an input sequence \(x_1^j,...,x_m^j\), each \(\vec{y^j}\) is a state sequence \(y_1^j,...,y_m^j\).
+The regularized log-likelihood function is 
+
+\[
+L(\boldsymbol{w}) = \sum\limits_{j=1}^n \log p(\vec {y^j}|\vec {x^j}; \boldsymbol{w}) - \frac{\lambda}{2}||\boldsymbol{w}||^2
+\]
+
+The partial derivatives are
+
+\[
+\frac{\partial}{\partial w_k} L(\boldsymbol{w}) = \sum\limits_{j=1}^n \boldsymbol{F}_k(\vec {x^j},\vec {y^j})
+- \sum\limits_{j=1}^n \sum\limits_{\color{red} {\vec{y'} \in \mathcal{S}^m}}
+p(\vec{y'}|\vec{x^j};\boldsymbol{w}) \boldsymbol{F}_k(\vec{x^j},\vec{y'}) - \lambda w_k
+
+\]
+
+
+<p><a name="classification"></a></p>
+<li> <strong>Naive Classification </strong></li>
+
+<div class="fig figcenter ">
+  <img src= "images/classification.png"  alt="HTML5 Icon" width="40%">
+  <div class="center">Figure: sequence labeling as a classification.</div>
+</div>
+
+
+\[\require{color} \colorbox{yellow}{$
+p(y_i|\vec{x};\boldsymbol{w}) $} = \frac{e^{f_{y_i}}}{{\sum_j e^{f_j}}}
+\]
+
+The cross-entropy between a "true" distribution `p` and an estimated distribution `q` is defined as:
+\[
+\begin{align}
+H(p,q) &= -\sum_x p(x)\log q(x) \\
+&=-\sum_i \log \left( \frac{e^{f_{y_i}}}{{\sum_j e^{f_j}}} \right) 
+\end{align}
+\]
+
+The Softmax classifier is hence minimizing the cross-entropy between the estimated class probabilities (`q=\frac{e^{f_{y_i}}}{\sum_j e^{f_j}}`
+as seen above) and the "true" distribution, which in this interpretation is the distribution where all
+probability mass is on the correct class (i.e. `p=[0,...1,...,0]` contains a single 1 at the `y_i`-th position.).
+
+
+ <p><a name="seq2seq"></a></p>
+<li> <strong>Sequence-to-Sequence (seq2seq) </strong></li>
+<div class="fig figcenter ">
+  <img src= "images/seq2seq.png"  alt="HTML5 Icon" width="30%">
+  <div class="center">Figure: Sequence-to-Sequence.</div>
+</div>
+
+
+In traditional sequence-to-sequence model, <font color="red">the output dictionary size is fixed</font>. 
+For example, in chinese-english translation task, the english vocabulary is fixed when generation english sentences. 
+Thus, we need to train a separate model for each fixed dictionary. 
+
+Input sequence: \(x_i,...,x_n \), output sequence: \(y_1,...,y_m\), the task is to model the conditional probability:
+\[
+p(\vec{y}|\vec{x}; \boldsymbol{w})= \prod \limits_{i=1}^m p(y_i|y_1,...,y_{i-1},\vec{x};\boldsymbol{w})
+\]
+
+With an RNN, each conditional probability is modeled as 
+
+\[
+\require{color} \colorbox{yellow}{$ p(y_i|y_1,...,y_{i-1},\vec{x};\boldsymbol{w}) $}= g(y_{i-1},\vec{s_i},\vec{c})
+\]
+
+where `g` is a nonlinear, potentially multi-layered, function that outputs the probability of `y_i`, and \(\vec{s_i}\) is the hidden state of the RNN at time step `i`, and  `c` is the context vector. 
+
+
+
+
+
+
+ <p><a name="pointer"></a></p>
+<li> <strong>Pointer Networks</strong></li>
+<div class="fig figcenter ">
+  <img src= "images/pointernetworks.png"  alt="HTML5 Icon" width="30%">
+  <div class="center">Figure: Pointer Networks.</div>
+</div>
+
+The advantage of pointer networks is that the output dictionary size depends on the number of elements in the input sequence.
+That is, the output dictionary size  is variable. 
+</br>
+Let us define input sequence: \(x_i,...,x_n \), output sequence: \(y_1,...,y_m\), encoder hidden states \(e_1,...,e_n\), and decoder hidden states \(d_1,...,d_m\).
+The attention mechanism can be modeled as follows:
+\[
+\begin{align}
+u_j^i &= v^T tanh(W_1e_j+W_2d_i)  \quad  j \in (1,...,n) \\
+\require{color} \colorbox{yellow}{$ p(y_i|y_1,...,y_{i-1},\vec{x}) $} &= softmax(\vec{u^i}) \\
+
+\end{align}
+\]
+
+where softmax normalizes the vector \(\vec{u^i}\) (of length `n`) to be an output distribution over the dictionary of inputs (length `n`).
+</br>
+`v`, `W_1` and `W_2` are learnable parameters of the output model. 
+</br>
+The parameters of the model are learnt by maximizing the conditional probabilities for the training
+set, i.e.
+
+\[
+\boldsymbol{w}^* = \underset{\boldsymbol{w}}{\arg\max} \sum \log p(\vec{y}|\vec{x};\boldsymbol{w})
+\]
+
+
+ where the sum is over training examples. \(\boldsymbol{w}\) is the set of the model parameters and each \((\vec{x},\vec{y})\) is an (input sequence, output sequence)
+pair from the training set. 
+
+</br>
+</br>
+<strong>References</strong>
+</br>
+[1] <a target="_blank" href="http://www.cs.columbia.edu/~mcollins/crf.pdf">Log-Linear Models, MEMMs, and CRFs</a> 
+</br>
+[2] <a target="_blank" href="https://arxiv.org/abs/1506.03134">Pointer Networks</a> 
+</br>
+[3] <a target="_blank" href="http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/hmms.pdf">Tagging with Hidden Markov Models</a> 
+</br>
+[4] <a target="_blank" href="http://cs231n.github.io/linear-classify/">Linear Classification</a> 
+
+
+
+
+</ol>
+
+
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-li-jing-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//www-li-jing-com.disqus.com/count.js" async></script>

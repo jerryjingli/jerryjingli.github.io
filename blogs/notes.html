@@ -31,11 +31,12 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
 
-
+<script src="../js/jquery.toc.js" charset="utf-8"></script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -103,22 +104,21 @@ MathJax.Hub.Config({
   </header>
 
   <article class="post-content">
+  
+<i>By Li Jing</i> 
+
+<blockquote>
   <p>There are some fundamental concepts in computer science.</p>
+</blockquote>
+
+<ul data-toc data-toc-headings="li"></ul>
 
 
-
-<ul>
-  <li><a href="#entropy">Entropy</a></li>
-  <li><a href="#kl">KL</a>  
-  <li><a href="#MI">Mutual information</a> 
-  <li><a href="#cross-entropy">Cross-entropy</a> 
-  <li><a href="#IG">Feature selection: Information gain and Mutual information</a>     
-</ul>
 
 <!-- 
 <script type="math/tex; mode=display">xxx</script> -->
+
   <ol>
-  
   <p><a name="entropy"></a></p>
   <li > <strong>Entropy </strong></li>  
 The entropy of a random variable `X` with a probability distribution `p(x)` is related to how much `p(x)` diverges from the uniform distribution on the support of `X`. The more `p(x)` diverges the lesser is entropy and vice versa. 
@@ -191,9 +191,9 @@ MI(X,C) &= \sum_{i=1}^{k} \sum_{j=1}^{m} p(x_i,c_j) \log \frac{p(x_i,c_j)}{p(x_i
 $$
 Note that `p(y)= \sum_x p(x,y)`, and `H(Y|X)=\sum_x p(x) H(Y|X=x) = -\sum_x p(x) \sum_y p(y|x) \log p(y|x)`
        
-</ol>
 
 
+  </ol>
 
 
 

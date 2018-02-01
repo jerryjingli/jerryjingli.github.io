@@ -102,7 +102,14 @@ MathJax.Hub.Config({
   </header>
 
   <article class="post-content">
-  <p>In this post, I will illustrate recurrent neural network (RNN) Encoder-Decoder with the input and output. The model architecture is based on the official tutorial of Pytorch. </p>
+
+    <i>Aug 18, 2017 by Li Jing</i> 
+
+
+<blockquote>
+<p>In this post, I will illustrate recurrent neural network (RNN) Encoder-Decoder with the input and output. The model architecture is based on the official tutorial of Pytorch. </p>
+</blockquote>
+  
 
 
   
@@ -116,6 +123,16 @@ MathJax.Hub.Config({
   <div class="figcaption">Figure: Illustration input and output of RNN Encoder-Decoder.</div>
 </div>
 
+
+<code>bmm</code>: The context vector `c_i = \sum_{j=1}^{T_x} \alpha_{ij}h_j` in paper <a  target="_blank" href="https://arxiv.org/abs/1409.0473"> Bahdanau et al.</a> </br>
+
+In above figure, for time step `t` of decoder:
+$$c_t = [\alpha_{t1}, \alpha_{t2},..., \alpha_{tL}]_{1\times L} \times \left[ \begin{array}{l}
+h_1\\
+h_2\\
+h_3\\
+h_L
+\end{array} \right]_{L \times H}$$
 
 </br>
 <p><strong>Code</strong></p>

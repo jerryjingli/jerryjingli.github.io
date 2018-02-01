@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Command</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="my notes">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+
+
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="myblogcss.css">
+
+
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+   <!-- mathjax -->
+    <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+     <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+     <!--  <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      </script> -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+       <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: {
+    scale: 85
+  }
+});
+</script>
+      
+    
+</head>
+
+
+
+<body data-spy="scroll" data-target="#toc">
+
+
+
+
+
+
+<nav id="myNav"class="navbar navbar-inverse navbar-fixed-top">  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+
+
+
+
+
+      <a href="../index.html" class="navbar-brand page-scroll" > Home</a>
+      <a href="../blog.html" class="navbar-brand page-scroll" > All blogs</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active"><a  class="page-scroll">current page</a></li>   -->
+        <!-- <li ><a href="/tag2" class="page-scroll">Tag2</a></li>   -->     
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+  <!--   <header class="site-header">
+
+            <div class="wrap title-wrap">
+              <p class="site-title " >AAA</p>
+            </div>
+
+   </header>
+ -->
+
+     <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+
+
+  <br>
+  <header class="post-header">
+    <h1> Sequence Labeling: HMMs, MEMMs, CRFs, Naive classification, seq2seq, Pointer-network </h1>
+  </header>
+
+<blockquote>
+  <p>This post explains the maths behind sequence labeling using HMMs, MEMMs, CRFs, Naive classification, seq2seq, Pointer-network.
+</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+<strong>Parameter Estimation in CRFs.</strong>
+</br>
+
+[4] <a target="_blank" href="http://cs231n.github.io/linear-classify/">Linear Classification</a> 
+
+
+
+
+\[\require{color} \colorbox{yellow}{$ p(y_1,y_2,...,y_m, x_1,x_2,...,x_m) $}= \prod\limits_{i = 1}^m p(y_i|y_{i-1}) 
+\prod\limits_{i = 1}^m {p(x_i|y_i)}  
+\]
+
+
+
+
+
+\[ \begin{align}
+p(y_1,y_2,...,y_m|x_1,x_2,...,x_m) &= \prod\limits_{i = 1}^m {p(y_i|y_1,...,y_{i-1},x_1,...,x_m)} \\
+        & \approx \prod\limits_{i = 1}^m {p(y_i|y_{i-1},x_1,...,x_m)} 
+       \end{align}\]
+
+
+
+
+<div class="fig figcenter ">
+  <img src= "images/CRF.png"  alt="HTML5 Icon" width="40%">
+  <div class="center">Figure: BiLSTM-CRF.</div>
+</div>
+
+
+
+
+
+
+We can see that  \(\boldsymbol{F}_k\) is calculated by summing the <font color="red"> "local" feature vector</font> `f_k` over the `m` different state transitions in `y_1,...,y_m`.
+</br>
+
+
+
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-li-jing-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//www-li-jing-com.disqus.com/count.js" async></script>
