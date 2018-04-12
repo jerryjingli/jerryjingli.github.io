@@ -83,8 +83,12 @@
   bottom: 5px;
   left: 5px; }
 .navbar {
-  display: none; 
+  display: block; 
 text-align: center;}
+.navbar-item {
+    position: relative;
+    float: right;
+    margin-bottom: 0; }
 
 /* Larger than phone */
 @media (min-width: 550px) {
