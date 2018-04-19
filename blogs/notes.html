@@ -29,6 +29,26 @@
 
 
 
+<style type="text/css">
+  
+a.back-to-top {
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #8E7881 url(../images/up-arrow.png) no-repeat center 43%;
+  background-size: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 40px;
+}
+
+</style>
+
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -46,12 +66,37 @@ MathJax.Hub.Config({
 </script>
       
     
+
+
+  <!-- create the back to top button -->
+    <script type="text/javascript">
+
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+      if ( $(window).scrollTop() > amountScrolled ) {
+        $('a.back-to-top').fadeIn('slow');
+      } else {
+        $('a.back-to-top').fadeOut('slow');
+      }
+    });
+
+    $('a.back-to-top, a.simple-back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 700);
+      return false;
+    });
+    </script>
 </head>
 
 
 
 <body>
 
+<!-- back to top button start -->
+        <a href="" class="back-to-top">Back to Top</a>
+        <!-- back to top button end -->
 
 
 

@@ -18,7 +18,6 @@
 
 
 
-
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -30,11 +29,33 @@
 
 
 
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
        <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
 
+
+
+
+
+<style type="text/css">
+  
+a.back-to-top {
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #8E7881 url(../images/up-arrow.png) no-repeat center 43%;
+  background-size: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 40px;
+}
+
+</style>
 
 
     <script type="text/x-mathjax-config">
@@ -44,6 +65,32 @@ MathJax.Hub.Config({
   }
 });
 </script>  
+
+
+  <script src="../js/jquery.min.js"></script>
+
+  <!-- create the back to top button -->
+    <script type="text/javascript">
+
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+      if ( $(window).scrollTop() > amountScrolled ) {
+        $('a.back-to-top').fadeIn('slow');
+      } else {
+        $('a.back-to-top').fadeOut('slow');
+      }
+    });
+
+    $('a.back-to-top, a.simple-back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 700);
+      return false;
+    });
+    </script>
+
+
     
 </head>
 
@@ -52,6 +99,11 @@ MathJax.Hub.Config({
 <body>
 
 
+
+
+<!-- back to top button start -->
+        <a href="" class="back-to-top">Back to Top</a>
+        <!-- back to top button end -->
 
 
 
@@ -110,6 +162,8 @@ MathJax.Hub.Config({
 </blockquote>
 
 
+
+     
 
   
 
@@ -209,6 +263,8 @@ class CNN_Sentence_Classification(nn.Module):
         return logit
 </code></pre>
 </div>
+
+
 
 
  <div id="disqus_thread"></div>
