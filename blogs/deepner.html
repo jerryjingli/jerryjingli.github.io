@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deep Learning for Named Entity Recognition: A Comprehensive Survey</title>
+     <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <meta name="description" content="my notes">
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="myblogcss.css">
+
+
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+   <!-- mathjax -->
+    <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+     <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+
+
+
+<style type="text/css">
+  
+a.back-to-top {
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #8E7881 url(../images/up-arrow.png) no-repeat center 43%;
+  background-size: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 40px;
+}
+
+
+.mytoc {font-size: 1.2em;}
+</style>
+
+
+    
+    
+      <!--  <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>       
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+ -->
+<script src="../js/jquery.toc.js" charset="utf-8"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: {
+    scale: 85
+  }
+});
+</script>
+      
+    
+
+
+  <!-- create the back to top button -->
+    <script type="text/javascript">
+
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+      if ( $(window).scrollTop() > amountScrolled ) {
+        $('a.back-to-top').fadeIn('slow');
+      } else {
+        $('a.back-to-top').fadeOut('slow');
+      }
+    });
+
+    $('a.back-to-top, a.simple-back-to-top').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 700);
+      return false;
+    });
+    </script>
+</head>
+
+
+
+<body>
+
+<!-- back to top button start -->
+        <a href="" class="back-to-top">Back to Top</a>
+        <!-- back to top button end -->
+
+
+
+
+
+<nav id="myNav"class="navbar navbar-inverse navbar-fixed-top">  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+
+
+
+
+
+ <!--      <a href="../index.html" class="navbar-brand page-scroll" > Home</a>
+      <a href="../blog.html" class="navbar-brand page-scroll" > All blogs</a> -->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="active"><a  class="page-scroll">current page</a></li>   -->
+        <!-- <li ><a href="/tag2" class="page-scroll">Tag2</a></li>   -->     
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+
+
+ <div class="page-content">
+ <div class="wrap">
+ <div class="post">
+
+
+
+  <br>
+  <header class="post-header">
+  <h1>Deep Learning for Named Entity Recognition: A Comprehensive Survey</h1>
+  </header>
+
+  <article class="post-content">
+  
+<i>By Li Jing</i> 
+
+<blockquote>
+  <p>A survey on deep learning in named entity recognition.</p>
+
+  <p>Named entity recognition (NER) is a subtask of information extraction that seeks to locate and classify named entities in text into pre-defined categories (e.g., organization, location and person).
+  Recently, deep learning has been broadly applied to solve NER problem with great success. Thus, I write up this survey to summarize recent work.</p>
+</blockquote>
+
+<ul data-toc data-toc-headings="li.mytoc"></ul>
+
+
+
+<!-- 
+<script type="math/tex; mode=display">xxx</script> -->
+
+<ol>
+
+
+
+  <li class="mytoc" > <strong>Word-level CNN Encoder, CRF Tag Decoder</strong></li>  
+    <ul>
+      <li>Ronan Collobert, Jason Weston, Léon Bottou, Michael Karlen, Koray Kavukcuoglu, Pavel P. Kuksa. <b>Natural Language Processing (Almost) from Scratch</b>. JMLR 2011.
+      <a target="_blank"  href="../papers/nersurvey/2011 JMLR Natural language processing (almost) from scratch.pdf"> PDF</a>
+      </li> 
+
+      <li>  Jingwei Zhuo, Yong Cao, Jun Zhu, Bo Zhang, Zaiqing Nie. <b>Segment-Level Sequence Modeling using Gated Recursive Semi-Markov Conditional Random Fields</b>. ACL 2016.
+      <a target="_blank"  href="../papers/nersurvey/2016 ACL Segment-Level Sequence Modeling using Gated Recursive Semi-MarKov Conditional Random Fields.pdf"> PDF</a>
+      </li> 
+
+
+
+        <li>Emma Strubell, Patrick Verga, David Belanger, Andrew McCallum. <b>Fast and Accurate Entity Recognition with Iterated Dilated Convolutions</b>. EMNLP 2017.
+      <a target="_blank"  href="https://arxiv.org/pdf/1702.02098.pdf"> PDF</a>
+      </li> 
+
+
+
+    </ul>
+  <br>
+
+
+  <li class="mytoc" > <strong>Word-level RNN Encoder, CRF/MEM Tag Decoder </strong></li>  
+    <ul>
+      <li>Zhiheng Huang, Wei Xu, Kai Yu. <b>Bidirectional LSTM-CRF Models for Sequence Tagging</b>. ICLR 2018.
+      <a target="_blank"  href="../papers/nersurvey/2015 Bidirectional lstm-crf models for sequence tagging.pdf"> PDF</a>
+      </li> 
+
+      <li>Xuezhe Ma, Eduard H. Hovy. <b>End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF</b>. ACL 2018.
+      <a target="_blank"  href="../papers/nersurvey/2016 ACL End-to-end sequence labeling via bi-directional LSTM-CNNs-CRF.pdf"> PDF</a>
+      </li> 
+
+      <li>Marek Rei, Gamal K. O. Crichton, Sampo Pyysalo. <b>Attending to Characters in Neural Sequence Labeling Models</b>. Coling 2016.
+      <a target="_blank"  href="../papers/nersurvey/2016 Coling Attending to Characters in Neural Sequence Labeling Models.pdf"> PDF</a>
+      </li> 
+
+
+       <li>Fabrice Dugas, Eric Nichols. <b>DeepNNNER: Applying BLSTM-CNNs and Extended Lexicons to Named Entity Recognition in Tweets</b>. NUT@Coling 2016.
+      <a target="_blank"  href="../papers/nersurvey/2016 DeepNNNER Applying BLSTM-CNNs and extended lexicons to named entity recognition in tweets.pdf"> PDF</a>
+      </li> 
+
+      <li>Jason P. C. Chiu, Eric Nichols. <b>Named Entity Recognition with Bidirectional LSTM-CNNs</b>. TACL 2016.
+      <a target="_blank"  href="../papers/nersurvey/2016 Named Entity Recognition with Bidirectional LSTM-CNNs.pdf"> PDF</a>
+      </li> 
+
+      <li>Guillaume Lample, Miguel Ballesteros, Sandeep Subramanian, Kazuya Kawakami, Chris Dyer. <b>Neural Architectures for Named Entity Recognition</b>. HLT-NAACL 2016.
+      <a target="_blank"  href="../papers/nersurvey/2016 Neural Architectures for Named Entity Recognition.pdf"> PDF</a>
+      </li> 
+
+      <li>Thien Huu Nguyen, Avirup Sil, Georgiana Dinu, Radu Florian. <b>Toward Mention Detection Robustness with Recurrent Neural Networks</b>. https://arxiv.org/pdf/1602.07749.pdf. 2016.
+      <a target="_blank"  href="https://arxiv.org/pdf/1602.07749.pdf"> PDF</a>
+      </li> 
+
+
+    
+
+
+         <li> Matthew E. Peters, Waleed Ammar, Chandra Bhagavatula, Russell Power. <b>Semi-supervised Sequence Tagging with Bidirectional Language Models</b>. ACL 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 ACL Semi-supervised sequence tagging with bidirectional language models.pdf"> PDF</a>
+      </li> 
+
+
+       <li>Quan Tran, Andrew MacKinlay, Antonio Jimeno-Yepes. <b>Named Entity Recognition with Stack Residual LSTM and Trainable Bias Decoding</b>. IJCNLP 2017.
+      <a target="_blank"  href="http://aclweb.org/anthology/I17-1057"> PDF</a>
+      </li> 
+
+
+      <li>  Bill Y. Lin, Frank F. Xu, Zhiyi Luo, Kenny Q. Zhu. <b>Multi-channel BiLSTM-CRF Model for Emerging Named Entity Recognition in Social Media</b>. NUT@EMNLP 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 Multi-channel BiLSTM-CRF Model for Emerging Named Entity Recognition in Social Media"> PDF</a>
+      </li> 
+
+       <li>Nils Reimers, Iryna Gurevych. <b>Reporting Score Distributions Makes a Difference: Performance Study of LSTM-networks for Sequence Tagging</b>. EMNLP 2017.
+      <a target="_blank"  href="http://aclweb.org/anthology/D17-1035"> PDF</a>
+      </li> 
+
+         <li> Liyuan Liu, Jingbo Shang, Xiang Ren, Frank Fangzheng Xu, Huan Gui, Jian Peng, Jiawei Han. <b>Empower Sequence Labeling with Task-Aware Neural Language Model</b>. AAAI 2018.
+      <a target="_blank"  href="https://arxiv.org/pdf/1709.04109.pdf"> PDF</a>
+      </li> 
+
+
+        <li> Abbas Ghaddar and Philippe Langlais. <b>Robust Lexical Features for Improved Neural Network Named-Entity Recognition</b>. arXiv 2018.
+      <a target="_blank"  href="https://arxiv.org/pdf/1806.03489.pdf"> PDF</a>
+      </li> 
+      
+      
+
+    </ul>
+  <br>
+
+
+
+
+
+ <li class="mytoc" > <strong>Word-level RNN Encoder, RNN Tag Decoder</strong></li>  
+    <ul>
+      <li>Suncong Zheng, Feng Wang, Hongyun Bao, Yuexing Hao, Peng Zhou, Bo Xu. <b>Joint Extraction of Entities and Relations Based on a Novel Tagging Scheme</b>. ACL 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 ACL joint extraction of entities and relations based on a novel tagging scheme.pdf"> PDF</a>
+      </li> 
+
+
+        <li>Suncong Zheng, Yuexing Hao, Dongyuan Lu, Hongyun Bao, Jiaming Xu, Hongwei Hao, Bo Xu. <b>Joint Entity and Relation Extraction Based on A Hybrid Neural Network</b>. Neurocomputing 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 Joint entity and relation extraction based on a hybrid neural network.pdf"> PDF</a>
+      </li>
+
+        <li>  Peng Zhou, Suncong Zheng, Jiaming Xu, Zhenyu Qi, Hongyun Bao, Bo Xu. <b>Joint Extraction of Multiple Relations and Entities by Using a Hybrid Neural Network</b>. CCL 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 Joint Extraction of Multiple Relations and Entities by Using a Hybrid Neural Network.pdf"> PDF</a>
+      </li>
+
+
+       <li>   Zhi-Xiu Ye, Zhen-Hua Ling. <b>Hybrid semi-Markov CRF for Neural Sequence Labeling</b>. ACL 2018.
+      <a target="_blank"  href="https://arxiv.org/pdf/1805.03838.pdf"> PDF</a>
+      </li>
+
+
+       <li>Meizhi Ju, Makoto Miwa, Sophia Ananiadou.
+       <b>A Neural Layered Model for Nested Named Entity Recognition</b>.
+       NAACL-HLT 2018.
+      <a target="_blank"  href="http://aclweb.org/anthology/N18-1131"> PDF</a>
+      </li>
+
+
+    </ul>
+  <br>
+
+
+
+
+
+
+
+
+  <li class="mytoc" > <strong>Word-level RNN Encoder, Pointer Tag Decoder</strong></li>  
+    <ul>
+      <li>  Feifei Zhai, Saloni Potdar, Bing Xiang, Bowen Zhou. <b>Neural Models for Sequence Chunking</b>. AAAI 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 AAAI Neural models for sequence chunking.pdf"> PDF</a>
+      </li> 
+    </ul>
+  <br>
+
+
+ <li class="mytoc" > <strong>Fixed-size Ordinally Forgetting Encoding, Feedforward Neural Network </strong></li>  
+    <ul>
+      <li>  Mingbin Xu, Hui Jiang, Sedtawut Watcharawittayakul. <b>A Local Detection Approach for Named Entity Recognition and Mention Detection</b>. ACL 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 ACL A Local Detection Approach for Named Entity Recognition and Mention Detection.pdf"> PDF</a>
+      </li> 
+    </ul>
+  <br>
+
+
+
+
+ <li class="mytoc" > <strong>Multi-task Learning </strong></li>  
+    <ul>
+      <li>  Zhilin Yang, Ruslan Salakhutdinov, William W. Cohen. <b>Multi-Task Cross-Lingual Sequence Tagging from Scratch</b>. https://arxiv.org/pdf/1603.06270.pdf, 2016.
+      <a target="_blank"  href="https://arxiv.org/pdf/1603.06270.pdf"> PDF</a>
+      </li> 
+
+        <li>  Marek Rei. <b>Semi-supervised Multitask Learning for Sequence Labeling</b>. ACL 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 ACL Semi-supervised Multitask Learning for Sequence Labeling.pdf"> PDF</a>
+      </li> 
+    </ul>
+  <br>
+
+  <li class="mytoc" > <strong>Active Learning </strong></li>  
+    <ul>
+      <li>Yanyao Shen, Hyokun Yun, Zachary C. Lipton, Yakov Kronrod, Animashree Anandkumar. <b>Deep Active Learning for Named Entity Recognition</b>. ICLR 2018.
+      <a target="_blank"  href="../papers/nersurvey/2018 ICLR Deep active learning for named entity recognition.pdf"> PDF</a>
+      </li> 
+    </ul>
+  <br>
+
+
+
+  <li class="mytoc" > <strong>Transfer Learning </strong></li>  
+    <ul>
+      <li>  Zhilin Yang, Ruslan Salakhutdinov, William W. Cohen. <b> Transfer Learning for Sequence Tagging with Hierarchical Recurrent Networks</b>. ICLR 2017.
+      <a target="_blank"  href="../papers/nersurvey/2017 ICLR Transfer Learning for sequence tagging with hierarchical recurrent networks.pdf"> PDF</a>
+      </li> 
+    </ul>
+  <br>
+
+
+    <li class="mytoc" > <strong>Reinforcement Learning </strong></li>  
+    <ul>
+      <li>Karthik Narasimhan, Adam Yala, Regina Barzilay. <b> Improving Information Extraction by Acquiring External Evidence with Reinforcement Learning</b>. EMNLP 2016.
+      <a target="_blank"  href="../papers/nersurvey/2016 EMNLP Improving Information Extraction by Acquiring External Evidence with Reinforcement Learning.pdf"> PDF</a>
+      </li> 
+    </ul>
+  <br>
+
+
+
+ <li class="mytoc" > <strong>Deep Learning based NER in Medical Text </strong></li>  
+    <ul>
+      <li>Susmitha Wunnava, Xiao Qin, Tabassum Kakar, Elke A. Rundensteiner, Xiangnan Kong. <b> Bidirectional LSTM-CRF for Adverse Drug Event Tagging in Electronic Health Records</b>. PMLR 2016.
+      <a target="_blank"  href="http://proceedings.mlr.press/v90/wunnava18a/wunnava18a.pdf"> PDF</a>
+      </li> 
+
+
+       <li>Ken Yano.
+       <b>Neural Disease Named Entity Extraction with Character-based BiLSTM+ CRF in Japanese Medical Text</b>. arxiv 2018.
+      <a target="_blank"  href="https://arxiv.org/pdf/1806.03648.pdf"> PDF</a>
+      </li> 
+
+
+
+
+    </ul>
+  <br>
+
+
+
+
+
+ <li class="mytoc" > <strong>Tools</strong></li>  
+    <ul>
+      <li>Franck Dernoncourt, Ji Young Lee, Peter Szolovits. <b> NeuroNER: An Easy-to-Use Program for Named-entity Recognition Based on Neural Networks</b>. EMNLP 2017.
+      <a target="_blank"  href="https://github.com/Franck-Dernoncourt/NeuroNER"> Website</a>
+      </li> 
+
+
+    </ul>
+  <br>
+
+
+       
+
+
+  </ol>
+
+
+
+
+ <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://www-li-jing-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//www-li-jing-com.disqus.com/count.js" async></script>
