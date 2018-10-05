@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Li Jing's homepage</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Li Jing - Nanyang Technological University (NTU)</title>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=0.85">
+
  
 
 
-        <link rel="stylesheet" href="css/style.css">
+
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="css/Raleway.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+
+ <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/jquery.min.js"></script>
+
+  
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
        
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" type="text/css" href="css/custom.css"> 
- <link rel="stylesheet" href="css/github-prettify-theme.css">
-          
+
+        
        
     
 
@@ -37,22 +42,23 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/run_prettify.js"></script>
-  
+   
+
+   
+
   <script src="js/site.js"></script>
-  
 
-  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=eb3a&d=9gYcBi7vGfkRh_ZDs1qVy_FrbDiLr3V4NFRNgJpr6P4"></script> -->
 
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>    
 
-  <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
-  
 
-<!-- create the back to top button -->
+
+
+<!-- back to top button jquery -->
+<!--     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>    -->
+
+
+  <!-- create the back to top button -->
     <script type="text/javascript">
 
     var amountScrolled = 300;
@@ -68,11 +74,23 @@
     $('a.back-to-top, a.simple-back-to-top').click(function() {
       $('html, body').animate({
         scrollTop: 0
-      }, 700);
+      }, 50);
       return false;
     });
     </script>
 
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110819220-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-110819220-2');
+</script>
 
 </head>
 
@@ -82,47 +100,49 @@
 
 
 
- <div class="container">
-
-
-
-
      <!-- back to top button start -->
         <a href="" class="back-to-top">Back to Top</a>
         <!-- back to top button end -->
 
 
 
- <div class="docs-section">  
-        <div class="row">
-            <div class="three columns"> <img align="left"  src='images/jingli.png' width='140'></img> <img align="right" class="headshot" id='JingLI80.jpg' src='images/JingLi18.jpg' width='80%'/> </div>
-            <div class="nine columns">
-            <img align="right" src='images/welcome.png' width='400'/>
-            <br>
-              <p > <h5> <strong>Jing LI <font size="5" face="华文行楷">(李晶)</font></strong></h5> </p>
-              <p ><i class="fa fa-graduation-cap fa-1x"/></i> Ph.D., Research Fellow</p>       <!-- style="line-height:1"   -->    
-              <p ><i class="fa fa-university fa-1x"/></i> School of Computer Science and Engineering, Nanyang Technological University (NTU), Singapore.  <!-- style = "line-height:1" -->
-          <p > <i class="fa fa-home fa-1x"/></i> Blk N4-B3c-14, DMAL, SCSE, 50 Nanyang Avenue, Singapore 639798 </p>
-         <p > <i class="fa fa-phone-square fa-1x"/></i> <img src='images/tel.png' width='14%' style="vertical-align:middle"></img>  &nbsp; &nbsp;&nbsp;&nbsp &nbsp;&nbsp  &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp  <i class="fa fa-envelope fa-1x"/></i> <img src='images/email.png' width='18%' style="vertical-align:middle"></img> </p>   <!-- style = "margin:0px"      --> 
-            </div>
-          </div>
+
+
+ <div class="container">
+
+
+    <div class="navbar-spacer"></div>
+        <div class="navbar" > 
+         <div class="container">  
+            <ul class="navbar-list">
+          <li class="navbar-item-left"><a class="navbar-link-left">Jing Li (<font face="华文行楷">李晶</font>)@ NTU</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="me.html">Misc</a></li>
+              <li class="navbar-item"><a class="navbar-link active" href="blog.html">Blogs</a></li>
+                <li class="navbar-item"><a class="navbar-link " href="index.html">Home</a></li>
+             </ul>
+         </div>
+       </div> 
+
+
+
+
+
+<div class="sidenav" style="font-size:80%;">
+    <img align="middle"  class="headshot" id='JingLI80.jpg' src='images/JingLi18.jpg' width='100%'/> 
+                    <p style="font-size:120%;"> <b>Dr. Jing Li</b></p>
+                   <p> School of Computer Science and Engineering, Nanyang Technological University (NTU), Singapore.</p>
+
+                    <p><b>Address</b>: Blk N4-B3c-14, DMAL, SCSE, 50 Nanyang Avenue, Singapore 639798</p>
+                     <p><b>Email</b>: jli030@e.ntu.edu.sg</p>
+                     <p><b>Phone</b>: +65-96145188</p>
+<br/>
+    <div align="center">  
+      <a target="_blank" href="http://www.clustrmaps.com/map/li-jing.com" title="Visitor Map for li-jing.com"><img src="//www.clustrmaps.com/map_v2.png?u=eb3a&d=9gYcBi7vGfkRh_ZDs1qVy_FrbDiLr3V4NFRNgJpr6P4" /></a>
+  </div>
+
 </div>
 
 
-<!--  <div class="docs-section">  
-        <div class="row">
-            <div class="three columns"> <img align="left"  src='images/jingli.png' width='140'></img> <img align="right" class="headshot" id='JingLI80.jpg' src='images/JingLi18.jpg' width='80%'/> </div>
-            <div class="nine columns">
-            <img align="right" src='images/welcome.png' width='400'/>
-            <br>
-              <p style = "margin:0px"> <h5> <strong>Jing LI <font size="5" face="华文行楷">(李晶)</font></strong></h5> </p>
-              <p style="line-height:1"><i class="fa fa-graduation-cap fa-1x"/></i> Ph.D. Candidate</p>           
-              <p style = "line-height:1"><i class="fa fa-university fa-1x"/></i> School of Computer Science and Engineering, Nanyang Technological University (NTU), Singapore.
-          <p style = "margin:0px"> <i class="fa fa-home fa-1x"/></i> Blk N4-B3c-14, DMAL, SCSE, 50 Nanyang Avenue, Singapore 639798 </p>
-         <p style = "margin:0px"> <i class="fa fa-phone-square fa-1x"/></i> <img src='images/tel.png' width='14%' style="vertical-align:middle"></img>  &nbsp; &nbsp;&nbsp;&nbsp &nbsp;&nbsp  &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp  <i class="fa fa-envelope fa-1x"/></i> <img src='images/email.png' width='18%' style="vertical-align:middle"></img> </p>         
-            </div>
-          </div>
-</div> -->
 
 
 
@@ -130,26 +150,11 @@
 
 
 
-         <div class="navbar-spacer"></div>
-    <div class="navbar" > 
-     <div class="container">    
-        <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-link" href="me.html">Misc</a></li>
-        <li class="navbar-item"><a class="navbar-link active" href="blog.html">Blogs</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
-          
-          <!-- <li class="navbar-item"><a class="navbar-link" href="projects.html">Projects</a></li> -->
-  <!--         <li class="navbar-item"><a class="navbar-link" href="links.html">Links</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="photos.html">Photos</a></li> -->
-          
-        </ul>
-      </div>
-    </div> 
 
 
+<div class="mymain">
 
-  <div class="docs-section">
-    </br>
+<div class="docs-section">
     <h5><strong>Blog List</strong></h5>    
 
 This blog notes some fundamental concepts in computer science, so that I can easily recover my memory when needed. 
@@ -176,6 +181,8 @@ As the saying goes, "Note is better than memory for ever".
 </ul></p>
 
     </div>
+    
+
 
 
 
