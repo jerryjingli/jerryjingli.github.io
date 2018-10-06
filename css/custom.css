@@ -173,7 +173,7 @@ text-align: center;}
     margin-right: 35px;
     text-decoration: none;
     line-height: 5.5rem;
-    color: #ff9900; }
+    color: #33C3F0; }
     .navbar-link-left {
     /*text-transform: lowercase;*/
     font-size: 28px;
@@ -184,7 +184,7 @@ text-align: center;}
     line-height: 5.5rem;
   color: #222;}
   .navbar-link.active {
-    color: #33C3F0; }
+    color: #ff9900; }
   .has-docked-nav .navbar {
     position: fixed;
     top: 0;
