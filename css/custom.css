@@ -340,3 +340,42 @@ a.back-to-top {
     border-right: 1px solid #C0C0C0;
 }
 
+
+
+.sidenav .member .image {
+  display: block;
+  position: relative;
+  text-align: center;
+
+}
+
+
+
+.sidenav .member .image.animate {
+  -webkit-animation-name: teamClip;
+  animation-name: teamClip;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.sidenav .member .image img {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.sidenav .member .image .hover-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.sidenav .member:hover .image .hover-image {
+  z-index: 1;
+}
+
