@@ -31,8 +31,9 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
+ /* margin:0px 5px 0px 5px;*/
   box-sizing: border-box; }
 .column,
 .columns {
