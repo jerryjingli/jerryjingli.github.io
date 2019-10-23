@@ -18,7 +18,16 @@
     overflow-x: hidden;
     padding-top: 10px;
 }
+
+@media screen and (max-width: 360px) {
+  .sidenav {position: static}
+}
 /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed*/
+
+
+/*.year { border-top: 1px solid #ccc; color: #ccc; margin: 0 -3em -2.5ex -2em; padding-top: 1ex; text-align: right; }*/
+.year { border-top: 1px dashed #ccc; color: #ccc;  margin: 0 0em -2ex -1em; padding-top: 1ex; text-align: right; }
+.yearsubmitted{ border-top: 1px #ccc; color: #ccc; margin: 0 0em -3.5ex -1em; padding-top: 1ex; text-align: right; }
 
 .header {
   margin-top: 6rem;
@@ -274,7 +283,7 @@ padding-left: 1.8em;
 list-style-position: outside;
 }
 
-.file_link{background-color:#DEB887;color:#fcfcfc;padding:1px 4px;font-size:smaller}  
+.file_link{background-color:#DAD0AB;color:#fcfcfc;padding:1px 4px;font-size:smaller}  
 .jpaper{background-color:#002062;color:#fcfcfc;;padding:1px 4px;font-size:smaller}
 
 .cpaper{background-color:#0E6251;color:#fcfcfc;;padding:1px 4px;font-size:smaller}
