@@ -1,6 +1,7 @@
 
 .container {
   max-width: 1400px;
+/*  background:rgba(238,238,238,0.95);*/
    /* margin-left: 5%;*/
        font-size: 1.8rem; }
 
@@ -9,20 +10,6 @@
   max-width: 1400px;
    font-size: 1.8rem; }
 
-.sidenav {
-    height: 100%;
-    width: 15%;
-    position: fixed;
-    z-index: 1;
-   
-    overflow-x: hidden;
-    padding-top: 10px;
-}
-
-@media screen and (max-width: 360px) {
-  .sidenav {position: static}
-}
-/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed*/
 
 
 /*.year { border-top: 1px solid #ccc; color: #ccc; margin: 0 -3em -2.5ex -2em; padding-top: 1ex; text-align: right; }*/
@@ -159,6 +146,7 @@ text-align: center;}
     width: 100%;
     height: 5.5rem;
     background: #fff;
+    /*background:rgba(238,238,238,0.95);*/
     z-index: 99;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee; }
@@ -347,6 +335,43 @@ a.back-to-top {
 
 .border-right {
     border-right: 1px solid #C0C0C0;
+}
+
+
+
+
+
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidebar_responsive*/
+.sidenav {
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  /*/*background-color: #f1f1f1;*/
+  /*background:rgba(238,238,238,0.95);*/
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+/*  .sidenav a {float: left;}*/
+  .sidenav .member .image img {width: 50%;}
+  div.mymain {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+  }
+   .sidenav .member .image img {width: 50%;}
 }
 
 
