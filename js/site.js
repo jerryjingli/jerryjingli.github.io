@@ -1,5 +1,84 @@
 $(document).ready(function() {
 
+
+var tkdeif = "IF: 4.936", tnnlsif = "IF: 8.793", tscif = "IF: 5.823", jasistif = "IF: 2.41", insif = "IF: 5.91", pierif = "IF: 1.898", jewaif = "IF: 1.373", geoinfif = "IF: 1.774", emseif = "IF: 3.156", wwwjif = "IF: 2.892";
+
+var i;
+
+var x = document.getElementsByClassName("tkdeif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = tkdeif
+}
+
+var x = document.getElementsByClassName("tnnlsif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = tnnlsif
+}
+
+var x = document.getElementsByClassName("tscif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = tscif
+}
+
+
+var x = document.getElementsByClassName("jasistif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = jasistif
+}
+
+
+var x = document.getElementsByClassName("insif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = insif
+}
+
+
+var x = document.getElementsByClassName("pierif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = pierif
+}
+
+
+var x = document.getElementsByClassName("jewaif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = jewaif
+}
+
+
+var x = document.getElementsByClassName("geoinfif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = geoinfif
+}
+
+
+var x = document.getElementsByClassName("emseif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = emseif
+}
+
+var x = document.getElementsByClassName("wwwjif");
+for (i = 0; i < x.length; i++) {
+ x[i].innerHTML = wwwjif
+}
+
+
+
+
+
+
+
+// document.getElementById("tkdeif").innerHTML = tkdeif;
+// document.getElementById("tnnlsif").innerHTML = tnnlsif;
+// document.getElementById("tscif").innerHTML = tscif;
+// document.getElementById("jasistif").innerHTML = jasistif;
+// document.getElementById("insif").innerHTML = insif;
+// document.getElementById("pierif").innerHTML = pierif;
+// document.getElementById("jewaif").innerHTML = jewaif;
+// document.getElementById("geoinfif").innerHTML = geoinfif;
+// document.getElementById("emseif").innerHTML = emseif;
+
+
+
   // Variables
   var $codeSnippets = $('.code-example-body'),
       $nav = $('.navbar'),
