@@ -184,8 +184,8 @@
  -->
 
 
-      <h5><strong>Full List </strong></h5> 
-<!--       [<a style="text-decoration:none;" href="https://scholar.google.com.sg/citations?hl=en&user=2QxEwWsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>] -->
+      <h5><strong>Full List 
+      [<a style="text-decoration:none;" href="https://scholar.google.com.sg/citations?hl=en&user=2QxEwWsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>] </strong></h5> 
 
 
 <div id="book"> 
@@ -204,7 +204,7 @@
 </div>
 
       
-<jol style="counter-reset: my-j-counter 12;">
+<jol style="counter-reset: my-j-counter 13;">
       <confol style="counter-reset: my-c-counter 19;">
   
 
@@ -230,98 +230,585 @@
  -->
 
 
-<h3 class="year">2020</h3>
+<!-- <h3 class="year">2020</h3>
+ -->
+
+
+
+
+
+<li > <strong>A Survey on Deep Learning for Named Entity Recognition</strong><br/>
+      <i> <strong>Jing Li</strong>, Aixin Sun, Jianglei Han and Chenliang Li<br/>
+      <span class="abbpaper">IEEE TKDE-22</span>- IEEE Transactions on Knowledge and Data Engineering, 34(1): 50-70, 2022. (<strong><span class="tkdeif"></span></strong>) <br/>
+
+      <a class="file_link" href="https://arxiv.org/pdf/1812.09449.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_survey20').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_survey20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
+      <br/>
+
+      <div id="abstract_survey20" class="verbatim" style="display:none">
+    Named entity recognition (NER) is the task to identify text spans that mention named entities, and to classify them into predefined categories such as person, location, organization etc. NER serves as the basis for a variety of natural language applications such as question answering, text summarization, and machine translation. Although early NER systems are successful in producing decent recognition accuracy, they often require much human effort in carefully designing rules or features. In recent years, deep learning, empowered by continuous real-valued vector representations and semantic composition through nonlinear processing, has been employed in NER systems, yielding state-of-the-art performance. In this paper, we provide a comprehensive review on existing deep learning techniques for NER. We first introduce NER resources, including tagged NER corpora and off-the-shelf NER tools. Then, we systematically categorize existing works based on a taxonomy along three axes: distributed representations for input, context encoder, and tag decoder. Next, we survey the most representative methods for recent applied techniques of deep learning in new NER problem settings and applications. Finally, we present readers with the challenges faced by NER systems and outline future directions in this area.
+      </div>
+
+      <div id="bibtex_survey20" style="display:none">
+      <pre class="verbatim">
+@article{jing22nersurvey,
+author    = {Jing Li and Aixin Sun and Jianglei Han and Chenliang Li},
+title     = {A Survey on Deep Learning for Named Entity Recognition},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume    = {34},
+number    = {1},
+pages     = {50--70},
+year      = {2022},
+url       = {https://doi.org/10.1109/TKDE.2020.2981314},
+doi       = {10.1109/TKDE.2020.2981314},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
+
+
+<li > <strong>Neural Text Segmentation and Its Application to Sentiment Analysis</strong><br/>
+      <i> <strong>Jing Li</strong>, Billy Chiu, Shuo Shang and Ling Shao<br/>
+      <span class="abbpaper">IEEE TKDE-22</span>- IEEE Transactions on Knowledge and Data Engineering, 34(2): 828-842, 2022. (<strong><span class="tkdeif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/22Sentiment_Analysis.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_sentiment20').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_sentiment20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> &nbsp 
+
+      <a class="file_link" href="http://138.197.118.157:8000/segbot/"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> Demo</a>  
+
+
+      <br/>
+
+      <div id="abstract_sentiment20" class="verbatim" style="display:none">
+Text segmentation is a fundamental task in natural language processing. Depending on the levels of granularity, the task can be defined as segmenting a document into topical segments, or segmenting a sentence into elementary discourse units (EDUs). Traditional solutions to the two tasks heavily rely on carefully designed features. The recently proposed neural models do not need manual feature engineering, but they either suffer from sparse boundary tags or cannot efficiently handle the issue of variable size output vocabulary. In light of such limitations, we propose a generic end-to-end segmentation model, namely SEGBOT, which first uses a bidirectional recurrent neural network to encode an input text sequence. SEGBOT then uses another recurrent neural networks, together with a pointer network, to select text boundaries in the input sequence. In this way, SEGBOT does not require any hand-crafted features. More importantly, SEGBOT inherently handles the issue of variable size output vocabulary and the issue of sparse boundary tags. In our experiments, SEGBOT outperforms state-of-the-art models on two tasks: document-level topic segmentation and sentence-level EDU segmentation. As a downstream application, we further propose a hierarchical attention model for sentence-level sentiment analysis based on the outcomes of SEGBOT. The hierarchical model can make full use of both word-level and EDU-level information simultaneously for sentence-level sentiment analysis. In particular, it can effectively exploit EDU-level information, such as the inner properties of EDUs, which cannot be fully encoded in word-level features. Experimental results show that our hierarchical model achieves new state-of-the-art results on the Movie Review and Stanford Sentiment Treebank benchmarks.
+   </div>
+
+      <div id="bibtex_sentiment20" style="display:none">
+      <pre class="verbatim">
+@article{li22segsenti,
+author    = {Jing Li and Billy Chiu and Shuo Shang and Ling Shao},
+title     = {Neural Text Segmentation and Its Application to Sentiment Analysis},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume    = {34},
+number    = {2},
+pages     = {828--842},
+year      = {2022},
+url       = {https://doi.org/10.1109/TKDE.2020.2983360},
+doi       = {10.1109/TKDE.2020.2983360},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
+
+
+
+
+
+
+
+
+
+<li > <strong>Neural Named Entity Boundary Detection</strong><br/>
+      <i> <strong>Jing Li</strong>, Aixin Sun and Yukun Ma<br/>
+      <span class="abbpaper">IEEE TKDE-22</span>- IEEE Transactions on Knowledge and Data Engineering, 33(4): 1790-1795, 2021. (<strong><span class="tkdeif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/21Boundary_Detection.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_bdrybot20').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_bdrybot20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> &nbsp 
+
+      <a class="file_link" href="http://138.197.118.157:8000/bdrybot/"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> Demo</a>  
+
+
+      <br/>
+
+      <div id="abstract_bdrybot20" class="verbatim" style="display:none">
+In this paper, we focus on named entity boundary detection , which is to detect the start and end boundaries of an entity mention in text, without predicting its type. The detected entities are input to entity linking or fine-grained typing systems for semantic enrichment. We propose BdryBot , a recurrent neural network encoder-decoder framework with a pointer network to detect entity boundaries from a given sentence. The encoder considers both character-level representations and word-level embeddings to represent the input words. In this way, BdryBot does not require any hand-crafted features. Because of the pointer network, BdryBot overcomes the problem of variable size output vocabulary and the issue of sparse boundary tags. We conduct two sets of experiments, in-domain detection and cross-domain detection, on six datasets. Our results show that BdryBot achieves state-of-the-art performance against five baselines. In addition, our proposed approach can be further enhanced when incorporating contextualized language embeddings into token representations.
+   </div>
+
+      <div id="bibtex_bdrybot20" style="display:none">
+      <pre class="verbatim">
+@article{li21bdrybot,
+author    = {Jing Li and Aixin Sun and Yukun Ma},
+title     = {Neural Named Entity Boundary Detection},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume    = {33},
+number    = {4},
+pages     = {1790--1795},
+year      = {2021},
+url       = {https://doi.org/10.1109/TKDE.2020.2981329},
+doi       = {10.1109/TKDE.2020.2981329},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
+
+
+
+
+<li > <strong>Sequence Labeling with Meta-Learning</strong><br/>
+      <i> <strong>Jing Li</strong>, Peng Han, Xiangnan Ren, Jilin Hu, Lisi Chen and Shuo Shang<br/>
+      <span class="abbpaper">IEEE TKDE-21</span>- IEEE Transactions on Knowledge and Data Engineering, 2021, in Press. (<strong><span class="tkdeif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/21Sequence_Labeling.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_seq21').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_seq21').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
+      <br/>
+
+      <div id="abstract_seq21" class="verbatim" style="display:none">
+Recent neural architectures in sequence labeling have yielded state-of-the-art performance on single domain data such as newswires. However, they still suffer from (i) requiring massive amounts of training data to avoid overfitting; (ii) huge performance degradation when there is a domain shift in the data distribution between training and testing. In this paper, we investigate the problem of domain adaptation for sequence labeling under homogeneous and heterogeneous settings. We propose MetaSeq, a novel meta-learning approach for domain adaptation in sequence labeling. Specifically, MetaSeq incorporates meta-learning and adversarial training strategies to encourage robust, general and transferable representations for sequence labeling. The key advantage of MetaSeq is that it is capable of adapting to new unseen domains with a small amount of annotated data from those domains. We extensively evaluate MetaSeq on named entity recognition, part-of-speech tagging and slot filling tasks under homogeneous and heterogeneous settings. The experimental results show that MetaSeq achieves state-of-the-art performance against eight baselines. Impressively, MetaSeq surpasses the in-domain performance using only 16.17% and 7% of target domain data on average for homogeneous settings, and 34.76%, 24%, 22.5% of target domain data on average for heterogeneous settings.
+      </div>
+
+      <div id="bibtex_seq21" style="display:none">
+      <pre class="verbatim">
+@article{jing22nersurvey,
+author    = {Jing Li and Peng Han and Xiangnan Ren and Jilin Hu and Lisi Chen and Shuo Shang},
+title     = {Sequence Labeling with Meta-Learning},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume    = {34},
+number    = {1},
+pages     = {50--70},
+year      = {2021},
+url       = {https://doi.org/10.1109/TKDE.2021.3118469},
+doi       = {10.1109/TKDE.2021.3118469},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
+
+
+<li > <strong>Domain Generalization for Named Entity Boundary Detection via Meta-Learning</strong><br/>
+      <i> <strong>Jing Li</strong>, Shuo Shang and Lisi Chen<br/>
+      <span class="abbpaper">IEEE TNNLS-21</span>- IEEE Transactions on Neural Networks and Learning Systems, 32(9): 3819-3830, 2021. (<strong><span class="tnnlsif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/21Domain_Generalization.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_domainG20').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_domainG20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_domainG20" class="verbatim" style="display:none">
+Named entity recognition (NER) aims to recognize mentions of rigid designators from text belonging to predefined semantic types, such as person, location, and organization. In this article, we focus on a fundamental subtask of NER, named entity boundary detection, which aims at detecting the start and end boundaries of an entity mention in the text, without predicting its semantic type. The entity boundary detection is essentially a sequence labeling problem. Existing sequence labeling methods either suffer from sparse boundary tags (i.e., entities are rare and nonentities are common) or they cannot well handle the issue of variable size output vocabulary (i.e., need to retrain models with respect to different vocabularies). To address these two issues, we propose a novel entity boundary labeling model that leverages pointer networks to effectively infer boundaries depending on the input sequence. On the other hand, training models on source domains that generalize to new target domains at the test time are a challenging problem because of the performance degradation. To alleviate this issue, we propose METABDRY, a novel domain generalization approach for entity boundary detection without requiring any access to target domain information. Especially, adversarial learning is adopted to encourage domain-invariant representations. Meanwhile, metalearning is used to explicitly simulate a domain shift during training so that metaknowledge from multiple resource domains can be effectively aggregated. As such, METABDRY explicitly optimizes the capability of ``learning to generalize,'' resulting in a more general and robust model to reduce the domain discrepancy. We first conduct experiments to demonstrate the effectiveness of our novel boundary labeling model. We then extensively evaluate METABDRY on eight data sets under domain generalization settings. The experimental results show that METABDRY achieves state-of-the-art results against the recent seven baselines.
+   </div>
+
+      <div id="bibtex_domainG20" style="display:none">
+      <pre class="verbatim">
+@article{li21domaingen,
+author    = {Jing Li and Shuo Shang and Lisi Chen},
+title     = {Domain Generalization for Named Entity Boundary Detection via Metalearning},
+journal   = {IEEE Transactions on Neural Networks and Learning Systems (TNNLS)},
+volume    = {32},
+number    = {9},
+pages     = {3819--3830},
+year      = {2021},
+url       = {https://doi.org/10.1109/TNNLS.2020.3015912},
+doi       = {10.1109/TNNLS.2020.3015912},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
+
+
+
+<li  > <strong>Leveraging Official Content and Social Context to Recommend Software Documentation</strong><br/>
+      <i> <strong>Jing Li</strong>, Zhenchang Xing  and Muhammad Ashad Kabir<br/>
+      <span class="abbpaper">IEEE TSC-21</span>- IEEE Transactions on Services Computing, 14(2), 472-486, 2021. (<strong><span class="tscif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/21TSC.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_tsc18').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_tsc18').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_tsc18" class="verbatim" style="display:none">
+For an unfamiliar Application Programming Interface (API), software developers often access the official documentation to learn its usage, and post questions related to this API on social question and answering (Q&A) sites to seek solutions. The official software documentation often captures the information about functionality and parameters, but lacks detailed descriptions in different usage scenarios. On the contrary, the discussions about APIs on social Q&A sites provide enriching usages. Moreover, existing code search engines and information retrieval systems cannot effectively return relevant software documentation when the issued query does not contain code snippets or API-like terms. In this paper, we present CnCxL2R , a software documentation recommendation strategy incorporating the content of official documentation and the social context on Q&A into a learning-to-rank schema. In the proposed strategy, the content, local context and global context of documentation are considered to select candidate documents. Then four types of features are extracted to learn a ranking model. We conduct a large-scale automatic evaluation on Java documentation recommendation. The results show that CnCxL2R achieves state-of-the-art performance over the eight baseline models. We also compare the CnCxL2R with Google search. The results show that CnCxL2R can recommend more relevant software documentation, and can effectively capture the semantic between the high-level intent in developers’ queries and the low-level implementation in software documentation.
+     </div>
+
+      <div id="bibtex_tsc18" style="display:none">
+      <pre class="verbatim">
+@article{TSCLiXK21,
+  author    = {Jing Li and
+               Zhenchang Xing and
+               Muhammad Ashad Kabir},
+  title     = {Leveraging Official Content and Social Context to Recommend Software
+               Documentation},
+  journal   = {{IEEE} Trans. Serv. Comput.},
+  volume    = {14},
+  number    = {2},
+  pages     = {472--486},
+  year      = {2021},
+  url       = {https://doi.org/10.1109/TSC.2018.2812729},
+  doi       = {10.1109/TSC.2018.2812729},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
+
+
+
 
 
 
 
 <li > <strong>Few-Shot Named Entity Recognition via Meta-Learning</strong><br/>
-       <i> <strong>Jing Li</strong>, Billy Chiu, Shanshan Feng and Hao Wang<br/>
-       <span class="abbpaper">IEEE TKDE-20</span>- IEEE Transactions on Knowledge and Data Engineering, 2020. (<strong><span class="tkdeif"></span></strong>)  
- <a class="file_link" href="https://doi.org/10.1109/TKDE.2020.3038670"  target="_blank"> PDF</a>
-&nbsp  <a class="file_link" href="https://scholar.googleusercontent.com/scholar.bib?q=info:YH8GlWxdLvkJ:scholar.google.com/&output=citation&scisdr=CgXfRTqoEKOX3-rfCfg:AAGBfm0AAAAAYBbaEfgnmei_9J_rPnH3jRc2uzv5HukN&scisig=AAGBfm0AAAAAYBbaEWoc5lT_rL7q658hydDOKYeblcIT&scisf=4&ct=citation&cd=-1&hl=en"  target="_blank"> BibTex</a>
+      <i> <strong>Jing Li</strong>, Billy Chiu, Shanshan Feng and Hao Wang<br/>
+      <span class="abbpaper">IEEE TKDE-20</span>- IEEE Transactions on Knowledge and Data Engineering, 2020, in Press. (<strong><span class="tkdeif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/20Few-Shot.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_fewshot20').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_fewshot20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
+      <br/>
+
+      <div id="abstract_fewshot20" class="verbatim" style="display:none">
+Few-shot learning under the N-way K-shot setting (i.e., K annotated samples for each of N classes) has been widely studied in relation extraction (e.g., FewRel) and image classification (e.g., Mini-ImageNet). Named entity recognition (NER) is typically framed as a sequence labeling problem where the entity classes are inherently entangled together because the entity number and classes in a sentence are not known in advance, leaving the N-way K-shot NER problem so far unexplored. In this paper, we first formally define a more suitable N-way K-shot setting for NER. Then we propose FewNER, a novel meta-learning approach for few-shot NER. FewNER separates the entire network into a task-independent part and a task-specific part. During training in FewNER, the task-independent part is meta-learned across multiple tasks and a task-specific part is learned for each single task in a low-dimensional space. At test time, FewNER keeps the task-independent part fixed and adapts to a new task via gradient descent by updating only the task-specific part, resulting in it being less prone to overfitting and more computationally efficient. The results demonstrate that FewNER achieves state-of-the-art performance against nine baseline methods by significant margins on three adaptation experiments.
+   </div>
+
+      <div id="bibtex_fewshot20" style="display:none">
+      <pre class="verbatim">
+@article{li20fewshot,
+author    = {Jing Li and Billy Chiu and Shanshan Feng and Hao Wang},
+title     = {Few-Shot Named Entity Recognition via Meta-Learning},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume    = {Early Access},
+year      = {2021},
+url       = {https://doi.org/10.1109/TKDE.2020.3038670},
+doi       = {10.1109/TKDE.2020.3038670},
+}
+      </pre>
+      </div>
+
 </i> </li>
 
 
 
-<confli > <strong>HME: A Hyperbolic Metric Embedding Approach for Next-POI Recommendation</strong><br/>
-       <i>Shanshan Feng, Lucas Vinh Tran, Gao Cong, Lisi Chen, <strong>Jing Li</strong> and Fan Li<br/>
-<span class="abbpaper">SIGIR-20</span>- The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, 2020. Acceptance rate: 147/555 (26%).
-<a class="file_link" href="https://dl.acm.org/doi/pdf/10.1145/3397271.3401049"  target="_blank"> PDF</a>
+
+
+
+
+<confli > <strong>HME: A Hyperbolic Metric Embedding Approach for Next-POI Recommendation </strong><br/>
+      <i>Shanshan Feng, Lucas Vinh Tran, Gao Cong, Lisi Chen, <strong>Jing Li</strong> and Fan Li<br/>
+      <span class="abbpaper">SIGIR-20</span>- The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, 2020. Acceptance rate: 147/555 (26%). <br/>
+
+      <a class="file_link" href="papers/HME.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_hme').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_hme').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_hme" class="verbatim" style="display:none">
+With the increasing popularity of location-aware social media services, next-Point-of-Interest (POI) recommendation has gained significant research interest. The key challenge of next-POI recommendation is to precisely learn users' sequential movements from sparse check-in data. To this end, various embedding methods have been proposed to learn the representations of check-in data in the Euclidean space. However, their ability to learn complex patterns, especially hierarchical structures, is limited by the dimensionality of the Euclidean space. To this end, we propose a new research direction that aims to learn the representations of check-in activities in a hyperbolic space, which yields two advantages. First, it can effectively capture the underlying hierarchical structures, which are implied by the power-law distributions of user movements. Second, it provides high representative strength and enables the check-in data to be effectively represented in a low-dimensional space. Specifically, to solve the next-POI recommendation task, we propose a novel hyperbolic metric embedding (HME) model, which projects the check-in data into a hyperbolic space. The HME jointly captures sequential transition, user preference, category and region information in a unified approach by learning embeddings in a shared hyperbolic space. To the best of our knowledge, this is the first study to explore a non-Euclidean embedding model for next-POI recommendation. We conduct extensive experiments on three check-in datasets to demonstrate the superiority of our hyperbolic embedding approach over the state-of-the-art next-POI recommendation algorithms. Moreover, we conduct experiments on another four online transaction datasets for next-item recommendation to further demonstrate the generality of our proposed model.
+   </div>
+
+      <div id="bibtex_hme" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/sigir/FengTCCLL20,
+  author    = {Shanshan Feng and
+               Lucas Vinh Tran and
+               Gao Cong and
+               Lisi Chen and
+               Jing Li and
+               Fan Li},
+  title     = {{HME:} {A} Hyperbolic Metric Embedding Approach for Next-POI Recommendation},
+  booktitle = {Proceedings of the 43rd International {ACM} {SIGIR} conference on
+               research and development in Information Retrieval (SIGIR)},
+  pages     = {1429--1438},
+  publisher = {{ACM}},
+  year      = {2020},
+  url       = {https://doi.org/10.1145/3397271.3401049},
+  doi       = {10.1145/3397271.3401049},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
-<confli > <strong> Contextualized Point-of-Interest Recommendation </strong><br/>
-       <i> Peng Han, Zhongxiao Li, Yong Liu, Peilin Zhao, <strong>Jing Li</strong>, Hao Wang and Shuo Shang<br/>
-<span class="abbpaper">IJCAI-PRICAI-20</span>- The 29th International Joint Conference on Artificial Intelligence and the 17th Pacific Rim International Conference on Artificial Intelligence, 2020. 
-Acceptance rate: 592/4717 (12.6%).
-<a class="file_link" href="https://www.ijcai.org/Proceedings/2020/0344.pdf"  target="_blank"> PDF</a>
+
+
+
+
+<confli > <strong>Contextualized Point-of-Interest Recommendation  </strong><br/>
+      <i> Peng Han, Zhongxiao Li, Yong Liu, Peilin Zhao, <strong>Jing Li</strong>, Hao Wang and Shuo Shang<br/>
+      <span class="abbpaper">IJCAI-PRICAI-20</span>- The 29th International Joint Conference on Artificial Intelligence and the 17th Pacific Rim International Conference on Artificial Intelligence, 2020. 
+Acceptance rate: 592/4717 (12.6%). <br/>
+
+      <a class="file_link" href="https://www.ijcai.org/Proceedings/2020/0344.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_cpoi').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_cpoi').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_cpoi" class="verbatim" style="display:none">
+Point-of-interest (POI) recommendation has become an increasingly important sub-field of recommendation system research. Previous methods employ various assumptions to exploit the contextual information for improving the recommendation accuracy. The common property among them is that similar users are more likely to visit similar POIs and similar POIs would like to be visited by the same user. However, none of existing methods utilize similarity explicitly to make recommendations. In this paper, we propose a new framework for POI recommendation, which explicitly utilizes similarity with contextual information. Specifically, we categorize the context information into two groups, i.e., global and local context, and develop different regularization terms to incorporate them for recommendation. A graph Laplacian regularization term is utilized to exploit the global context information. Moreover, we cluster users into different groups, and let the objective function constrain the users in the same group to have similar predicted POI ratings. An alternating optimization method is developed to optimize our model and get the final rating matrix. The results in our experiments show that our algorithm outperforms all the state-of-the-art methods.
+   </div>
+
+      <div id="bibtex_cpoi" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/ijcai/HanLLZLWS20,
+  author    = {Peng Han and
+               Zhongxiao Li and
+               Yong Liu and
+               Peilin Zhao and
+               Jing Li and
+               Hao Wang and
+               Shuo Shang},
+  title     = {Contextualized Point-of-Interest Recommendation},
+  booktitle = {Proceedings of the Twenty-Ninth International Joint Conference on
+               Artificial Intelligence (IJCAI)},
+  pages     = {2484--2490},
+  year      = {2020},
+  url       = {https://doi.org/10.24963/ijcai.2020/344},
+  doi       = {10.24963/ijcai.2020/344},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
-<li > <strong>A Survey on Deep Learning for Named Entity Recognition</strong><br/>
-       <i> <strong>Jing Li</strong>, Aixin Sun, Jianglei Han and Chenliang Li<br/>
-       <span class="abbpaper">IEEE TKDE-20</span>- IEEE Transactions on Knowledge and Data Engineering, 2020. (<strong><span class="tkdeif"></span></strong>)  
- <a class="file_link" href="https://arxiv.org/abs/1812.09449"  target="_blank"> arXiv</a>
-&nbsp  <a class="file_link" href="https://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1812-09449"  target="_blank"> BibTex</a>
-</i> </li>
-
-
-<li > <strong>Neural Named Entity Boundary Detection</strong><br/>
-       <i> <strong>Jing Li</strong>, Aixin Sun and Yukun Ma<br/>
-<span class="abbpaper">IEEE TKDE-20</span>- IEEE Transactions on Knowledge and Data Engineering, 2020. (<strong><span class="tkdeif"></span></strong>)  <a class="file_link" href="http://138.197.118.157:8000/bdrybot/"  target="_blank"> BdryBot</a>
-</i> </li>
-
-
-<li > <strong>Neural Text Segmentation and Its Application to Sentiment Analysis</strong><br/>
-       <i> <strong>Jing Li</strong>, Billy Chiu, Shuo Shang and Ling Shao<br/>
-<span class="abbpaper">IEEE TKDE-20</span>- IEEE Transactions on Knowledge and Data Engineering, 2020. (<strong><span class="tkdeif"></span></strong>)  <a class="file_link" href="http://138.197.118.157:8000/segbot/"  target="_blank"> SegBot</a>
-</i> </li>
-
-
-<li > <strong>Domain Generalization for Named Entity Boundary Detection via Meta-Learning</strong><br/>
-       <i> <strong>Jing Li</strong>, Shuo Shang and Lisi Chen<br/>
-<span class="abbpaper">IEEE TNNLS-20</span>- IEEE Transactions on Neural Networks and Learning Systems, 2020. (<strong><span class="tnnlsif"></span></strong>) 
-</i> </li>
 
 
 
 
-<confli > <strong> MetaNER: Named Entity Recognition with Meta-Learning </strong><br/>
-       <i> <strong>Jing Li</strong>, Shuo Shang and Ling Shao<br/>
-<span class="abbpaper">WWW-20</span>- The Web Conference, 2020. Acceptance rate: 217/1129 (19.2%).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<confli > <strong>MetaNER: Named Entity Recognition with Meta-Learning </strong><br/>
+      <i> <strong>Jing Li</strong>, Shuo Shang and Ling Shao<br/>
+      <span class="abbpaper">WWW-20</span>- The Web Conference, 2020. Acceptance rate: 217/1129 (19.2%). <br/>
+
+      <a class="file_link" href="papers/20MetaNER.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_metaner').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_metaner').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_metaner" class="verbatim" style="display:none">
+Recent neural architectures in named entity recognition (NER) have yielded state-of-the-art performance on single domain data such as newswires. However, they still suffer from (i) requiring massive amounts of training data to avoid overfitting; (ii) huge performance degradation when there is a domain shift in the data distribution between training and testing. In this paper, we investigate the problem of domain adaptation for NER under homogeneous and heterogeneous settings. We propose MetaNER, a novel meta-learning approach for domain adaptation in NER. Specifically, MetaNER incorporates meta-learning and adversarial training strategies to encourage robust, general and transferable representations for sequence labeling. The key advantage of MetaNER is that it is capable of adapting to new unseen domains with a small amount of annotated data from those domains. We extensively evaluate MetaNER on multiple datasets under homogeneous and heterogeneous settings. The experimental results show that MetaNER achieves state-of-the-art performance against eight baselines. Impressively, MetaNER surpasses the in-domain performance using only 16.17% and 34.76% of target domain data on average for homogeneous and heterogeneous settings, respectively.
+   </div>
+
+      <div id="bibtex_metaner" style="display:none">
+      <pre class="verbatim">
+@inproceedings{li20metaner,
+author    = {Jing Li and Shuo Shang and Ling Shao},
+title     = {MetaNER: Named Entity Recognition with Meta-Learning},
+booktitle = {The Web Conference 2020 (WWW)},
+pages     = {429--440},
+year      = {2020},
+url       = {https://doi.org/10.1145/3366423.3380127},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
-<confli > <strong> Pay Your Trip for Traffic Congestion: Dynamic Pricing in Traffic-Aware Road Networks</strong><br/>
-       <i>Lisi Chen, Shuo Shang, Bin Yao and <strong>Jing Li</strong><br/>
-<span class="abbpaper">AAAI-20</span>- The Thirty-Fourth AAAI Conference on Artificial Intelligence. Acceptance rate: 1591/7737 (20.6%).
+
+
+
+<confli > <strong>Pay Your Trip for Traffic Congestion: Dynamic Pricing in Traffic-Aware Road Networks</strong><br/>
+      <i>Lisi Chen, Shuo Shang, Bin Yao and <strong>Jing Li</strong><br/>
+      <span class="abbpaper">AAAI-20</span>- The Thirty-Fourth AAAI Conference on Artificial Intelligence. Acceptance rate: 1591/7737 (20.6%). <br/>
+
+      <a class="file_link" href="https://ojs.aaai.org//index.php/AAAI/article/view/5397"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_pay').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_pay').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_pay" class="verbatim" style="display:none">
+Pricing is essential in optimizing transportation resource allocation. Congestion pricing is widely used to reduce urban traffic congestion. We propose and investigate a novel Dynamic Pricing Strategy (DPS) to price travelers' trips in intelligent transportation platforms (e.g., DiDi, Lyft, Uber). The trips are charged according to their “congestion contributions” to global urban traffic systems. The dynamic pricing strategy retrieves a matching between n travelers' trips and the potential travel routes (each trip has k potential routes) to minimize the global traffic congestion. We believe that DPS holds the potential to benefit society and the environment, such as reducing traffic congestion and enabling smarter and greener transportation. The DPS problem is challenging due to its high computation complexity (there exist kn matching possibilities). We develop an efficient and effective approximate matching algorithm based on local search, as well as pruning techniques to further enhance the matching efficiency. The accuracy and efficiency of the dynamic pricing strategy are verified by extensive experiments on real datasets.
+   </div>
+
+      <div id="bibtex_pay" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/aaai/ChenSYL20,
+  author    = {Lisi Chen and
+               Shuo Shang and
+               Bin Yao and
+               Jing Li},
+  title     = {Pay Your Trip for Traffic Congestion: Dynamic Pricing in Traffic-Aware
+               Road Networks},
+  booktitle = {The Thirty-Fourth {AAAI} Conference on Artificial Intelligence (AAAI)},
+  pages     = {582--589},
+  year      = {2020},
+  url       = {https://aaai.org/ojs/index.php/AAAI/article/view/5397},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
 
-<h3 class="year">2019</h3>
+
+
+
+
 
 <!-- <p style="margin: 0rem 0 1rem -3rem;"><strong>Published</strong></p> -->
 
-<confli > <strong>Adversarial Transfer for Named Entity Boundary Detection with Pointer Networks
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Deheng Ye and Shuo Shang<br/>
-<span class="abbpaper">IJCAI-19</span>- The 28th International Joint Conference on Artificial Intelligence, Pages 5053-5069, 2019. Acceptance rate: 850/4752 (17.9%).
-<a class="file_link" href="https://www.ijcai.org/proceedings/2019/0702.pdf"  target="_blank"> PDF</a>
+<confli > <strong>Adversarial Transfer for Named Entity Boundary Detection with Pointer Networks</strong><br/>
+      <i> <strong>Jing Li</strong>, Deheng Ye and Shuo Shang<br/>
+      <span class="abbpaper">IJCAI-19</span>- The 28th International Joint Conference on Artificial Intelligence, Pages 5053-5069, 2019. Acceptance rate: 850/4752 (17.9%). <br/>
+
+      <a class="file_link" href="https://www.ijcai.org/proceedings/2019/0702.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_adt19').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_adt19').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_adt19" class="verbatim" style="display:none">
+In this paper, we focus on named entity boundary detection, which aims to detect the start and end boundaries of an entity mention in text, without predicting its type. A more accurate and robust detection approach is desired to alleviate error propagation in downstream applications, such as entity linking and fine-grained typing systems. Here, we first develop a novel entity boundary labeling approach with pointer networks, where the output dictionary size depends on the input, which is variable. Furthermore, we propose AT-Bdry, which incorporates adversarial transfer learning into an end-to-end sequence labeling model to encourage domain-invariant representations. More importantly, AT-Bdry can reduce domain difference in data distributions between the source and target domains, via an unsupervised transfer learning approach (i.e., no annotated target-domain data is necessary). We conduct Formal Text to Formal Text, Formal Text to Informal Text and ablation evaluations on five benchmark datasets. Experimental results show that AT-Bdry achieves state-of-the-art transferring performance against recent baselines. 
+   </div>
+
+      <div id="bibtex_adt19" style="display:none">
+      <pre class="verbatim">
+@inproceedings{li19advt,
+author    = {Jing Li and Deheng Ye andd Shuo Shang},
+title     = {Adversarial Transfer for Named Entity Boundary Detection with Pointer Networks},
+booktitle = {Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence (IJCAI)},
+pages     = {5053--5059},
+year      = {2019},
+url       = {https://doi.org/10.24963/ijcai.2019/702},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
-<confli > <strong> Neural Discourse Segmentation
-</strong><br/>
-       <i> <strong>Jing Li</strong><br/>
-<span class="abbpaper">IJCAI-19</span>- The 28th International Joint Conference on Artificial Intelligence, Pages 6539-6541, 2019.  (Demo)
-<a class="file_link" href="https://www.ijcai.org/proceedings/2019/0949.pdf"  target="_blank"> PDF</a>
+
+
+
+
+<confli > <strong>Neural Discourse Segmentation</strong><br/>
+      <i> <strong>Jing Li</strong><br/>
+      <span class="abbpaper">IJCAI-19</span>- The 28th International Joint Conference on Artificial Intelligence, Pages 6539-6541, 2019.  (Demo) <br/>
+
+      <a class="file_link" href="https://www.ijcai.org/proceedings/2019/0949.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_segdemo').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_segdemo').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_segdemo" class="verbatim" style="display:none">
+Identifying discourse structures and coherence relations in a piece of text is a fundamental task in natural language processing. The first step of this process is segmenting sentences into clause-like units called elementary discourse units (EDUs). Traditional solutions to discourse segmentation heavily rely on carefully designed features. In this demonstration, we present SEGBOT, a system to split a given piece of text into sequence of EDUs by using an end-to-end neural segmentation model. Our model does not require hand-crafted features or external knowledge except word embeddings, yet it outperforms state-of-the-art solutions to discourse segmentation.
+   </div>
+
+      <div id="bibtex_segdemo" style="display:none">
+      <pre class="verbatim">
+@inproceedings{li19segdemo,
+author    = {Jing Li},
+title     = {Neural Discourse Segmentation},
+booktitle = {Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence (IJCAI)},
+pages     = {6539--6541},
+year      = {2019},
+url       = {https://doi.org/10.24963/ijcai.2019/949},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
@@ -331,177 +818,800 @@ Acceptance rate: 592/4717 (12.6%).
 
 
 
-<li  > <strong> LinkLive: Discovering web learning resources for developers from Q&A discussions
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Zhenchang Xing and Aixin Sun<br/>
- <span class="abbpaper">WWWJ-19</span>- World Wide Web. 22(4), Pages 1699-1725, Springer, 2019.  (<strong><span class="wwwjif"></span></strong>)
-<!-- <a class="file_link" href="http://em.rdcu.be/wf/click?upn=lMZy1lernSJ7apc5DgYM8Q5ysxbpck5uRtGsEMpW3D8-3D_w9ZrgIDNsbQdViTU2ZVN-2Br4SYMffPj665QfEOqhKSNdbZg7C4Axr4IEeVI62G1X1ox3c2RK476-2FjJeTx-2Bm9VrQzNdlfKQGVIc-2Blx7lbk1pLPz8PfGUqObFUsS01Sk993LdhJPm3mpCCWHcquwkGVl3pNnBNi67OO6HrF3dVfTwzybndjA35UA7pYX4GCXyPmH6rEKRZV5ek4j6PIsP0QRgnrYBaYlmEk0alM2uMc5kNS5oHWpxN9w92-2Bbq8CO22KfiMVxxhrVhS9wQWUU1qE1g-3D-3D"  target="_blank"> PDF</a> -->
-<a class="file_link" href="papers/wwwj2019.pdf"  target="_blank"> PDF</a>
+
+
+<li> <strong>LinkLive: Discovering web learning resources for developers from Q&A discussions</strong><br/>
+      <i> <strong>Jing Li</strong>, Zhenchang Xing and Aixin Sun<br/>
+      <span class="abbpaper">WWWJ-19</span>- World Wide Web. 22(4), Pages 1699-1725, Springer, 2019.  (<strong><span class="wwwjif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/wwwj2019.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_wwwj19').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_wwwj19').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_wwwj19" class="verbatim" style="display:none">
+Software developers need access to correlated information (e.g., API documentation, Wikipedia pages, Stack Overflow questions and answers) which are often dispersed among different Web resources. This paper is concerned with the situation where a developer is visiting a Web page, but at the same time is willing to explore correlated Web resources to extend his/her knowledge or to satisfy his/her curiosity. Specifically, we present an item-based collaborative filtering technique, named LinkLive, for automatically recommending a list of correlated Web resources for a particular Web page. The recommendation is done by exploiting hyperlink associations from the crowdsourced knowledge on Stack Overflow. We motivate our research using an exploratory study of hyperlink dissemination patterns on Stack Overflow. We then present our LinkLive technique that uses multiple features, including hyperlink co-occurrences in Q&A discussions, locations (e.g., question, answer, or comment) in which hyperlinks are referenced, and votes for posts/comments in which hyperlinks are referenced. Experiments using 7 years of Stack Overflow data show that, our technique recommends correlated Web resources with promising accuracy in an open setting. A user study of 6 participants suggests that practitioners find the recommended Web resources useful for Web discovery.
+     </div>
+
+      <div id="bibtex_wwwj19" style="display:none">
+      <pre class="verbatim">
+@article{LiXS19,
+  author    = {Jing Li and Zhenchang Xing and Aixin Sun},
+  title     = {LinkLive: discovering Web learning resources for developers from Q{\&}A discussions},
+  journal   = {World Wide Web},
+  volume    = {22},
+  number    = {4},
+  pages     = {1699--1725},
+  year      = {2019},
+  url       = {https://doi.org/10.1007/s11280-018-0621-y},
+  doi       = {10.1007/s11280-018-0621-y},
+}
+      </pre>
+      </div>
+
 </i> </li>
 
 
 
-<confli > <strong> DLocRL: A Deep Learning Pipeline for Fine-Grained Location Recognition and Linking in Tweets
-</strong><br/>
-       <i> Canwen Xu, <strong>Jing Li</strong>, Xiangyang Luo, Jiaxin Pei, Chenliang Li, Donghong Ji<br/>
-<span class="abbpaper">WWW-19</span>- The Web Conference, Pages 3391-3397, ACM, 2019. (Short) 
-<a class="file_link" href="https://arxiv.org/abs/1901.07005"  target="_blank"> PDF</a>
+
+
+
+
+<confli > <strong>DLocRL: A Deep Learning Pipeline for Fine-Grained Location Recognition and Linking in Tweets</strong><br/>
+      <i> Canwen Xu, <strong>Jing Li</strong>, Xiangyang Luo, Jiaxin Pei, Chenliang Li, Donghong Ji<br/>
+      <span class="abbpaper">WWW-19</span>- The Web Conference, Pages 3391-3397, ACM, 2019. (Short) <br/>
+
+      <a class="file_link" href="https://arxiv.org/abs/1901.07005"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_dlocrl').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_dlocrl').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_dlocrl" class="verbatim" style="display:none">
+In recent years, with the prevalence of social media and smart devices, people causally reveal their locations such as shops, hotels, and restaurants in their tweets. Recognizing and linking such fine-grained location mentions to well-defined location profiles are beneficial for retrieval and recommendation systems. In this paper, we propose DLocRL, a new deep learning pipeline for fine-grained location recognition and linking in tweets, and verify its effectiveness on a real-world Twitter dataset.
+   </div>
+
+      <div id="bibtex_dlocrl" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/www/XuLLPLJ19,
+  author    = {Canwen Xu and
+               Jing Li and
+               Xiangyang Luo and
+               Jiaxin Pei and
+               Chenliang Li and
+               Donghong Ji},
+  title     = {DLocRL: {A} Deep Learning Pipeline for Fine-Grained Location Recognition
+               and Linking in Tweets},
+  booktitle = {The World Wide Web Conference (WWW)},
+  pages     = {3391--3397},
+  year      = {2019},
+  url       = {https://doi.org/10.1145/3308558.3313491},
+  doi       = {10.1145/3308558.3313491},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
-<li value="27"> <strong> Spatial Keyword Search: A Survey </strong><br/>
-       <i> Lisi Chen, Shuo Shang, Chengcheng Yang and <strong>Jing Li</strong><br/>
-<span class="abbpaper">GeoInformatica-19</span>- GeoInformatica. Springer, July 2019. (<strong><span class="geoinfif"></span></strong>)   <!-- 2016 IF: 4.832 -->
-<a class="file_link" href="https://rdcu.be/bIGLV"  target="_blank"> PDF</a>
+
+
+
+
+
+
+<li> <strong>Spatial Keyword Search: A Survey</strong><br/>
+      <i> Lisi Chen, Shuo Shang, Chengcheng Yang and <strong>Jing Li</strong><br/>
+      <span class="abbpaper">GeoInformatica-19</span>- GeoInformatica. Springer, July 2019. (<strong><span class="geoinfif"></span></strong>) <br/>
+
+      <a class="file_link" href="https://rdcu.be/bIGLV"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_spatialsurvey').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_spatialsurvey').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_spatialsurvey" class="verbatim" style="display:none">
+Spatial keyword search has been playing an indispensable role in personalized route recommendation and geo-textual information retrieval. In this light, we conduct a survey on existing studies of spatial keyword search. We categorize existing works of spatial keyword search based on the types of their input data, output results, and methodologies. For each category, we summarize their common features in terms of input data, output result, indexing scheme, and search algorithms. In addition, we provide detailed description regarding each study of spatial keyword search. This survey summarizes the findings of existing spatial keyword search studies, thus uncovering new insights that may guide software engineers as well as further research.
+     </div>
+
+      <div id="bibtex_spatialsurvey" style="display:none">
+      <pre class="verbatim">
+@article{DBLP:journals/geoinformatica/ChenSYL20,
+  author    = {Lisi Chen and
+               Shuo Shang and
+               Chengcheng Yang and
+               Jing Li},
+  title     = {Spatial keyword search: a survey},
+  journal   = {GeoInformatica},
+  volume    = {24},
+  number    = {1},
+  pages     = {85--106},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/s10707-019-00373-y},
+  doi       = {10.1007/s10707-019-00373-y},
+      </pre>
+      </div>
+
 </i> </li>
 
 
 
 
-<confli > <strong> Subtopic-Driven Multi-Document Summarization</strong><br/>
+
+
+<confli > <strong>Subtopic-Driven Multi-Document Summarization</strong><br/>
       <i>Xin Zheng, Aixin Sun, <strong>Jing Li</strong> and Karthik Muthuswamy <br/>
-<span class="abbpaper">EMNLP-IJCNLP-19</span>- 2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing, Pages 3144-3153, 2019. Acceptance rate: 684/2877 (23.8%).
+      <span class="abbpaper">EMNLP-IJCNLP-19</span>- 2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing, Pages 3144-3153, 2019. Acceptance rate: 684/2877 (23.8%). <br/>
+
+      <a class="file_link" href="https://aclanthology.org/D19-1311.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_xinemnlp').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_xinemnlp').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_xinemnlp" class="verbatim" style="display:none">
+In multi-document summarization, a set of documents to be summarized is assumed to be on the same topic, known as the underlying topic in this paper. That is, the underlying topic can be collectively represented by all the documents in the set. Meanwhile, different documents may cover various different subtopics and the same subtopic can be across several documents. Inspired by topic model, the underlying topic of a document set can also be viewed as a collection of different subtopics of different importance. In this paper, we propose a summarization model called STDS. The model generates the underlying topic representation from both document view and subtopic view in parallel. The learning objective is to minimize the distance between the representations learned from the two views. The contextual information is encoded through a hierarchical RNN architecture. Sentence salience is estimated in a hierarchical way with subtopic salience and relative sentence salience, by considering the contextual information. Top ranked sentences are then extracted as a summary. Note that the notion of subtopic enables us to bring in additional information (e.g. comments to news articles) that is helpful for document summarization. Experimental results show that the proposed solution outperforms state-of-the-art methods on benchmark datasets.
+   </div>
+
+      <div id="bibtex_xinemnlp" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/emnlp/ZhengSLM19,
+  author    = {Xin Zheng and
+               Aixin Sun and
+               Jing Li and
+               Karthik Muthuswamy},
+  title     = {Subtopic-driven Multi-Document Summarization},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural
+               Language Processing and the 9th International Joint Conference on
+               Natural Language Processing (EMNLP-IJCNLP)},
+  pages     = {3151--3160},
+  publisher = {Association for Computational Linguistics},
+  year      = {2019},
+  url       = {https://doi.org/10.18653/v1/D19-1311},
+  doi       = {10.18653/v1/D19-1311},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
 
-<h3 class="year">2018</h3>
+
 
 <li > <strong>To Do or Not To Do: Distill Crowdsourced Negative Caveats to Augment API Documentation</strong><br/>
-       <i> <strong>Jing Li</strong>, Aixin Sun and Zhenchang Xing<br/>
- <span class="abbpaper">JASIST-18</span>- Journal of the Association for Information Science and Technology. 
-Volume 69, Issue 12, Pages 1460-1475, Wiley, 2018. (<strong><span class="jasistif"></span></strong>)
-<!--   <a class="file_link" href="http://dx.doi.org/10.1002/asi.24067"  target="_blank"> PDF</a> -->
-<a class="file_link" href="papers/JASIST2018.pdf"  target="_blank"> PDF</a>
-</i> </li>  
+      <i> <strong>Jing Li</strong>, Aixin Sun and Zhenchang Xing<br/>
+       <span class="abbpaper">JASIST-18</span>- Journal of the Association for Information Science and Technology. Volume 69, Issue 12, Pages 1460-1475, Wiley, 2018. (<strong><span class="jasistif"></span></strong>)<br/>
+
+      <a class="file_link" href="papers/JASIST2018.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_jasist18').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_jasist18').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_jasist18" class="verbatim" style="display:none">
+Negative caveats of application programming interfaces (APIs) are about “how not to use an API,” which are often absent from the official API documentation. When these caveats are overlooked, programming errors may emerge from misusing APIs, leading to heavy discussions on Q&A websites like Stack Overflow. If the overlooked caveats could be mined from these discussions, they would be beneficial for programmers to avoid misuse of APIs. However, it is challenging because the discussions are informal, redundant, and diverse. For this, for example, we propose Disca, a novel approach for automatically Distilling desirable API negative caveats from unstructured Q&A discussions. Through sentence selection and prominent term clustering, Disca ensures that distilled caveats are context‐independent, prominent, semantically diverse, and nonredundant. Quantitative evaluation in our experiments shows that the proposed Disca significantly outperforms four text‐summarization techniques. We also show that the distilled API negative caveats could greatly augment API documentation through qualitative analysis.
+     </div>
+
+      <div id="bibtex_jasist18" style="display:none">
+      <pre class="verbatim">
+@article{LiSX18,
+  author    = {Jing Li and Aixin Sun and Zhenchang Xing},
+  title     = {To Do or Not To Do: Distill crowdsourced negative caveats to augment api documentation},
+  journal   = {J. Assoc. Inf. Sci. Technol.},
+  volume    = {69},
+  number    = {12},
+  pages     = {1460--1475},
+  year      = {2018},
+  url       = {https://doi.org/10.1002/asi.24067},
+  doi       = {10.1002/asi.24067},
+}
+      </pre>
+      </div>
+
+</i> </li>
+
+
 
 
 <confli  > <strong>SegBot: A Generic Neural Text Segmentation Model with Pointer Network</strong><br/>
-       <i> <strong>Jing Li</strong>, Aixin Sun and Shafiq Joty<br/>
-  <span class="abbpaper">IJCAI-18</span>-The 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence. Pages 4166-4172, 2018. Acceptance rate: 710/3470 (20.5%).  
-  <a class="file_link" href="https://www.ijcai.org/proceedings/2018/0579.pdf"  target="_blank"> PDF</a> &nbsp  <a class="file_link" href="http://138.197.118.157:8000/segbot/"  target="_blank"> Website</a>
+      <i> <strong>Jing Li</strong>, Aixin Sun and Shafiq Joty<br/>
+      <span class="abbpaper">IJCAI-18</span>-The 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence. Pages 4166-4172, 2018. Acceptance rate: 710/3470 (20.5%).  <br/>
+
+      <a class="file_link" href="https://www.ijcai.org/proceedings/2018/0579.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_segbot').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_segbot').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>  &nbsp 
+
+       <a class="file_link" href="http://138.197.118.157:8000/segbot/"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> Demo</a>  
+
+
+      <br/>
+
+      <div id="abstract_segbot" class="verbatim" style="display:none">
+Text segmentation is a fundamental task in natural language processing that comes in two levels of granularity: (i) segmenting a document into a sequence of topical segments (topic segmentation), and (ii) segmenting a sentence into a sequence of elementary discourse units (EDU segmentation). Traditional solutions to the two tasks heavily rely on carefully designed features. The recently proposed neural models do not need manual feature engineering, but they either suffer from sparse boundary tags or they cannot well handle the issue of variable size output vocabulary. We propose a generic end-to-end segmentation model called SegBot. SegBot uses a bidirectional recurrent neural network to encode input text sequence. The model then uses another recurrent neural network together with a pointer network to select text boundaries in the input sequence. In this way, SegBot does not require hand-crafted features. More importantly, our model inherently handles the issue of variable size output vocabulary and the issue of sparse boundary tags. In our experiments, SegBot outperforms state-of-the-art models on both topic and EDU segmentation tasks.
+   </div>
+
+      <div id="bibtex_segbot" style="display:none">
+      <pre class="verbatim">
+@inproceedings{LiSJ18segbot,
+  author    = {Jing Li and Aixin Sun and Shafiq R. Joty},
+  title     = {SegBot: {A} Generic Neural Text Segmentation Model with Pointer Network},
+  booktitle = {Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence (IJCAI)},
+  pages     = {4166--4172},
+  year      = {2018},
+  url       = {https://doi.org/10.24963/ijcai.2018/579},
+  doi       = {10.24963/ijcai.2018/579},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
-<confli> <strong>API Caveat Explorer: Surfacing Nagative Usages from Practice 
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Aixin Sun, Zhenchang Xing and Lei Han<br/>
-<span class="abbpaper">SIGIR-18</span>-The 41st International ACM SIGIR Conference on Research and Development in Information Retrieval, Pages 1293-1296. ACM, 2018. (Demo)   &nbsp  <a class="file_link" href="http://138.197.118.157:8000/caveat/"  target="_blank"> Website</a>
-<!-- <a class="file_link" href="https://dl.acm.org/citation.cfm?id=3209978.3210170"  target="_blank"> PDF</a> -->
-<a class="file_link" href="papers/SIGIR18Demo.pdf"  target="_blank"> PDF</a>
+
+
+<confli> <strong>API Caveat Explorer: Surfacing Nagative Usages from Practice</strong><br/>
+      <i> <strong>Jing Li</strong>, Aixin Sun, Zhenchang Xing and Lei Han<br/>
+      <span class="abbpaper">SIGIR-18</span>-The 41st International ACM SIGIR Conference on Research and Development in Information Retrieval, Pages 1293-1296. ACM, 2018. (Demo)  <br/>
+
+      <a class="file_link" href="papers/SIGIR18Demo.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_apicat').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_apicat').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>  &nbsp 
+
+       <a class="file_link" href="http://138.197.118.157:8000/caveat/"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> Demo</a>  
+
+
+      <br/>
+
+      <div id="abstract_apicat" class="verbatim" style="display:none">
+Application programming interface (API) documentation well describes an API and how to use it. However, official documentation does not describe "how not to use it" or the different kinds of errors when an API is used wrongly. Programming caveats are negative usages of an API. When these caveats are overlooked, errors may emerge, leading to heavy discussions on Q&A websites like Stack Overflow. In this demonstration, we present API Caveat Explorer, a search system to explore API caveats that are mined from large-scale unstructured discussions on Stack Overflow. API Caveat Explorer takes API-oriented queries such as "HashMap" and retrieves API caveats by text summarization techniques. API caveats are represented by sentences, which are context-independent, prominent, semantically diverse and non-redundant. The system provides a web-based interface that allows users to interactively explore the full picture of all discovered caveats of an API, and the details of each. The potential users of API Caveat Explorer are programmers and educators for learning and teaching APIs.
+   </div>
+
+      <div id="bibtex_apicat" style="display:none">
+      <pre class="verbatim">
+@inproceedings{LiSXH18,
+  author    = {Jing Li and
+               Aixin Sun and
+               Zhenchang Xing and
+               Lei Han},
+  title     = {{API} Caveat Explorer - Surfacing Negative Usages from Practice: An
+               API-oriented Interactive Exploratory Search System for Programmers},
+  booktitle = {The 41st International {ACM} {SIGIR} Conference on Research {\&}
+               Development in Information Retrieval},
+  pages     = {1293--1296},
+  year      = {2018},
+  url       = {https://doi.org/10.1145/3209978.3210170},
+  doi       = {10.1145/3209978.3210170},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
-  <li > <strong>Learning to Answer Programming Questions with Software Documentation through Social Context Embedding
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Aixin Sun and Zhenchang Xing<br/>
-<span class="abbpaper">INS-18</span>- Information Sciences. Volumes 448–449, Pages 36-52,  June 2018, Elsevier. (<strong><span class="insif"></span></strong>)   <!-- 2016 IF: 4.832 -->
-<!-- <a class="file_link" href="https://www.sciencedirect.com/science/article/pii/S0020025517303845"  target="_blank"> PDF</a> -->
-<a class="file_link" href="papers/LearingtoAnswer.pdf"  target="_blank"> PDF</a>
+<li > <strong>Learning to Answer Programming Questions with Software Documentation through Social Context Embedding</strong><br/>
+      <i> <strong>Jing Li</strong>, Aixin Sun and Zhenchang Xing<br/>
+      <span class="abbpaper">INS-18</span>- Information Sciences. Volumes 448–449, Pages 36-52,  June 2018, Elsevier. (<strong><span class="insif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/18LearingtoAnswer.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_l2a18').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_l2a18').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_l2a18" class="verbatim" style="display:none">
+Official software documentation provides a comprehensive overview of software usages, but not on specific programming tasks or use cases. Often there is a mismatch between the documentation and a question on a specific programming task because of different wordings. We observe from Stack Overflow that the best answers to programmers’ questions often contain links to formal documentation. In this paper, we propose a novel deep-learning-to-answer framework, named QDLinker, for answering programming questions with software documentation. QDLinker learns from the large volume of discussions in community-based question answering site to bridge the semantic gap between programmers’ questions and software documentation. Specifically, QDLinker learns question-documentation semantic representation from these question answering discussions with a four-layer neural network, and incorporates semantic and content features into a learning-to-rank schema. Our approach does not require manual feature engineering or external resources to infer the degree of relevance between a question and documentation. Through extensive experiments, results show that QDLinker effectively answers programming questions with direct links to software documentation. QDLinker significantly outperforms the baselines based on traditional retrieval models and Web search services dedicated for software documentation retrieval. The user study shows that QDLinker effectively bridges the semantic gap between the intent of a programming question and the content of software documentation.
+     </div>
+
+      <div id="bibtex_l2a18" style="display:none">
+      <pre class="verbatim">
+@article{L2ALiSX18,
+  author    = {Jing Li and
+               Aixin Sun and
+               Zhenchang Xing},
+  title     = {Learning to answer programming questions with software documentation
+               through social context embedding},
+  journal   = {Information Sciences},
+  volume    = {448-449},
+  pages     = {36--52},
+  year      = {2018},
+  url       = {https://doi.org/10.1016/j.ins.2018.03.014},
+  doi       = {10.1016/j.ins.2018.03.014},
+}
+      </pre>
+      </div>
+
 </i> </li>
 
 
 
-<li  > <strong>Leveraging Official Content and Social Context to Recommend Software Documentation
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Zhenchang Xing  and Ashad Kabir<br/>
-<span class="abbpaper">IEEE TSC-18</span>- IEEE Transactions on Services Computing. IEEE, 2018. (<strong><span class="tscif"></span></strong>)  <!-- 2016 IF: 4.832 -->
-<!--  <a class="file_link" href="http://ieeexplore.ieee.org/document/8307192/"  target="_blank"> PDF</a> -->
-<a class="file_link" href="papers/TSC18.pdf"  target="_blank"> PDF</a>
+
+
+
+
+
+
+
+
+
+
+
+
+<confli > <strong>HDSKG: Harvesting Domain Specific Knowledge Graph from Content of Webpages</strong><br/>
+      <i> Xuejiao Zhao, Zhenchang Xing, Muhammad Ashad Kabir, Naoya Sawada, <strong>Jing Li</strong> and Shangwei Lin<br/>
+      <span class="abbpaper">SANER-17</span>-The 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering. Acceptance rate: 34/140 (24.3%).   <br/>
+
+      <a class="file_link" href="papers/HDSKG.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_hdskg').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_hdskg').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_hdskg" class="verbatim" style="display:none">
+Knowledge graph is useful for many different domains like search result ranking, recommendation, exploratory search, etc. It integrates structural information of concepts across multiple information sources, and links these concepts together. The extraction of domain specific relation triples (subject, verb phrase, object) is one of the important techniques for domain specific knowledge graph construction. In this research, an automatic method named HDSKG is proposed to discover domain specific concepts and their relation triples from the content of webpages. We incorporate the dependency parser with rule-based method to chunk the relations triple candidates, then we extract advanced features of these candidate relation triples to estimate the domain relevance by a machine learning algorithm. For the evaluation of our method, we apply HDSKG to Stack Overflow (a Q&A website about computer programming). As a result, we construct a knowledge graph of software engineering domain with 35279 relation triples, 44800 concepts, and 9660 unique verb phrases. The experimental results show that both the precision and recall of HDSKG (0.78 and 0.7 respectively) is much higher than the openIE (0.11 and 0.6 respectively). The performance is particularly efficient in the case of complex sentences. Further more, with the self-training technique we used in the classifier, HDSKG can be applied to other domain easily with less training data.
+   </div>
+
+      <div id="bibtex_hdskg" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/wcre/ZhaoXKSLL17,
+  author    = {Xuejiao Zhao and
+               Zhenchang Xing and
+               Muhammad Ashad Kabir and
+               Naoya Sawada and
+               Jing Li and
+               Shang{-}Wei Lin},
+  editor    = {Martin Pinzger and
+               Gabriele Bavota and
+               Andrian Marcus},
+  title     = {{HDSKG:} Harvesting domain specific knowledge graph from content of
+               webpages},
+  booktitle = {{IEEE} 24th International Conference on Software Analysis, Evolution
+               and Reengineering (SANER)},
+  pages     = {56--67},
+  publisher = {{IEEE} Computer Society},
+  year      = {2017},
+  url       = {https://doi.org/10.1109/SANER.2017.7884609},
+  doi       = {10.1109/SANER.2017.7884609},
+}
+      </pre>
+      </div>
+
+</i> </confli>
+
+
+
+
+
+
+
+
+
+
+
+
+<confli > <strong>From Discussion to Wisdom: Web Resource Recommendation for Hyperlinks in Stack Overflow</strong><br/>
+      <i> <strong>Jing Li</strong>, Zhenchang Xing, Deheng Ye and Xuejiao Zhao<br/>
+      <span class="abbpaper">SAC-16</span>-The 31st ACM Symposium on Applied Computing,2016. Acceptance rate: 252/1047 (24.07%).  <br/>
+
+      <a class="file_link" href="papers/WisLinker.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_wislinker').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_wislinker').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_wislinker" class="verbatim" style="display:none">
+Application programming interface (API) documentation well describes an API and how to use it. However, official documentation does not describe "how not to use it" or the different kinds of errors when an API is used wrongly. Programming caveats are negative usages of an API. When these caveats are overlooked, errors may emerge, leading to heavy discussions on Q&A websites like Stack Overflow. In this demonstration, we present API Caveat Explorer, a search system to explore API caveats that are mined from large-scale unstructured discussions on Stack Overflow. API Caveat Explorer takes API-oriented queries such as "HashMap" and retrieves API caveats by text summarization techniques. API caveats are represented by sentences, which are context-independent, prominent, semantically diverse and non-redundant. The system provides a web-based interface that allows users to interactively explore the full picture of all discovered caveats of an API, and the details of each. The potential users of API Caveat Explorer are programmers and educators for learning and teaching APIs.
+   </div>
+
+      <div id="bibtex_wislinker" style="display:none">
+      <pre class="verbatim">
+@inproceedings{SACLiXYZ16,
+  author    = {Jing Li and
+               Zhenchang Xing and
+               Deheng Ye and
+               Xuejiao Zhao},
+  editor    = {Sascha Ossowski},
+  title     = {From discussion to wisdom: web resource recommendation for hyperlinks
+               in stack overflow},
+  booktitle = {Proceedings of the 31st Annual {ACM} Symposium on Applied Computing (SAC)},
+  pages     = {1127--1133},
+  year      = {2016},
+  url       = {https://doi.org/10.1145/2851613.2851815},
+  doi       = {10.1145/2851613.2851815},
+}
+      </pre>
+      </div>
+
+</i> </confli>
+
+
+
+
+
+      
+<confli>   <strong>BPMiner: Mining Developers' Behavior Patterns from Screen-Captured Task Videos</strong><br/>
+      <i> <strong>Jing Li</strong>, Lingfeng Bao, Zhenchang Xing, Xinyu Wang and Bo Zhou<br/>
+      <span class="abbpaper">SAC-16</span>-The 31st ACM Symposium on Applied Computing, 2016. Acceptance rate: 252/1047 (24.07%).  <br/>
+
+      <a class="file_link" href="papers/BPMiner.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_bpminer').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_bpminer').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_bpminer" class="verbatim" style="display:none">
+Many user studies of software development use screen-capture software to record developers' behavior for post-mortem analysis. However, extracting behavioral patterns from screencaptured videos requires manual transcription and coding of videos, which is often tedious and error-prone. Automatically extracting Human-Computer Interaction (HCI) data from screen-captured videos and systematically analyzing behavioral data will help researchers analyze developers' behavior in software development more effectively and efficiently. In this paper, we present BPMiner, a novel behavior analysis approach to mine developers' behavior patterns from screencaptured videos using computer vision techniques and exploratory sequential pattern analysis. We have implemented a proof-of-concept prototype of BPMiner, and applied the BPMiner prototype to study the developers' online search behavior during software development. Our study suggests that the BPMiner approach can open up new ways to study developers' behavior in software development.
+   </div>
+
+      <div id="bibtex_bpminer" style="display:none">
+      <pre class="verbatim">
+@inproceedings{SACLiBXWZ16,
+  author    = {Jing Li and
+               Lingfeng Bao and
+               Zhenchang Xing and
+               Xinyu Wang and
+               Bo Zhou},
+  editor    = {Sascha Ossowski},
+  title     = {BPMiner: mining developers' behavior patterns from screen-captured
+               task videos},
+  booktitle = {Proceedings of the 31st Annual {ACM} Symposium on Applied Computing (SAC)},
+  pages     = {1371--1377},
+  year      = {2016},
+  url       = {https://doi.org/10.1145/2851613.2851771},
+  doi       = {10.1145/2851613.2851771},
+}
+      </pre>
+      </div>
+
+</i> </confli>
+
+
+
+
+
+
+<confli > <strong>Software-specific Part-of-speech Tagging: An Experimental Study on Stack Overflow</strong><br/>
+      <i> Deheng Ye, Zhenchang Xing, <strong>Jing Li</strong> and Nachiket Kapre<br/>
+      <span class="abbpaper">SAC-16</span>-The 31st ACM Symposium on Applied Computing, 2016. Acceptance rate: 252/1047 (24.07%). <br/>
+
+      <a class="file_link" href="papers/POS.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_pos').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_pos').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_pos" class="verbatim" style="display:none">
+Part-of-speech (POS) tagging performance degrades on out-of-domain data due to the lack of domain knowledge. Software engineering knowledge, embodied in textual documentations, bug reports and online forum discussions, is expressed in natural language, but is full of domain terms, software entities and software-specific informal languages. Such software texts call for software-specific POS tagging. In the software engineering community, there have been several attempts leveraging POS tagging technique to help solve software engineering tasks. However, little work is done for POS tagging on software natural language texts. In this paper, we build a software-specific POS tagger, called S-POS, for processing the textual discussions on Stack Overflow. We target at Stack Overflow because it has become an important developer-generated knowledge repository for software engineering. We define a POS tagset that is suitable for describing software engineering knowledge, select corpus, develop a custom tokenizer, annotate data, design features for supervised model training, and demonstrate that the tagging accuracy of S-POS outperforms that of the Stanford POS Tagger when tagging software texts. Our work presents a feasible roadmap to build software-specific POS tagger for the socio-professional contents on Stack Overflow, and reveals challenges and opportunities for advanced software-specific information extraction.
+   </div>
+
+      <div id="bibtex_pos" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/sac/YeXLK16,
+  author    = {Deheng Ye and
+               Zhenchang Xing and
+               Jing Li and
+               Nachiket Kapre},
+  editor    = {Sascha Ossowski},
+  title     = {Software-specific part-of-speech tagging: an experimental study on
+               stack overflow},
+  booktitle = {Proceedings of the 31st Annual {ACM} Symposium on Applied Computing (SAC)},
+  pages     = {1378--1385},
+  publisher = {{ACM}},
+  year      = {2016},
+  url       = {https://doi.org/10.1145/2851613.2851772},
+  doi       = {10.1145/2851613.2851772},
+}
+      </pre>
+      </div>
+
+</i> </confli>
+
+
+
+
+
+
+<li  > <strong>Extracting and Analyzing Time-Series HCI Data from Screen-Captured Task Videos</strong><br/>
+      <i> Lingfeng Bao, <strong>Jing Li</strong>, Zhenchang Xing, Xinyu Wang, Xin xia and Bo Zhou<br/>
+      <span class="abbpaper">EMSE-16</span>- Empirical Software Engineering, Springer, Pages 1-41, 2016. (<strong><span class="emseif"></span></strong>) <br/>
+
+      <a class="file_link" href="papers/EMSE2016.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_emse').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_emse').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_emse" class="verbatim" style="display:none">
+Recent years have witnessed the increasing emphasis on human aspects in software engineering research and practices. Our survey of existing studies on human aspects in software engineering shows that screen-captured videos have been widely used to record developers’ behavior and study software engineering practices. The screen-captured videos provide direct information about which software tools the developers interact with and which content they access or generate during the task. Such Human-Computer Interaction (HCI) data can help researchers and practitioners understand and improve software engineering practices from human perspective. However, extracting time-series HCI data from screen-captured task videos requires manual transcribing and coding of videos, which is tedious and error-prone. In this paper we report a formative study to understand the challenges in manually transcribing screen-captured videos into time-series HCI data. We then present a computer-vision based video scraping technique to automatically extract time-series HCI data from screen-captured videos. We also present a case study of our scvRipper tool that implements the video scraping technique using 29-hours of task videos of 20 developers in two development tasks. The case study not only evaluates the runtime performance and robustness of the tool, but also performs a detailed quantitative analysis of the tool’s ability to extract time-series HCI data from screen-captured task videos. We also study the developer’s micro-level behavior patterns in software development from the quantitative analysis.
+     </div>
+
+      <div id="bibtex_emse" style="display:none">
+      <pre class="verbatim">
+@article{DBLP:journals/ese/BaoLXWXZ17,
+  author    = {Lingfeng Bao and
+               Jing Li and
+               Zhenchang Xing and
+               Xinyu Wang and
+               Xin Xia and
+               Bo Zhou},
+  title     = {Extracting and analyzing time-series {HCI} data from screen-captured
+               task videos},
+  journal   = {Empir. Softw. Eng.},
+  volume    = {22},
+  number    = {1},
+  pages     = {134--174},
+  year      = {2017},
+  url       = {https://doi.org/10.1007/s10664-015-9417-1},
+  doi       = {10.1007/s10664-015-9417-1},
+}
+      </pre>
+      </div>
+
 </i> </li>
 
 
 
-<h3 class="year">2017</h3>
 
-  <confli >  <strong>HDSKG: Harvesting Domain Specific Knowledge Graph from Content of Webpages
-</strong><br/>
-       <i> Xuejiao Zhao, Zhenchang Xing, Muhammad Ashad Kabir, Naoya Sawada, <strong>Jing Li</strong> and Shangwei Lin<br/>
-<span class="abbpaper">SANER-17</span>-The 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering. Acceptance rate: 34/140 (24.3%). 
-<a class="file_link" href="papers/HDSKG.pdf"  target="_blank"> PDF</a>
+
+<confli > <strong>Learning to Extract API Mentions from Informal Natural Language Discussions</strong><br/>
+      <i> Deheng Ye, Zhenchang Xing, Chee Yong Foo, <strong>Jing Li</strong>, and Nachiket Kapre<br/>
+      <span class="abbpaper">ICSME-16</span>-The 32nd International Conference on Software Maintenance and Evolution. Acceptance rate: 37/125 (29%).  <br/>
+
+      <a class="file_link" href="papers/APIMentions.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_icsme').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_icsme').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_icsme" class="verbatim" style="display:none">
+When discussing programming issues on social platforms (e.g, Stack Overflow, Twitter), developers often mention APIs in natural language texts. Extracting API mentions in natural language texts is a prerequisite for effective indexing and searching for API-related information in software engineering social content. However, the informal nature of social discussions creates two fundamental challenges for API extraction: common-word polysemy and sentence-format variations. Common-word polysemy refers to the ambiguity between the API sense of a common word and the normal sense of the word (e.g., append, apply and merge). Sentence-format variations refer to the lack of consistent sentence writing format for inferring API mentions. Existing API extraction techniques fall short to address these two challenges, because they assume distinct API naming conventions (e.g., camel case, underscore) or structured sentence format (e.g., code-like phrase, API annotation, or full API name). In this paper, we propose a semi-supervised machine-learning approach that exploits name synonyms and rich semantic context of API mentions to extract API mentions in informal social text. The key innovation of our approach is to exploit two complementary unsupervised language models learned from the abundant unlabeled text to model sentence-format variations and to train a robust model with a small set of labeled data and an iterative self-training process. The evaluation of 1,205 API mentions of the three libraries (Pandas, Numpy, and Matplotlib) in Stack Overflow texts shows that our approach significantly outperforms existing API extraction techniques based on language-convention and sentence-format heuristics and our earlier machine-learning based method for named-entity recognition.
+   </div>
+
+      <div id="bibtex_icsme" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/icsm/YeXFLK16,
+  author    = {Deheng Ye and
+               Zhenchang Xing and
+               Chee Yong Foo and
+               Jing Li and
+               Nachiket Kapre},
+  title     = {Learning to Extract {API} Mentions from Informal Natural Language
+               Discussions},
+  booktitle = {2016 {IEEE} International Conference on Software Maintenance and Evolution (ICSME)},
+  pages     = {389--399},
+  year      = {2016},
+  url       = {https://doi.org/10.1109/ICSME.2016.11},
+  doi       = {10.1109/ICSME.2016.11},
+}
+      </pre>
+      </div>
+
 </i> </confli>
 
 
 
 
 
-<h3 class="year">2016</h3>
 
 
+<confli > <strong>Software-specific Named Entity Recognition in Software Engineering Social Content</strong><br/>
+      <i> Deheng Ye, Zhenchang Xing, Chee Yong Foo, Zi Qun Ang, <strong>Jing Li</strong> and Nachiket Kapre<br/>
+      <span class="abbpaper">SANER-16</span>-The 23rd IEEE International Conference on Software Analysis, Evolution, and Reengineering. Acceptance rate: 52/140 (37%).   <br/>
+
+      <a class="file_link" href="papers/NER.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
 
-      <confli > <strong>From Discussion to Wisdom: Web Resource Recommendation  for Hyperlinks in Stack Overflow
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Zhenchang Xing, Deheng Ye and Xuejiao Zhao<br/>
-<span class="abbpaper">SAC-16</span>-The 31st ACM Symposium on Applied Computing,2016. Acceptance rate: 252/1047 (24.07%). 
-<a class="file_link" href="papers/WisLinker.pdf"  target="_blank"> PDF</a>
-</i> </confli>
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_sner').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
 
-        <confli >   <strong>BPMiner: Mining Developers' Behavior Patterns from
-           Screen-Captured Task Videos
-</strong><br/>
-       <i> <strong>Jing Li</strong>, Lingfeng Bao, Zhenchang Xing, Xinyu Wang and Bo Zhou<br/>
-<span class="abbpaper">SAC-16</span>-The 31st ACM Symposium on Applied Computing,2016. Acceptance rate: 252/1047 (24.07%).
-<a class="file_link" href="papers/BPMiner.pdf"  target="_blank"> PDF</a>
-</i> </confli>
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_sner').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
 
 
+      <br/>
 
-  <confli>  <strong> Software-specific Part-of-speech Tagging: An Experimental Study on Stack Overflow </strong><br/>
-       <i> Deheng Ye, Zhenchang Xing, <strong>Jing Li</strong> and Nachiket Kapre<br/>
-<span class="abbpaper">SAC-16</span>-The 31st ACM Symposium on Applied Computing, 2016. Acceptance rate: 252/1047 (24.07%).
-<a class="file_link" href="papers/POS.pdf"  target="_blank"> PDF</a>
-</i> </confli>
+      <div id="abstract_sner" class="verbatim" style="display:none">
+Software engineering social content, such as Q&A discussions on Stack Overflow, has become a wealth of information on software engineering. This textual content is centered around software-specific entities, and their usage patterns, issues-solutions, and alternatives. However, existing approaches to analyzing software engineering texts treat software-specific entities in the same way as other content, and thus cannot support the recent advance of entity-centric applications, such as direct answers and knowledge graph. The first step towards enabling these entity-centric applications for software engineering is to recognize and classify software-specific entities, which is referred to as Named Entity Recognition (NER) in the literature. Existing NER methods are designed for recognizing person, location and organization in formal and social texts, which are not applicable to NER in software engineering. Existing information extraction methods for software engineering are limited to API identification and linking of a particular programming language. In this paper, we formulate the research problem of NER in software engineering. We identify the challenges in designing a software-specific NER system and propose a machine learning based approach applied on software engineering social content. Our NER system, called S-NER, is general for software engineering in that it can recognize a broad category of software entities for a wide range of popular programming languages, platform, and library. We conduct systematic experiments to evaluate our machine learning based S-NER against a well-designed, and to study the effectiveness of widely-adopted NER techniques and features in the face of the unique characteristics of software engineering social content.
+   </div>
 
+      <div id="bibtex_sner" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/wcre/YeXFALK16,
+  author    = {Deheng Ye and
+               Zhenchang Xing and
+               Chee Yong Foo and
+               Zi Qun Ang and
+               Jing Li and
+               Nachiket Kapre},
+  title     = {Software-Specific Named Entity Recognition in Software Engineering
+               Social Content},
+  booktitle = {{IEEE} 23rd International Conference on Software Analysis, Evolution,
+               and Reengineering (SANER)},
+  pages     = {90--101},
+  publisher = {{IEEE} Computer Society},
+  year      = {2016},
+  url       = {https://doi.org/10.1109/SANER.2016.10},
+  doi       = {10.1109/SANER.2016.10},
+}
+      </pre>
+      </div>
 
-
-  <li > <strong> Extracting and Analyzing Time-Series HCI Data from Screen-Captured Task Videos
-</strong><br/>
-       <i> Lingfeng Bao, <strong>Jing Li</strong>, Zhenchang Xing, Xinyu Wang, Xin xia and Bo Zhou<br/>
-<span class="abbpaper">EMSE-16</span>- Empirical Software Engineering, Springer, Pages 1-41, 2016. (<strong><span class="emseif"></span></strong>)
-<a class="file_link" href="papers/EMSE2016.pdf"  target="_blank"> PDF</a>
-</i> </li>
-
-
-
-  <confli >  <strong>Learning to Extract API Mentions from Informal Natural Language Discussions
-</strong><br/>
-       <i> Deheng Ye, Zhenchang Xing, Chee Yong Foo, <strong>Jing Li</strong>, and Nachiket Kapre<br/>
-<span class="abbpaper">ICSME-16</span>-The 32nd International Conference on Software Maintenance and Evolution. Acceptance rate: 37/125 (29%). 
-<a class="file_link" href="papers/APIMentions.pdf"  target="_blank"> PDF</a>
-</i> </confli>
-
-
-  <confli >   <strong>Software-specific Named Entity Recognition in Software Engineering Social Content
-</strong><br/>
-       <i> Deheng Ye, Zhenchang Xing, Chee Yong Foo, Zi Qun Ang, <strong>Jing Li</strong> and Nachiket Kapre<br/>
-<span class="abbpaper">SANER-16</span>-The 23rd IEEE International Conference on Software Analysis, Evolution, and Reengineering. Acceptance rate: 52/140 (37%). 
-<a class="file_link" href="papers/NER.pdf"  target="_blank"> PDF</a>
 </i> </confli>
 
 
 
-<h3 class="year">2015</h3>
 
 
-       <confli>  <strong> scvRipper: Video Scraping Tool for Modeling Developers' Behavior Using Interaction Data </strong><br/>
-       <i> Lingfeng Bao, <strong>Jing Li</strong>, Zhenchang Xing, Xinyu Wang and Bo Zhou <br/>
-<span class="abbpaper">ICSE-15</span>-The 37th International Conference on Software Engineering Tool Demonstrations, Vol.2, Pages 673-676, 2015. 
-<a class="file_link" href="papers/scvRipper video scraping tool for modeling developers' behavior using interaction data.pdf"  target="_blank"> PDF</a>
-<a class="file_link" href="https://www.youtube.com/watch?v=DElYOhids8Y"  target="_blank"> Video</a>
+
+
+<confli > <strong>scvRipper: Video Scraping Tool for Modeling Developers' Behavior Using Interaction Data</strong><br/>
+      <i> Lingfeng Bao, <strong>Jing Li</strong>, Zhenchang Xing, Xinyu Wang and Bo Zhou <br/>
+      <span class="abbpaper">ICSE-15</span>-The 37th International Conference on Software Engineering Tool Demonstrations, Vol.2, Pages 673-676, 2015.   <br/>
+
+      <a class="file_link" href="papers/scvRipper video scraping tool for modeling developers' behavior using interaction data.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_scvripper').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+
+      <a class="file_link" href="https://www.youtube.com/watch?v=DElYOhids8Y"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> Demo</a>   &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_scvripper').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_scvripper" class="verbatim" style="display:none">
+Screen-capture tool can record a user's interaction with software and application content as a stream of screenshots which is usually stored in certain video format. Researchers have used screen-captured videos to study the programming activities that the developers carry out. In these studies, screen-captured videos had to be manually transcribed to extract software usage and application content data for the study purpose. This paper presents a computer-vision based video scraping tool (called scvRipper) that can automatically transcribe a screen-captured video into time-series interaction data according to the analyst's need. This tool can address the increasing need for automatic behavioral data collection methods in the studies of human aspects of software engineering.
+   </div>
+
+      <div id="bibtex_scvripper" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/icse/BaoLXWZ15,
+  author    = {Lingfeng Bao and
+               Jing Li and
+               Zhenchang Xing and
+               Xinyu Wang and
+               Bo Zhou},
+  title     = {scvRipper: Video Scraping Tool for Modeling Developers' Behavior Using
+               Interaction Data},
+  booktitle = {37th {IEEE/ACM} International Conference on Software Engineering,
+               {ICSE} 2015, Florence, Italy, May 16-24, 2015, Volume 2},
+  pages     = {673--676},
+  publisher = {{IEEE} Computer Society},
+  year      = {2015},
+  url       = {https://doi.org/10.1109/ICSE.2015.220},
+  doi       = {10.1109/ICSE.2015.220},
+}    </pre>
+      </div>
+
 </i> </confli>
 
 
 
-   <confli > <strong> Reverse Engineering Time-Series Interaction Data from Screen-Captured Videos </strong><br/>
-<i> Lingfeng Bao, <strong>Jing Li</strong>, Zhenchang Xing, Xinyu Wang and Bo Zhou <br/>
-<span class="abbpaper">SANER-15</span>-The 22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering, Pages 399-408, 2015. Acceptance rate: 46/144 (32%). 
-<a class="file_link" href="papers/Reverse Engineering Time-Series Interaction Data from Screen-Captured Videos.pdf"  target="_blank"> PDF</a>
-<a class="file_link"  href="papers/Reverse Engineering Time-Series Interaction Data from Screen-Captured Videos.pdf" target="_blank"> Slides</a>
-<a class="file_link"  href="papers/Reverse Engineering Time-Series Interaction Data from Screen-Captured Videos.pdf" target="_blank"> GitHub</a>
-</i></confli>
+
+
+
+
+
+
+
+<confli > <strong>Reverse Engineering Time-Series Interaction Data from Screen-Captured Videos</strong><br/>
+      <i> Lingfeng Bao, <strong>Jing Li</strong>, Zhenchang Xing, Xinyu Wang and Bo Zhou <br/>
+      <span class="abbpaper">SANER-15</span>-The 22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering, Pages 399-408, 2015. Acceptance rate: 46/144 (32%).  <br/>
+
+      <a class="file_link" href="papers/Reverse Engineering Time-Series Interaction Data from Screen-Captured Videos.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_s15').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_s15').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_s15" class="verbatim" style="display:none">
+In recent years the amount of research on human aspects of software engineering has increased. Many studies use screen-capture software (e.g., Snagit) to record developers' behavior as they work on software development tasks. The recorded task videos capture direct information about which activities the developers carry out with which content and in which applications during the task. Such behavioral data can help researchers and practitioners understand and improve software engineering practices from human perspective. However, extracting time-series interaction data (software usage and application content) from screen-captured videos requires manual transcribing and coding of videos, which is tedious and error-prone. In this paper we present a computer-vision based video scraping technique to automatically reverse-engineer time-series interaction data from screen-captured videos. We report the usefulness, effectiveness and runtime performance of our video scraping technique using a case study of the 29 hours task videos of 20 developers in the two development tasks.
+   </div>
+
+      <div id="bibtex_s15" style="display:none">
+      <pre class="verbatim">
+@inproceedings{DBLP:conf/wcre/BaoLXWZ15,
+  author    = {Lingfeng Bao and
+               Jing Li and
+               Zhenchang Xing and
+               Xinyu Wang and
+               Bo Zhou},
+  editor    = {Yann{-}Ga{\"{e}}l Gu{\'{e}}h{\'{e}}neuc and
+               Bram Adams and
+               Alexander Serebrenik},
+  title     = {Reverse engineering time-series interaction data from screen-captured
+               videos},
+  booktitle = {22nd {IEEE} International Conference on Software Analysis, Evolution,
+               and Reengineering (SANER)},
+  pages     = {399--408},
+  year      = {2015},
+  url       = {https://doi.org/10.1109/SANER.2015.7081850},
+  doi       = {10.1109/SANER.2015.7081850},
+} 
+</pre>
+      </div>
+
+</i> </confli>
+
+
 
  
 
@@ -559,7 +1669,7 @@ Journal Reviewers -->
 
 </div>
 <footer id="credits" >   
-        <p align="center"><span class="nobreak">Copyright &copy; 2015 - 2021 Jing LI &nbsp;<i class="fa fa-envelope fa-1x"/></i> lijing@li-jing.com</span></p>
+        <p align="center"><span class="nobreak">Copyright &copy; 2015 - 2022 Jing LI &nbsp;<i class="fa fa-envelope fa-1x"/></i> lijing@li-jing.com</span></p>
     </footer>
 
 

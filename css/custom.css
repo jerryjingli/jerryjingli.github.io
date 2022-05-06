@@ -316,7 +316,7 @@ padding-left: 1.8em;
 list-style-position: outside;
 }
 
-.file_link{background-color:#DAD0AB;color:#fcfcfc;padding:1px 4px;font-size:smaller}  
+.file_link{background-color:#DAD0AB;border-radius: 3px;color:#fcfcfc;padding:2px 5px;font-size:smaller}  
 .jpaper{background-color:#002062;color:#fcfcfc;;padding:1px 4px;font-size:smaller}
 
 .cpaper{background-color:#0E6251;color:#fcfcfc;;padding:1px 4px;font-size:smaller}
@@ -459,5 +459,40 @@ a.back-to-top {
 }
 
 
+ .verbatim { 
+    font-family: monospace; 
+    background:#ebebeb;
+    border:#cccccc 2px dotted;
+    margin:0px 0px 20px 0px; padding: 10px 20px; 
+  }
+  .verbatim pre {
+    text-align: left;
+  }
 
 
+
+
+
+.myteam {
+  margin: 0% 5% 0% 5%;
+  padding: 0;
+  width: 80%;
+}
+
+
+
+
+.mycenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+
+
+/*for team page*/
+
+tr td {
+    padding-top: 0em;
+}

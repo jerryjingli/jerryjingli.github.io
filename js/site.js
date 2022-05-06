@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-var tkdeif = "IF: 4.936", tnnlsif = "IF: 8.793", tscif = "IF: 5.823", jasistif = "IF: 2.41", insif = "IF: 5.91", pierif = "IF: 1.898", jewaif = "IF: 1.373", geoinfif = "IF: 1.774", emseif = "IF: 3.156", wwwjif = "IF: 2.892";
+var tkdeif = "IF: 6.977", tnnlsif = "IF: 10.451", tscif = "IF: 8.216", jasistif = "IF: 2.687", insif = "IF: 6.795", pierif = "IF: 1.898", jewaif = "IF: 1.373", geoinfif = "IF: 2.684", emseif = "IF: 2.522", wwwjif = "IF: 2.716";
 
 var i;
 
