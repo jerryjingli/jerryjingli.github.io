@@ -139,8 +139,8 @@
 
 
                     <p style="font-size:120%;"> <b>Dr. Jing Li</b></p>
-                   <p> <b>Research Scientist</b>, Inception Institute of Artificial Intelligence, Abu Dhabi, United Arab Emirates.</p>
-                       <p><b>Email</b>: jli030 [AT] e [DOT] ntu [DOT] edu [DOT] sg</p>
+                <p> <b>Professor</b>, Harbin Institute of Technology (Shenzhen), China.</p>
+                    <p><b>Email</b>: li.jing [AT] hit [DOT] edu [DOT] cn</p>
 
 
         <div align="center">  
@@ -204,7 +204,7 @@
 </div>
 
       
-<jol style="counter-reset: my-j-counter 13;">
+<jol style="counter-reset: my-j-counter 14;">
       <confol style="counter-reset: my-c-counter 26;">
   
 
@@ -236,11 +236,12 @@
 
 
 
+
 <confli > <strong>Rethinking Document-Level Relation Extraction: A Reality Check </strong><br/>
       <i> <strong>Jing Li</strong>, Yequan Wang, Shuai Zhang and Min Zhang<br/>
       <span class="abbpaper">ACL-23</span>- Findings of The 61st Annual Meeting of the Association for Computational Linguistics, 2023. <br/>
 
-      <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+      <a class="file_link" href="https://arxiv.org/pdf/2306.08953.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
 
       <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_acl23').slideToggle('fast');return false;">
@@ -252,14 +253,56 @@
       <br/>
 
       <div id="abstract_acl23" class="verbatim" style="display:none">
-toupdate
+Recently, numerous efforts have continued to push up performance boundaries of document-level relation extraction (DocRE) and have claimed significant progress in DocRE. In this paper, we do not aim at proposing a novel model for DocRE. Instead, we take a closer look at the field to see if these performance gains are actually true. By taking a comprehensive literature review and a thorough examination of popular DocRE datasets, we find that these performance gains are achieved upon a strong or even untenable assumption in common: all named entities are perfectly localized, normalized, and typed in advance. Next, we construct four types of entity mention attacks to examine the robustness of typical DocRE models by behavioral probing. We also have a close check on model usability in a more realistic setting. Our findings reveal that most of current DocRE models are vulnerable to entity mention attacks and difficult to be deployed in real-world end-user NLP applications. Our study calls more attentions for future research to stop simplifying problem setups, and to model DocRE in the wild rather than in an unrealistic Utopian world.
    </div>
 
       <div id="bibtex_acl23" style="display:none">
-   toupdate
+        <pre class="verbatim">
+@inproceedings{li2023rethinking,
+  title={Rethinking Document-Level Relation Extraction: A Reality Check},
+  author={Li, Jing and Wang, Yequan and Zhang, Shuai and Zhang, Min},
+  booktitle = {Findings of The 61st Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2023}
+}
+      </pre>
       </div>
 
 </i> </confli>
+
+
+
+
+
+<li > <strong>Few-Shot Relation Extraction With Dual Graph Neural Network Interaction</strong><br/>
+      <i> <strong>Jing Li</strong>, Shanshan Feng and Billy Chiu<br/>
+      <span class="abbpaper">IEEE TNNLS-23</span>-  IEEE Transactions on Neural Networks and Learning Systems, 2023.  <br/>
+
+      <a class="file_link" href="" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_tnnls23').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_tnnls23').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
+      <br/>
+
+      <div id="abstract_tnnls23" class="verbatim" style="display:none">
+ Recent advances in relation extraction with deep neural architectures have achieved excellent performance. However, current models still suffer from two main drawbacks: 1) they require enormous volumes of training data to avoid model overfitting and 2) there is a sharp decrease in performance when the data distribution during training and testing shift from one domain to the other. It is thus vital to reduce the data requirement in training and explicitly model the distribution difference when transferring knowledge from one domain to another. In this work, we concentrate on few-shot relation extraction under domain adaptation settings. Specifically, we propose, a novel graph neural network (GNN) based approach for few-shot relation extraction. leverages an edge-labeling dual graph (i.e. an instance graph and a distribution graph) to explicitly model the intraclass similarity and interclass dissimilarity in each individual graph, as well as the instance-level and distribution-level relations across graphs. A dual graph interaction mechanism is proposed to adequately fuse the information between the two graphs in a cyclic flow manner. We extensively evaluate on FewRel1.0 and FewRel2.0 benchmarks under four few-shot configurations. The experimental results demonstrate that can match or outperform previously published approaches. We also perform experiments to further investigate the parameter settings and architectural choices, and we offer a qualitative analysis.
+      </div>
+
+      <div id="bibtex_tnnls23" style="display:none">
+      <pre class="verbatim">
+@article{li2023few,
+  title={Few-Shot Relation Extraction With Dual Graph Neural Network Interaction},
+  author={Li, Jing and Feng, Shanshan and Chiu, Billy},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  year={2023},
+  publisher={IEEE}
+}
+      </pre>
+      </div>
+
+</i> </li>
 
 
 
