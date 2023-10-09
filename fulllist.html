@@ -205,7 +205,7 @@
 
       
 <jol style="counter-reset: my-j-counter 14;">
-      <confol style="counter-reset: my-c-counter 26;">
+      <confol style="counter-reset: my-c-counter 27;">
   
 
 
@@ -232,6 +232,146 @@
 
 <!-- <h3 class="year">2020</h3>
  -->
+
+
+
+
+<dl>
+  <dt><b>Preprints</b></dt>
+  
+
+  <dd><strong>FLM-101B: An Open LLM and How to Train It with $100K Budget </strong></dd> 
+
+   <dd><i> Xiang Li, Yiqun Yao, Xin Jiang, Xuezhi Fang, Xuying Meng, Siqi Fan, Peng Han, <strong>Jing Li</strong>, Li Du, Bowen Qin, Zheng Zhang, Aixin Sun and Yequan Wang </i></dd> 
+
+     <dd>
+     <a class="file_link" href="https://arxiv.org/pdf/2309.03852.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_101b').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_101b').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+
+      <div id="abstract_101b" class="verbatim" style="display:none">
+Large language models (LLMs) have achieved remarkable success in NLP and multimodal tasks. Despite these successes, their development faces two main challenges: (i) high computational cost; and (ii) difficulty in conducting fair and objective evaluations. LLMs are prohibitively expensive, making it feasible for only a few major players to undertake their training, thereby constraining both research and application opportunities. This underscores the importance of cost-effective LLM training. In this paper, we utilize a growth strategy to significantly reduce LLM training cost. We demonstrate that an LLM with 101B parameters and 0.31TB tokens can be trained on a $100K budget. We also adopt a systematic evaluation paradigm for the IQ evaluation of LLMs, in complement to existing evaluations that focus more on knowledge-oriented abilities. We introduce our benchmark including evaluations on important aspects of intelligence including symbolic mapping, itrule understanding, pattern mining, and anti-interference. Such evaluations minimize the potential impact of memorization. Experimental results show that our model FLM-101B, trained with a budget of $100K, achieves comparable performance to powerful and well-known models, eg GPT-3 and GLM-130B, especially in the IQ benchmark evaluations with contexts unseen in training data. The checkpoint of FLM-101B will be open-sourced at https://huggingface.co/CofeAI/FLM-101B.
+   </div>
+
+      <div id="bibtex_101b" style="display:none">
+        <pre class="verbatim">
+@article{DBLP:journals/corr/abs-2309-03852,
+  author       = {Xiang Li and
+                  Yiqun Yao and
+                  Xin Jiang and
+                  Xuezhi Fang and
+                  Xuying Meng and
+                  Siqi Fan and
+                  Peng Han and
+                  Jing Li and
+                  Li Du and
+                  Bowen Qin and
+                  Zheng Zhang and
+                  Aixin Sun and
+                  Yequan Wang},
+  title        = {{FLM-101B:} An Open {LLM} and How to Train It with {\textdollar}100K
+                  Budget},
+  journal      = {CoRR},
+  volume       = {abs/2309.03852},
+  year         = {2023},
+  url          = {https://doi.org/10.48550/arXiv.2309.03852},
+  doi          = {10.48550/arXiv.2309.03852},
+  eprinttype    = {arXiv},
+}
+      </pre>
+      </div>
+
+    </dd> 
+
+
+
+<br>
+
+
+
+
+  <dd><strong>2x Faster Language Model Pre-training via Masked Structural Growth </strong></dd> 
+
+   <dd><i> Yiqun Yao, Zheng Zhang, <strong>Jing Li</strong> and Yequan Wang </i></dd> 
+
+     <dd>
+     <a class="file_link" href="https://arxiv.org/pdf/2305.02869"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_2x').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_2x').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+
+      <div id="abstract_2x" class="verbatim" style="display:none">
+Acceleration of large language model pre-training is a critical issue in present NLP research. In this paper, we focus on speeding up pre-training by progressively growing from a small Transformer structure to a large one. There are two main research problems related to progressive growth: growth schedule and growth operator. For growth schedule, existing work has explored multi-stage expansion of depth and feedforward layers. However, the impact of each dimension on the schedule's efficiency is still an open question. For growth operator, existing work relies on the initialization of new weights to inherit knowledge, and achieve only non-strict function preservation, limiting further optimization of training dynamics. To address these issues, we propose Masked Structural Growth (MSG), including growth schedules involving all possible dimensions and strictly function-preserving growth operators that is independent of the initialization of new weights. Experiments show that MSG is significantly faster than related work: we achieve a speed-up of 80% for Bert-base and 120% for Bert-large pre-training. Moreover, MSG is able to improve fine-tuning performances at the same time.
+   </div>
+
+      <div id="bibtex_2x" style="display:none">
+        <pre class="verbatim">
+@article{DBLP:journals/corr/abs-2305-02869,
+  author       = {Yiqun Yao and
+                  Zheng Zhang and
+                  Jing Li and
+                  Yequan Wang},
+  title        = {2x Faster Language Model Pre-training via Masked Structural Growth},
+  journal      = {CoRR},
+  volume       = {abs/2305.02869},
+  year         = {2023},
+  url          = {https://doi.org/10.48550/arXiv.2305.02869},
+  doi          = {10.48550/arXiv.2305.02869},
+  eprinttype    = {arXiv}
+}
+      </pre>
+      </div>
+
+    </dd> 
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+<confli > <strong>Chain of Thought with Explicit Evidence Reasoning for Few-shot Relation Extraction </strong><br/>
+      <i>Xilai Ma, <strong>Jing Li</strong> and Min Zhang<br/>
+      <span class="abbpaper">EMNLP-23</span>- Findings of The 2023 Conference on Empirical Methods in Natural Language Processing, 2023. <br/>
+
+      <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_emnlp23').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_emnlp23').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_emnlp23" class="verbatim" style="display:none">
+Toupdate
+   </div>
+
+      <div id="bibtex_emnlp23" style="display:none">
+        <pre class="verbatim">
+Toupdate
+      </pre>
+      </div>
+
+</i> </confli>
 
 
 
