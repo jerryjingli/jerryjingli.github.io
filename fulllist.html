@@ -109,6 +109,7 @@
             <ul class="navbar-list">
           <li class="navbar-item-left"><a class="navbar-link-left">Jing Li (<font face="华文行楷">李晶</font>)</a></li>
                    <li class="navbar-item"><a class="navbar-link" href="http://faculty.hitsz.edu.cn/lijing" target="_blank">中文</a></li>
+                   <li class="navbar-item"><a class="navbar-link" href="team.html">Team</a></li>
                      <li class="navbar-item"><a class="navbar-link active" href="fulllist.html">Publications</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
              </ul>  
@@ -205,7 +206,7 @@
 
       
 <jol style="counter-reset: my-j-counter 14;">
-      <confol style="counter-reset: my-c-counter 27;">
+      <confol style="counter-reset: my-c-counter 28;">
   
 
 
@@ -296,48 +297,6 @@ Large language models (LLMs) have achieved remarkable success in NLP and multimo
 
 
 
-  <dd><strong>2x Faster Language Model Pre-training via Masked Structural Growth </strong></dd> 
-
-   <dd><i> Yiqun Yao, Zheng Zhang, <strong>Jing Li</strong> and Yequan Wang </i></dd> 
-
-     <dd>
-     <a class="file_link" href="https://arxiv.org/pdf/2305.02869"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
-
-
-      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_2x').slideToggle('fast');return false;">
-                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
-
-      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_2x').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
-
-
-
-      <div id="abstract_2x" class="verbatim" style="display:none">
-Acceleration of large language model pre-training is a critical issue in present NLP research. In this paper, we focus on speeding up pre-training by progressively growing from a small Transformer structure to a large one. There are two main research problems related to progressive growth: growth schedule and growth operator. For growth schedule, existing work has explored multi-stage expansion of depth and feedforward layers. However, the impact of each dimension on the schedule's efficiency is still an open question. For growth operator, existing work relies on the initialization of new weights to inherit knowledge, and achieve only non-strict function preservation, limiting further optimization of training dynamics. To address these issues, we propose Masked Structural Growth (MSG), including growth schedules involving all possible dimensions and strictly function-preserving growth operators that is independent of the initialization of new weights. Experiments show that MSG is significantly faster than related work: we achieve a speed-up of 80% for Bert-base and 120% for Bert-large pre-training. Moreover, MSG is able to improve fine-tuning performances at the same time.
-   </div>
-
-      <div id="bibtex_2x" style="display:none">
-        <pre class="verbatim">
-@article{DBLP:journals/corr/abs-2305-02869,
-  author       = {Yiqun Yao and
-                  Zheng Zhang and
-                  Jing Li and
-                  Yequan Wang},
-  title        = {2x Faster Language Model Pre-training via Masked Structural Growth},
-  journal      = {CoRR},
-  volume       = {abs/2305.02869},
-  year         = {2023},
-  url          = {https://doi.org/10.48550/arXiv.2305.02869},
-  doi          = {10.48550/arXiv.2305.02869},
-  eprinttype    = {arXiv}
-}
-      </pre>
-      </div>
-
-    </dd> 
-
-
-
-
 
 </dl>
 
@@ -345,12 +304,53 @@ Acceleration of large language model pre-training is a critical issue in present
 
 
 
+<confli > <strong>2x Faster Language Model Pre-training via Masked Structural Growth</strong><br/>
+      <i> Yiqun Yao, Zheng Zhang, <strong>Jing Li</strong> and Yequan Wang <br/>
+      <span class="abbpaper">ICLR-24</span>- The Twelfth International Conference on Learning Representations, 2024. <br/>
+
+      <a class="file_link" href="https://arxiv.org/pdf/2305.02869"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_iclr24').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_iclr24').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <br/>
+
+      <div id="abstract_iclr24" class="verbatim" style="display:none">
+Acceleration of large language model pre-training is a critical issue in present NLP research. In this paper, we focus on speeding up pre-training by progressively growing from a small Transformer structure to a large one. There are two main research problems related to progressive growth: growth schedule and growth operator. For growth schedule, existing work has explored multi-stage expansion of depth and feedforward layers. However, the impact of each dimension on the schedule's efficiency is still an open question. For growth operator, existing work relies on the initialization of new weights to inherit knowledge, and achieve only non-strict function preservation, limiting further optimization of training dynamics. To address these issues, we propose Masked Structural Growth (MSG), including growth schedules involving all possible dimensions and strictly function-preserving growth operators that is independent of the initialization of new weights. Experiments show that MSG is significantly faster than related work: we achieve a speed-up of 80% for Bert-base and 120% for Bert-large pre-training. Moreover, MSG is able to improve fine-tuning performances at the same time.
+   </div>
+
+      <div id="bibtex_iclr24" style="display:none">
+        <pre class="verbatim">
+@inproceedings{yao24iclr,
+  title={2x Faster Language Model Pre-training via Masked Structural Growth},
+    author       = {Yiqun Yao and
+                  Zheng Zhang and
+                  Jing Li and
+                  Yequan Wang},
+  booktitle = {The Twelfth International Conference on Learning Representations (ICLR)},
+  year={2024}
+}
+      </pre>
+      </div>
+
+</i> </confli>
+
+
+
+
+
+
+
 
 <confli > <strong>Chain of Thought with Explicit Evidence Reasoning for Few-shot Relation Extraction </strong><br/>
-      <i>Xilai Ma, <strong>Jing Li</strong> and Min Zhang<br/>
+      <i>Xilai Ma, <strong>Jing Li <sup>#</sup></strong> and Min Zhang<br/>
       <span class="abbpaper">EMNLP-23</span>- Findings of The 2023 Conference on Empirical Methods in Natural Language Processing, 2023. <br/>
 
-      <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+      <a class="file_link" href="https://aclanthology.org/2023.findings-emnlp.153.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
 
       <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_emnlp23').slideToggle('fast');return false;">
@@ -362,12 +362,22 @@ Acceleration of large language model pre-training is a critical issue in present
       <br/>
 
       <div id="abstract_emnlp23" class="verbatim" style="display:none">
-Toupdate
+Few-shot relation extraction involves identifying the type of relationship between two specific entities within a text, using a limited number of annotated samples. A variety of solutions to this problem have emerged by applying meta-learning and neural graph techniques which typically necessitate a training process for adaptation. Recently, the strategy of in-context learning has been demonstrating notable results without the need of training. Few studies have already utilized in-context learning for zero-shot information extraction. Unfortunately, the evidence for inference is either not considered or implicitly modeled during the construction of chain-of-thought prompts. In this paper, we propose a novel approach for few-shot relation extraction using large language models, named CoT-ER, chain-of-thought with explicit evidence reasoning. In particular, CoT-ER first induces large language models to generate evidences using task-specific and concept-level knowledge. Then these evidences are explicitly incorporated into chain-of-thought prompting for relation extraction. Experimental results demonstrate that our CoT-ER approach (with 0% training data) achieves competitive performance compared to the fully-supervised (with 100% training data) state-of-the-art approach on the FewRel1.0 and FewRel2.0 datasets.
    </div>
 
       <div id="bibtex_emnlp23" style="display:none">
         <pre class="verbatim">
-Toupdate
+@inproceedings{DBLP:conf/emnlp/MaLZ23a,
+  author       = {Xilai Ma and
+                  Jing Li and
+                  Min Zhang},
+  title        = {Chain of Thought with Explicit Evidence Reasoning for Few-shot Relation
+                  Extraction},
+  booktitle    = {Findings of the Association for Computational Linguistics (EMNLP),
+  pages        = {2334--2352},
+  year         = {2023},
+  url          = {https://aclanthology.org/2023.findings-emnlp.153},
+}
       </pre>
       </div>
 
@@ -401,6 +411,7 @@ Recently, numerous efforts have continued to push up performance boundaries of d
 @inproceedings{li2023rethinking,
   title={Rethinking Document-Level Relation Extraction: A Reality Check},
   author={Li, Jing and Wang, Yequan and Zhang, Shuai and Zhang, Min},
+  pages= {5715--5730},
   booktitle = {Findings of The 61st Annual Meeting of the Association for Computational Linguistics (ACL)},
   year={2023}
 }
@@ -417,7 +428,7 @@ Recently, numerous efforts have continued to push up performance boundaries of d
       <i> <strong>Jing Li</strong>, Shanshan Feng and Billy Chiu<br/>
       <span class="abbpaper">IEEE TNNLS-23</span>-  IEEE Transactions on Neural Networks and Learning Systems, 2023.  <br/>
 
-      <a class="file_link" href="" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+      <a class="file_link" href="papers/23tnnlsdualgraph.pdf" target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
 
       <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_tnnls23').slideToggle('fast');return false;">
@@ -432,10 +443,11 @@ Recently, numerous efforts have continued to push up performance boundaries of d
 
       <div id="bibtex_tnnls23" style="display:none">
       <pre class="verbatim">
-@article{li2023few,
+@article{jing23dualgraph,
   title={Few-Shot Relation Extraction With Dual Graph Neural Network Interaction},
   author={Li, Jing and Feng, Shanshan and Chiu, Billy},
   journal={IEEE Transactions on Neural Networks and Learning Systems},
+  pages={Early Access},
   year={2023},
   publisher={IEEE}
 }
@@ -513,7 +525,7 @@ toupdate
       <i>Silin Zhou, <strong>Jing Li</strong>, Hao Wang, Shuo Shang, Peng Han<br/>
       <span class="abbpaper">AAAI-23</span>- The Thirty-Seventh AAAI Conference on Artificial Intelligence. <br/>
 
-      <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+      <a class="file_link" href="https://ojs.aaai.org/index.php/AAAI/article/view/25624/25396"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
 
       <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_23GRLSTM').slideToggle('fast');return false;">
@@ -525,12 +537,29 @@ toupdate
       <br/>
 
       <div id="abstract_23GRLSTM" class="verbatim" style="display:none">
-To be updated.
+The computation of trajectory similarity is a crucial task in many spatial data analysis applications. However, existing methods have been designed primarily for trajectories in Euclidean space, which overlooks the fact that real-world trajectories are often generated on road networks. This paper addresses this gap by proposing a novel framework, called GRLSTM (Graph-based Residual LSTM). To jointly capture the properties of trajectories and road networks, the proposed framework incorporates knowledge graph embedding (KGE), graph neural network (GNN), and the residual network into the multi-layer LSTM (Residual-LSTM). Specifically, the framework constructs a point knowledge graph to study the multi-relation of points, as points may belong to both the trajectory and the road network. KGE is introduced to learn point embeddings and relation embeddings to build the point fusion graph, while GNN is used to capture the topology structure information of the point fusion graph. Finally, Residual-LSTM is used to learn the trajectory embeddings.To further enhance the accuracy and robustness of the final trajectory embeddings, we introduce two new neighbor-based point loss functions, namely, graph-based point loss function and trajectory-based point loss function. The GRLSTM is evaluated using two real-world trajectory datasets, and the experimental results demonstrate that GRLSTM outperforms all the state-of-the-art methods significantly.
    </div>
 
       <div id="bibtex_23GRLSTM" style="display:none">
       <pre class="verbatim">
-To be updated.
+@inproceedings{DBLP:conf/aaai/Zhou0WS023,
+  author       = {Silin Zhou and
+                  Jing Li and
+                  Hao Wang and
+                  Shuo Shang and
+                  Peng Han},
+  editor       = {Brian Williams and
+                  Yiling Chen and
+                  Jennifer Neville},
+  title        = {{GRLSTM:} Trajectory Similarity Computation with Graph-Based Residual
+                  {LSTM}},
+  booktitle    = {Thirty-Seventh {AAAI} Conference on Artificial Intelligence, {AAAI}
+                  2023, Thirty-Fifth Conference on Innovative Applications of Artificial
+                  Intelligence, {IAAI} 2023, Thirteenth Symposium on Educational Advances
+                  in Artificial Intelligence},
+  pages        = {4972--4980},
+  year         = {2023},
+}
       </pre>
       </div>
 
@@ -540,7 +569,40 @@ To be updated.
 
 
 
+<li > <strong>Sequence Labeling with Meta-Learning</strong><br/>
+      <i> <strong>Jing Li</strong>, Peng Han, Xiangnan Ren, Jilin Hu, Lisi Chen and Shuo Shang<br/>
+      <span class="abbpaper">IEEE TKDE-23</span>- IEEE Transactions on Knowledge and Data Engineering, 35(3): 3072-3086, 2023. <br/>
 
+      <a class="file_link" href="papers/21metaseq.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_seq21').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_seq21').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
+      <br/>
+
+      <div id="abstract_seq21" class="verbatim" style="display:none">
+Recent neural architectures in sequence labeling have yielded state-of-the-art performance on single domain data such as newswires. However, they still suffer from (i) requiring massive amounts of training data to avoid overfitting; (ii) huge performance degradation when there is a domain shift in the data distribution between training and testing. In this paper, we investigate the problem of domain adaptation for sequence labeling under homogeneous and heterogeneous settings. We propose MetaSeq, a novel meta-learning approach for domain adaptation in sequence labeling. Specifically, MetaSeq incorporates meta-learning and adversarial training strategies to encourage robust, general and transferable representations for sequence labeling. The key advantage of MetaSeq is that it is capable of adapting to new unseen domains with a small amount of annotated data from those domains. We extensively evaluate MetaSeq on named entity recognition, part-of-speech tagging and slot filling tasks under homogeneous and heterogeneous settings. The experimental results show that MetaSeq achieves state-of-the-art performance against eight baselines. Impressively, MetaSeq surpasses the in-domain performance using only 16.17% and 7% of target domain data on average for homogeneous settings, and 34.76%, 24%, 22.5% of target domain data on average for heterogeneous settings.
+      </div>
+
+      <div id="bibtex_seq21" style="display:none">
+      <pre class="verbatim">
+@article{jing23seq,
+author    = {Jing Li and Peng Han and Xiangnan Ren and Jilin Hu and Lisi Chen and Shuo Shang},
+title     = {Sequence Labeling with Meta-Learning},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume       = {35},
+number       = {3},
+pages        = {3072--3086},
+year         = {2023},
+url       = {https://doi.org/10.1109/TKDE.2021.3118469},
+doi       = {10.1109/TKDE.2021.3118469},
+}
+      </pre>
+      </div>
+
+</i> </li>
 
 
 
@@ -793,38 +855,43 @@ doi       = {10.1109/TKDE.2020.2983360},
 
 
 
+<li > <strong>Few-Shot Named Entity Recognition via Meta-Learning</strong><br/>
+      <i> <strong>Jing Li</strong>, Billy Chiu, Shanshan Feng and Hao Wang<br/>
+      <span class="abbpaper">IEEE TKDE-22</span>- IEEE Transactions on Knowledge and Data Engineering, 34(9): 4245-4256, 2022. <br/>
 
-<li > <strong>Sequence Labeling with Meta-Learning</strong><br/>
-      <i> <strong>Jing Li</strong>, Peng Han, Xiangnan Ren, Jilin Hu, Lisi Chen and Shuo Shang<br/>
-      <span class="abbpaper">IEEE TKDE-21</span>- IEEE Transactions on Knowledge and Data Engineering, 2021, in Press.<br/>
-
-      <a class="file_link" href="papers/21metaseq.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+      <a class="file_link" href="papers/20TKDEfewshot.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
 
-      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_seq21').slideToggle('fast');return false;">
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_fewshot20').slideToggle('fast');return false;">
                              <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
 
-      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_seq21').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_fewshot20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
       <br/>
 
-      <div id="abstract_seq21" class="verbatim" style="display:none">
-Recent neural architectures in sequence labeling have yielded state-of-the-art performance on single domain data such as newswires. However, they still suffer from (i) requiring massive amounts of training data to avoid overfitting; (ii) huge performance degradation when there is a domain shift in the data distribution between training and testing. In this paper, we investigate the problem of domain adaptation for sequence labeling under homogeneous and heterogeneous settings. We propose MetaSeq, a novel meta-learning approach for domain adaptation in sequence labeling. Specifically, MetaSeq incorporates meta-learning and adversarial training strategies to encourage robust, general and transferable representations for sequence labeling. The key advantage of MetaSeq is that it is capable of adapting to new unseen domains with a small amount of annotated data from those domains. We extensively evaluate MetaSeq on named entity recognition, part-of-speech tagging and slot filling tasks under homogeneous and heterogeneous settings. The experimental results show that MetaSeq achieves state-of-the-art performance against eight baselines. Impressively, MetaSeq surpasses the in-domain performance using only 16.17% and 7% of target domain data on average for homogeneous settings, and 34.76%, 24%, 22.5% of target domain data on average for heterogeneous settings.
-      </div>
+      <div id="abstract_fewshot20" class="verbatim" style="display:none">
+Few-shot learning under the N-way K-shot setting (i.e., K annotated samples for each of N classes) has been widely studied in relation extraction (e.g., FewRel) and image classification (e.g., Mini-ImageNet). Named entity recognition (NER) is typically framed as a sequence labeling problem where the entity classes are inherently entangled together because the entity number and classes in a sentence are not known in advance, leaving the N-way K-shot NER problem so far unexplored. In this paper, we first formally define a more suitable N-way K-shot setting for NER. Then we propose FewNER, a novel meta-learning approach for few-shot NER. FewNER separates the entire network into a task-independent part and a task-specific part. During training in FewNER, the task-independent part is meta-learned across multiple tasks and a task-specific part is learned for each single task in a low-dimensional space. At test time, FewNER keeps the task-independent part fixed and adapts to a new task via gradient descent by updating only the task-specific part, resulting in it being less prone to overfitting and more computationally efficient. The results demonstrate that FewNER achieves state-of-the-art performance against nine baseline methods by significant margins on three adaptation experiments.
+   </div>
 
-      <div id="bibtex_seq21" style="display:none">
+      <div id="bibtex_fewshot20" style="display:none">
       <pre class="verbatim">
-@article{jing21metaseq,
-author    = {Jing Li and Peng Han and Xiangnan Ren and Jilin Hu and Lisi Chen and Shuo Shang},
-title     = {Sequence Labeling with Meta-Learning},
-journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE), Early Access},
-year      = {2021},
-url       = {https://doi.org/10.1109/TKDE.2021.3118469},
-doi       = {10.1109/TKDE.2021.3118469},
+@article{li20fewshot,
+author    = {Jing Li and Billy Chiu and Shanshan Feng and Hao Wang},
+title     = {Few-Shot Named Entity Recognition via Meta-Learning},
+journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+volume       = {34},
+number       = {9},
+pages        = {4245--4256},
+year         = {2022},
+url       = {https://doi.org/10.1109/TKDE.2020.3038670},
+doi       = {10.1109/TKDE.2020.3038670},
 }
       </pre>
       </div>
 
 </i> </li>
+
+
+
 
 
 
@@ -965,38 +1032,6 @@ For an unfamiliar Application Programming Interface (API), software developers o
 
 
 
-<li > <strong>Few-Shot Named Entity Recognition via Meta-Learning</strong><br/>
-      <i> <strong>Jing Li</strong>, Billy Chiu, Shanshan Feng and Hao Wang<br/>
-      <span class="abbpaper">IEEE TKDE-20</span>- IEEE Transactions on Knowledge and Data Engineering, 2020, in Press. <br/>
-
-      <a class="file_link" href="papers/20TKDEfewshot.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
-
-
-      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_fewshot20').slideToggle('fast');return false;">
-                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
-
-      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_fewshot20').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a>
-      <br/>
-
-      <div id="abstract_fewshot20" class="verbatim" style="display:none">
-Few-shot learning under the N-way K-shot setting (i.e., K annotated samples for each of N classes) has been widely studied in relation extraction (e.g., FewRel) and image classification (e.g., Mini-ImageNet). Named entity recognition (NER) is typically framed as a sequence labeling problem where the entity classes are inherently entangled together because the entity number and classes in a sentence are not known in advance, leaving the N-way K-shot NER problem so far unexplored. In this paper, we first formally define a more suitable N-way K-shot setting for NER. Then we propose FewNER, a novel meta-learning approach for few-shot NER. FewNER separates the entire network into a task-independent part and a task-specific part. During training in FewNER, the task-independent part is meta-learned across multiple tasks and a task-specific part is learned for each single task in a low-dimensional space. At test time, FewNER keeps the task-independent part fixed and adapts to a new task via gradient descent by updating only the task-specific part, resulting in it being less prone to overfitting and more computationally efficient. The results demonstrate that FewNER achieves state-of-the-art performance against nine baseline methods by significant margins on three adaptation experiments.
-   </div>
-
-      <div id="bibtex_fewshot20" style="display:none">
-      <pre class="verbatim">
-@article{li20fewshot,
-author    = {Jing Li and Billy Chiu and Shanshan Feng and Hao Wang},
-title     = {Few-Shot Named Entity Recognition via Meta-Learning},
-journal   = {IEEE Transactions on Knowledge and Data Engineering (TKDE)},
-volume    = {Early Access},
-year      = {2021},
-url       = {https://doi.org/10.1109/TKDE.2020.3038670},
-doi       = {10.1109/TKDE.2020.3038670},
-}
-      </pre>
-      </div>
-
-</i> </li>
 
 
 
@@ -2139,7 +2174,7 @@ Journal Reviewers -->
 
 </div>
 <footer id="credits" >   
-        <p align="center"><span class="nobreak">Copyright &copy; 2015 - 2023 Jing LI &nbsp;<i class="fa fa-envelope fa-1x"/></i> lijing@li-jing.com</span></p>
+        <p align="center"><span class="nobreak">Copyright &copy; 2015 - 2024 Jing LI &nbsp;<i class="fa fa-envelope fa-1x"/></i> lijing@li-jing.com</span></p>
     </footer>
 
 
