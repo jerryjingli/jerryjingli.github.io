@@ -308,7 +308,10 @@ Large language models (LLMs) have achieved remarkable success in NLP and multimo
 <confli > <strong>Parameter Competition Balancing for Model Merging</strong><br/>
   <i> Guodong Du, Junlin Lee, <strong>Jing Li</strong> <sup><i class="fa fa-envelope-o fa-1x"/></i></sup>, Runhua Jiang, Yifei Guo, Shuyang Yu, Hanting Liu, Sim Kuan Goh, Ho-Kin Tang, Daojing He, Min Zhang<br/>
       <span class="abbpaper">NeurIPS-24</span>- The Thirty-eighth Annual Conference on Neural Information Processing Systems, 2024. <br/>
-      <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+      <a class="file_link" href="https://arxiv.org/abs/2410.02396"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+        <a class="file_link" href="https://github.com/duguodong7/pcb-merging"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+
 
       <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_nips24guodong').slideToggle('fast');return false;">
                              <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
@@ -319,12 +322,18 @@ Large language models (LLMs) have achieved remarkable success in NLP and multimo
       <br/>
 
       <div id="abstract_nips24guodong" class="verbatim" style="display:none">
-        Update
+        While fine-tuning pretrained models has become common practice, these models often underperform outside their specific domains. Recently developed model merging techniques enable the direct integration of multiple models, each fine-tuned for distinct tasks, into a single model. This strategy promotes multitasking capabilities without requiring retraining on the original datasets. However, existing methods fall short in addressing potential conflicts and complex correlations between tasks, especially in parameter-level adjustments, posing a challenge in effectively balancing parameter competition across various tasks. This paper introduces an innovative technique named PCB-Merging (Parameter Competition Balancing), a lightweight and training-free technique that adjusts the coefficients of each parameter for effective model merging. PCB-Merging employs intra-balancing to gauge parameter significance within individual tasks and inter-balancing to assess parameter similarities across different tasks. Parameters with low importance scores are dropped, and the remaining ones are rescaled to form the final merged model. We assessed our approach in diverse merging scenarios, including cross-task, cross-domain, and cross-training configurations, as well as out-of-domain generalization. The experimental results reveal that our approach achieves substantial performance enhancements across multiple modalities, domains, model sizes, number of tasks, fine-tuning forms, and large language models, outperforming existing model merging methods. 
    </div>
 
       <div id="bibtex_nips24guodong" style="display:none">
         <pre class="verbatim">
-Update
+@inproceedings{guodong24neurips,
+  title={Parameter Competition Balancing for Model Merging},
+    author = {Guodong Du and
+    Junlin Lee and Jing Li  and Runhua Jiang and Yifei Guo and Shuyang Yu and Hanting Liu and Sim Kuan Goh and Ho-Kin Tang and Daojing He and Min Zhang},
+  booktitle = {The Thirty-eighth Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2024}
+}
       </pre>
       </div>
 
@@ -340,7 +349,6 @@ Update
       <span class="abbpaper">ACL-24</span>- The 62nd Annual Meeting of the Association for Computational Linguistics, 2024. <br/>
 
       <a class="file_link" href="https://arxiv.org/abs/2406.02030"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
-
 
       <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_acl24junlin').slideToggle('fast');return false;">
                              <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
