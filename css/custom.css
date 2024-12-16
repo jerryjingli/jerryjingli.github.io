@@ -8,7 +8,7 @@ jol li {
 }
 jol li::before {
   content: "J" counter(my-j-counter); /*'.'*/
-    margin: 0rem 0 0rem -3rem;
+    margin: 0rem 0 0rem -4rem;
    background-color: #424242; /*#000000; *//*#002062;*/
    color: #fcfcfc; /*#FF5733 ;*/
     border-radius: 3px;
@@ -28,7 +28,7 @@ confol confli {
 }
 confol confli::before {
   content: "C" counter(my-c-counter) ;
-   margin: 0rem 0 0rem -3rem;
+   margin: 0rem 0 0rem -4rem;
    border-radius: 4px; /*100%;*/
    border: 1px solid black;
    font-size: 93%;
