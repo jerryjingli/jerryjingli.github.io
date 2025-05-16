@@ -52,7 +52,8 @@ confol confli::before {
 
 
 /*.year { border-top: 1px solid #ccc; color: #ccc; margin: 0 -3em -2.5ex -2em; padding-top: 1ex; text-align: right; }*/
-.year { border-top: 1px dashed #ccc; color: #ccc;  margin: 0 -2.5em -3ex 0em; padding-top: 1ex; text-align: right;font-weight: bold; }
+/*.year { border-top: 1px dashed #ccc; color: #ccc;  margin: 0 -2.5em -3ex 0em; padding-top: 1ex; text-align: right;font-weight: bold; }*/
+.year { border-top: 1px dashed #ccc; color: #8000ff;  margin: 0 -2.5em -3ex 0em; padding-top: 1ex; text-align: right;font-weight: bold; }
 .yearsubmitted{ border-top: 1px #ccc; color: #ccc; margin: 0 -2.5em -3.5ex 0em; padding-top: 1ex; text-align: right; font-weight: bold; }
 
 
