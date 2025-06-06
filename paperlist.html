@@ -247,7 +247,7 @@
 
    <dd><i> Xiang Li, Yiqun Yao, Xin Jiang, Xuezhi Fang, Xuying Meng, Siqi Fan, Peng Han, <strong>Jing Li</strong>, Li Du, Bowen Qin, Zheng Zhang, Aixin Sun and Yequan Wang </i></dd> 
 
-     <dd>
+     <dd style="margin-bottom:3mm">
      <a class="file_link" href="https://arxiv.org/pdf/2309.03852.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
 
      <a class="file_link" href="https://huggingface.co/CofeAI/FLM-101B"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
@@ -287,7 +287,7 @@ Large language models (LLMs) have achieved remarkable success in NLP and multimo
   year         = {2023},
   url          = {https://doi.org/10.48550/arXiv.2309.03852},
   doi          = {10.48550/arXiv.2309.03852},
-  eprinttype    = {arXiv},
+  eprinttype   = {arXiv},
 }
       </pre>
       </div>
@@ -296,10 +296,131 @@ Large language models (LLMs) have achieved remarkable success in NLP and multimo
 
 
 
-<br>
+  <dd><strong>Multi-objective Large Language Model Alignment with Hierarchical Experts </strong></dd> 
+
+   <dd><i> Zhuo Li, Guodong Du, WeiYang Guo, Yigeng Zhou, Xiucheng Li, Wenya Wang, Fangming Liu, Yequan Wang, Deheng Ye, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> </i></dd> 
+
+     <dd style="margin-bottom:3mm">
+     <a class="file_link" href="https://arxiv.org/pdf/2505.20925"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+     <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_hoe').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_hoe').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
 
 
 
+      <div id="abstract_hoe" class="verbatim" style="display:none">
+Aligning large language models (LLMs) to simultaneously satisfy multiple objectives remains a significant challenge, especially given the diverse and often conflicting nature of human preferences. Existing alignment methods struggle to balance trade-offs effectively, often requiring costly retraining or yielding suboptimal results across the Pareto frontier of preferences. In this paper, we introduce HoE (Hierarchical Mixture-of-Experts), a lightweight, parameter-efficient, and plug-and-play approach that eliminates the need for model retraining, while enabling LLMs to adapt across the entire Pareto frontier and accommodate diverse user preferences. In particular, HoE consists of three hierarchical components: LoRA Experts, Router Experts and Weighting Router, reaching optimal Pareto frontiers and achieving a trade-off between parameter size, training cost, and performance. We evaluate HoE across various tasks on 16 objectives and 200 different preferences among 8 benchmarks, demonstrating superior performance over 15 recent baselines.
+   </div>
+
+      <div id="bibtex_hoe" style="display:none">
+        <pre class="verbatim">
+@article{hoe2025,
+  title        = {Multi-objective Large Language Model Alignment with Hierarchical Experts},
+  author       = {Zhuo Li and Guodong Du and WeiYang Guo and Yigeng Zhou and Xiucheng Li and Wenya Wang and Fangming Liu and Yequan Wang and Deheng Ye and Min Zhang and Jing Li},
+  journal      = {CoRR},
+  volume       = {abs/2505.20925},
+  year         = {2025},
+  url          = {https://doi.org/10.48550/arXiv.2505.20925},
+  doi          = {10.48550/arXiv.2309.03852},
+  eprinttype   = {arXiv},
+}
+      </pre>
+      </div>
+
+    </dd> 
+
+
+
+
+  <dd><strong>Jailbreak-R1: Exploring the Jailbreak Capabilities of LLMs via Reinforcement Learning </strong></dd> 
+
+   <dd><i> Weiyang Guo, Zesheng Shi, Zhuo Li, Yequan Wang, Xuebo Liu, Wenya Wang, Fangming Liu, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> </i></dd> 
+
+     <dd style="margin-bottom:3mm">
+     <a class="file_link" href="https://arxiv.org/pdf/2506.00782"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+     <a class="file_link" href="https://github.com/yuki-younai/Jailbreak-R1"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_jailr1').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_jailr1').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+
+      <div id="abstract_jailr1" class="verbatim" style="display:none">
+As large language models (LLMs) grow in power and influence, ensuring their safety and preventing harmful output becomes critical. Automated red teaming serves as a tool to detect security vulnerabilities in LLMs without manual labor. However, most existing methods struggle to balance the effectiveness and diversity of red-team generated attack prompts. To address this challenge, we propose Jailbreak-R1, a novel automated red teaming training framework that utilizes reinforcement learning to explore and generate more effective attack prompts while balancing their diversity. Specifically, it consists of three training stages: (1) Cold Start: The red team model is supervised and fine-tuned on a jailbreak dataset obtained through imitation learning. (2) Warm-up Exploration: The model is trained in jailbreak instruction following and exploration, using diversity and consistency as reward signals. (3) Enhanced Jailbreak: Progressive jailbreak rewards are introduced to gradually enhance the jailbreak performance of the red-team model. Extensive experiments on a variety of LLMs show that Jailbreak-R1 effectively balances the diversity and effectiveness of jailbreak prompts compared to existing methods. Our work significantly improves the efficiency of red team exploration and provides a new perspective on automated red teaming. Code is available at https://github.com/yuki-younai/Jailbreak-R1.
+   </div>
+
+      <div id="bibtex_jailr1" style="display:none">
+        <pre class="verbatim">
+@article{jailbreakr12025,
+  title        = {Jailbreak-R1: Exploring the Jailbreak Capabilities of LLMs via Reinforcement Learning},
+  author       = {Weiyang Guo, Zesheng Shi, Zhuo Li, Yequan Wang, Xuebo Liu, Wenya Wang, Fangming Liu, Min Zhang, Jing Li},
+  journal      = {CoRR},
+  volume       = {abs/2505.20925},
+  year         = {2025},
+  url          = {https://doi.org/10.48550/arXiv.2505.20925},
+  doi          = {10.48550/arXiv.2309.03852},
+  eprinttype   = {arXiv},
+}
+      </pre>
+      </div>
+
+    </dd> 
+
+
+
+
+
+  <dd><strong>Knowledge Grafting of Large Language Models</strong></dd> 
+
+   <dd><i>Guodong Du, Xuanning Zhou, Junlin Li, Zhuo Li, Zesheng Shi, Wanyu Lin <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup>, Ho-Kin Tang, Xiucheng Li, Fangming Liu, Wenya Wang, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> </i></dd> 
+
+     <dd>
+     <a class="file_link" href="https://arxiv.org/pdf/2505.18502"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+
+     <a class="file_link" href="https://github.com/duguodong7/GraftLLM"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+
+
+      <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_crafting').slideToggle('fast');return false;">
+                             <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+
+      <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_crafting').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+
+
+      <div id="abstract_crafting" class="verbatim" style="display:none">
+Cross-capability transfer is a key challenge in large language model (LLM) research, with applications in multi-task integration, model compression, and continual learning. Recent works like FuseLLM and FuseChat have demonstrated the potential of transferring multiple model capabilities to lightweight models, enhancing adaptability and efficiency, which motivates our investigation into more efficient cross-capability transfer methods. However, existing approaches primarily focus on small, homogeneous models, limiting their applicability. For large, heterogeneous models, knowledge distillation with full-parameter fine-tuning often overlooks the student model's intrinsic capacity and risks catastrophic forgetting, while PEFT methods struggle to effectively absorb knowledge from source LLMs. To address these issues, we introduce GraftLLM, a novel method that stores source model capabilities in a target model with SkillPack format. This approach preserves general capabilities, reduces parameter conflicts, and supports forget-free continual learning and model fusion. We employ a module-aware adaptive compression strategy to compress parameter updates, ensuring efficient storage while maintaining task-specific knowledge. The resulting SkillPack serves as a compact and transferable knowledge carrier, ideal for heterogeneous model fusion and continual learning. Experiments across various scenarios demonstrate that GraftLLM outperforms existing techniques in knowledge transfer, knowledge fusion, and forget-free learning, providing a scalable and efficient solution for cross-capability transfer. The code is publicly available at: https://github.com/duguodong7/GraftLLM.
+   </div>
+
+      <div id="bibtex_crafting" style="display:none">
+        <pre class="verbatim">
+@article{crafting2025,
+  title        = {Knowledge Grafting of Large Language Models},
+  author       = {Guodong DU and Xuanning Zhou and Junlin Li and Zhuo Li and Zesheng Shi and Wanyu Lin and Ho-Kin Tang and Xiucheng Li and Fangming Liu and Wenya Wang and Min Zhang and Jing Li},
+  journal      = {CoRR},
+  volume       = {abs/2505.18502},
+  year         = {2025},
+  url          = {https://doi.org/10.48550/arXiv.2505.18502},
+  doi          = {10.48550/arXiv.2505.18502},
+  eprinttype   = {arXiv},
+}
+      </pre>
+      </div>
+
+    </dd> 
+
+
+
+
+
+<!-- <br> -->
 
 
 </dl>
@@ -428,11 +549,11 @@ bibtex
 
 
 <confli > <strong>MTSA: Multi-turn Safety Alignment for LLMs through Multi-round Red-teaming</strong><br/>
-      <i>WeiYang Guo, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup>, Yu Li, Wenya Wang, Daojing He, Jun Yu, Min Zhang<br/>
+      <i>WeiYang Guo, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup>, Wenya Wang, Yu Li, Daojing He, Jun Yu, Min Zhang<br/>
           <span class="abbpaper">ACL-25</span>- The 63rd Annual Meeting of the Association for Computational Linguistics, 2025 <br/>
           <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
     
-             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+             <a class="file_link" href="https://github.com/yuki-younai/MTSA"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
     
     
           <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
@@ -487,7 +608,7 @@ bibtex
             <pre class="verbatim">
 @inproceedings{junlin_acl25,
   title={Multi-Modality Expansion and Retention for LLMs through Parameter Merging and Decoupling},
-    author = {Junlin Lee and Guodong DU and Jing Li  and Sim Kuan Goh and Wenya Wang and Yequan Wang and Fangming Liu and Ho-Kin Tang and Saleh Alharbi and Daojing He and Min Zhang},
+    author = {Junlin Li and Guodong DU and Jing Li  and Sim Kuan Goh and Wenya Wang and Yequan Wang and Fangming Liu and Ho-Kin Tang and Saleh Alharbi and Daojing He and Min Zhang},
   booktitle = {The 63rd Annual Meeting of the Association for Computational Linguistics (ACL)},
   year={2025}
 }
