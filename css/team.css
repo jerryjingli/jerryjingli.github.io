@@ -26,6 +26,8 @@
     *
     * Customize the background color to match your design.
     */
+
+
    
    ::-moz-selection {
      background: #b3d4fc;
@@ -276,6 +278,8 @@
    .member_figure {
      margin: 0;
    }
+
+
    
    .member_image {
      display: block;
@@ -285,6 +289,7 @@
      height: 150px;
      object-fit: cover;
      border-radius: 50%;
+     border: 1px solid #eaeaea;
    }
    
    .member_image_caption {
@@ -335,3 +340,37 @@
    }
 
    
+
+
+
+       /* 新添加的样式 - 使用CSS Grid控制每行显示数量 */
+    #members_wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 默认每行5个 */
+      gap: 15px;
+      justify-items: center;
+      padding: 10px;
+    }
+    
+    /* 响应式调整 */
+    @media (max-width: 1200px) {
+      #members_wrapper {
+        grid-template-columns: repeat(4, 1fr); /* 中等屏幕每行4个 */
+      }
+    }
+    
+    @media (max-width: 900px) {
+      #members_wrapper {
+        grid-template-columns: repeat(3, 1fr); /* 小屏幕每行3个 */
+      }
+    }
+    
+    @media (max-width: 600px) {
+      #members_wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 手机屏幕每行2个 */
+      }
+    }
+    
+    .member_figure:hover {
+      transform: translateY(-15px);
+    }
