@@ -295,7 +295,7 @@ Large language models (LLMs) have achieved remarkable success in NLP and multimo
     </dd> 
 
 
-
+<!-- 
   <dd><strong>Multi-objective Large Language Model Alignment with Hierarchical Experts </strong></dd> 
 
    <dd><i> Zhuo Li, Guodong Du, WeiYang Guo, Yigeng Zhou, Xiucheng Li, Wenya Wang, Fangming Liu, Yequan Wang, Deheng Ye, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> </i></dd> 
@@ -334,7 +334,7 @@ Aligning large language models (LLMs) to simultaneously satisfy multiple objecti
 
     </dd> 
 
-
+-->
 
 
   <dd><strong>Jailbreak-R1: Exploring the Jailbreak Capabilities of LLMs via Reinforcement Learning </strong></dd> 
@@ -377,7 +377,7 @@ As large language models (LLMs) grow in power and influence, ensuring their safe
 
 
 
-
+<!-- 
 
   <dd><strong>Knowledge Grafting of Large Language Models</strong></dd> 
 
@@ -416,7 +416,7 @@ Cross-capability transfer is a key challenge in large language model (LLM) resea
 
     </dd> 
 
-
+-->
 
 
 
@@ -466,10 +466,201 @@ bibtex
 
 <h3 class="year">2026</h3>
 
+
+
+
+
+
+
+<confli > <strong>Echoes as Anchors: Probabilistic Costs and Attention Refocusing in LLM Reasoning</strong><br/>
+        <i>Zhuoyuan Hao, Zhuo Li, Wu Li, Fangming Liu, Min Zhang and <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ICLR-26</span>- The Fourteenth International Conference on Learning Representations, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Test-time compute allocation in large reasoning models (LRMs) is widely used and has applications in mathematical problem solving, code synthesis, and planning. Recent work has addressed this problem by scaling self-consistency and parallel thinking, adding generic thinking tokens and prompting models to re-read the question before answering. Unfortunately, these approaches either inject task-agnostic tokens or mandate heuristics that do not explain---and often ignore---the \emph{spontaneous} repetition that many LRMs exhibit at the head of their internal chains. In contrast, we analyze and harness the model's tendency to restate the question, which we term the \emph{Echo of Prompt (EOP)}, as a front-loaded, compute-shaping mechanism. We formalize its probabilistic cost by casting echo removal as rejection-based conditioning and defining the \emph{Echo Likelihood Gap} 
+ as a computable proxy. This provides the missing theoretical link that links early repetition to likelihood gains and downstream accuracy. However, it does not by itself specify how to exploit EOP. Consequently, we develop \emph{Echo-Distilled SFT (ED-SFT)} to instill an ``echo-then-reason'' pattern through supervised finetuning, and \emph{Echoic Prompting (EP)} to re-ground the model mid-trace without training. While promising, quantifying benefits beyond verbosity is non-trivial. Therefore, we conduct length and suffix-controlled likelihood analyses together with layer-wise attention studies, showing that EOP increases answer to answer-prefix attention in middle layers, consistent with an \emph{attention refocusing} mechanism. We evaluate under identical decoding settings and compute budgets on GSM8K, MathQA, Hendrycks-MATH, AIME24, and MATH-500 under identical decoding settings and budgets, and find consistent gains over baselines.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{echoes_iclr26,
+  title={Echoes as Anchors: Probabilistic Costs and Attention Refocusing in LLM Reasoning},
+  author = {Zhuoyuan Hao and Zhuo Li and Wu Li and Fangming Liu and Min Zhang and Jing Li}
+  booktitle = {The Fourteenth International Conference on Learning Representations (ICLR)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+
+<confli > <strong>Multi-objective Large Language Model Alignment with Hierarchical Experts</strong><br/>
+        <i>Zhuo Li, Guodong Du, WeiYang Guo, Yigeng Zhou, Xiucheng Li, Wenya Wang, Fangming Liu, Yequan Wang, Deheng Ye, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ICLR-26</span>- The Fourteenth International Conference on Learning Representations, 2026. <br/>
+          <a class="file_link" href="https://arxiv.org/pdf/2505.20925"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Aligning large language models (LLMs) to simultaneously satisfy multiple objectives remains a significant challenge, especially given the diverse and often conflicting nature of human preferences. Existing alignment methods struggle to balance trade-offs effectively, often requiring costly retraining or yielding suboptimal results across the Pareto frontier of preferences. In this paper, we introduce HoE (Hierarchical Mixture-of-Experts), a lightweight, parameter-efficient, and plug-and-play approach that eliminates the need for model retraining, while enabling LLMs to adapt across the entire Pareto frontier and accommodate diverse user preferences. In particular, HoE consists of three hierarchical components: LoRA Experts, Router Experts and Weighting Router, reaching optimal Pareto frontiers and achieving a trade-off between parameter size, training cost, and performance. We evaluate HoE across various tasks on 16 objectives and 200 different preferences among 8 benchmarks, demonstrating superior performance over 15 recent baselines. </div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{hoe_iclr26,
+  title={Multi-objective Large Language Model Alignment with Hierarchical Experts},
+  author = {Zhuo Li and Guodong Du and WeiYang Guo and Yigeng Zhou and Xiucheng Li and Wenya Wang and Fangming Liu and Yequan Wang and Deheng Ye and Min Zhang and Jing Li},
+  booktitle = {The Fourteenth International Conference on Learning Representations (ICLR)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Knowledge Fusion of Large Language Models via Modular SkillPacks</strong><br/>
+        <i>Guodong DU, Zhuo Li, Xuanning Zhou, Junlin Li, Zesheng Shi, Wanyu Lin, Ho-Kin Tang, Xiucheng Li, Fangming Liu, Wenya Wang, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">ICLR-26</span>- The Fourteenth International Conference on Learning Representations, 2026. <br/>
+          <a class="file_link" href="https://arxiv.org/pdf/2505.18502"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href="https://github.com/duguodong7/GraftLLM"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Cross-capability transfer represents a key challenge in large language model (LLM) research, particularly in multi-task integration, model compression, and knowledge fusion. Recent works such as FuseLLM and FuseChat have shown the potential of transferring multiple model capabilities to lightweight models, thereby enhancing adaptability and efficiency. This motivates our investigation into more efficient methods for cross-capability transfer. However, existing merging approaches primarily focus on small, homogeneous models, limiting their applicability. For large, heterogeneous models, knowledge distillation with full-parameter fine-tuning often overlooks the student model’s inherent capability and risks catastrophic forgetting, while PEFT methods struggle to effectively absorb knowledge from source LLMs. To address these issues, we introduce GraftLLM, a novel grafting-based method that stores source model capabilities in a target model + SkillPack format. This approach preserves general capabilities, reduces parameter conflicts, and supports forget-free continual learning and model fusion. We employ a module-aware adaptive compression strategy for parameter updates, ensuring efficient storage while preserving task-specific knowledge. The resulting SkillPack serves as a compact and transferable knowledge carrier, ideal for heterogeneous LLM fusion. Experiments across various scenarios demonstrate that GraftLLM outperforms existing techniques in knowledge transfer, knowledge fusion, and forget-free learning, providing a scalable and efficient solution for cross-capability transfer.  </div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{guodong_iclr26,
+  title={Knowledge Fusion of Large Language Models via Modular SkillPacks},
+  author = {Guodong DU and Zhuo Li and Xuanning Zhou and Junlin Li and Zesheng Shi and Wanyu Lin and Ho-Kin Tang and Xiucheng Li and Fangming Liu and Wenya Wang and Min Zhang and Jing Li},
+  booktitle = {The Fourteenth International Conference on Learning Representations (ICLR)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+<li > <strong>Mitigating Context-Memory Conflicts in LLMs through Dynamic Cognitive Reconciliation Decoding</strong><br/>
+        <i>Yigeng Zhou, Wu Li, Yifan Lu, Yequan Wang, Xuebo Liu, Wenya Wang, Jun Yu, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">IEEE TASL</span>- IEEE Transactions on Audio, Speech and Language Processing, 2026<br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large language models accumulate extensive parametric knowledge through pre-training. However, knowledge conflicts occur when outdated or incorrect parametric knowledge conflicts with external knowledge in the context. Existing methods address knowledge conflicts through contrastive decoding, but in conflict-free scenarios, static approaches disrupt output distribution. Other dynamic decoding methods attempt to measure the degree of conflict but still struggle with complex real-world situations. In this paper, we propose a two-stage decoding method called Dynamic Cognitive Reconciliation Decoding (DCRD), to predict and mitigate context-memory conflicts. DCRD first analyzes the attention map to assess context fidelity and predict potential conflicts. Based on this prediction, the input is directed to one of two decoding paths: (1) greedy decoding, or (2) context
+fidelity-based dynamic decoding. This design enables DCRD to handle conflicts efficiently while maintaining high accuracy and decoding efficiency in conflict-free cases. Additionally, to simulate scenarios with frequent knowledge updates, we constructed ConflictKG, a knowledge conflict QA benchmark. Experiments on four LLMs across six QA datasets show that DCRD outperforms all baselines, achieving state-of-the-art performance. </div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@article{dcrd_26,
+  title={Mitigating Context-Memory Conflicts in LLMs through Dynamic Cognitive Reconciliation Decoding},
+  author = {Yigeng Zhou and Wu Li and Yifan Lu and Yequan Wang and Xuebo Liu and Wenya Wang and Jun Yu and Min Zhang and Jing Li},
+  booktitle = {IEEE Transactions on Audio, Speech and Language Processing},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </li>
+
+
+
+
+
+<li > <strong>Progressive Adaptation of Large Language Models for Multilingual Text Ranking</strong><br/>
+        <i>Longhui Zhang, Yanzhao Zhang, Dingkun Long, Pengjun Xie, Meishan Zhang, <strong>Jing Li</strong>, Min Zhang<br/>
+      <span class="abbpaper">ACM TOIS-26</span>- ACM Transactions on Information Systems, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Despite increasing research attention to text ranking, most studies focus on monolingual scenarios, with a particular emphasis on
+English-language contexts. This narrow focus limits the applicability of ranking models in cross-lingual contexts, such as ranking
+Chinese documents based on English queries. Recent advances in large language models (LLMs) have significantly reduced interlanguage barriers through extensive pre-training on extensive multilingual corpora, thus facilitating the study of multilingual text
+ranking (MTR). In this work, we explore the potential of LLMs in MTR tasks. Specifically, we first introduce an MTR benchmark
+encompassing both monolingual and cross-lingual scenarios. Then, we propose a two-stage training pipeline to alleviate the misalignment between LLMs and text ranking. Lastly, we adapt this training pipeline to multilingual scenarios from the perspective of
+training data and methods. Our experiments on the MTR benchmark demonstrate that the proposed multilingual two-stage training
+pipeline significantly improves LLM ranking performance in both monolingual and cross-lingual scenarios, particularly in out-domain
+settings. We complement these findings with a thorough analysis to deepen the understanding of our approach.  </div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@article{mtr_26,
+  title={Progressive Adaptation of Large Language Models for Multilingual Text Ranking},
+  author = {Longhui Zhang and Yanzhao Zhang and Dingkun Long and Pengjun Xie and Meishan Zhang and Jing Li and Min Zhang},
+  booktitle = {ACM Transactions on Information Systems},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </li>
+
+
+
 <confli > <strong>FP=XINT: Representing Neural Networks via Low‑Bit Series Basis Functions</strong><br/>
         <i>Boyang Zhang, Daning Cheng, Yunquan Zhang, Jiake Tian, <strong>Jing Li</strong>, Fangming Liu<br/>
       <span class="abbpaper">AAAI-26</span>- The Fortieth AAAI Conference on Artificial Intelligence, 2026. <br/>
-          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+          <a class="file_link" href="https://arxiv.org/pdf/2412.06865v2"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
     
              <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
     
