@@ -475,9 +475,9 @@ bibtex
 <confli > <strong>Echoes as Anchors: Probabilistic Costs and Attention Refocusing in LLM Reasoning</strong><br/>
         <i>Zhuoyuan Hao, Zhuo Li, Wu Li, Fangming Liu, Min Zhang and <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
       <span class="abbpaper">ICLR-26</span>- The Fourteenth International Conference on Learning Representations, 2026. <br/>
-          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+          <a class="file_link" href="https://arxiv.org/pdf/2602.06600"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
     
-             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+             <a class="file_link" href="https://github.com/hhh2210/echoes-as-anchors"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
     
           <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
                                  <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
@@ -1268,7 +1268,7 @@ Large language models (LLMs) deliver impressive results but face challenges from
           <br/>
     
           <div id="abstract" class="verbatim" style="display:none">
-Semantic role labeling (SRL) is a crucial task of natural language processing (NLP). Although generative decoder-based large language models (LLMs) have achieved remarkable success across various NLP tasks, they still lag behind state-of-the-art encoder-decoder (BERT-like) models in SRL. In this work, we seek to bridge this gap by equipping LLMs for SRL with two mechanisms: (a) retrieval-augmented generation and (b) self-correction. The first mechanism enables LLMs to leverage external linguistic knowledge such as predicate and argument structure descriptions, while the second allows LLMs to identify and correct inconsistent SRL outputs. We conduct extensive experiments on three widely-used benchmarks of SRL (CPB1.0, CoNLL-2009, and CoNLL-2012). Results demonstrate that our method achieves state-of-the-art performance in both Chinese and English, marking the first successful application of LLMs to surpass encoder-decoder approaches in SRL.
+Recent research shows that supplementing Large Language Models (LLMs) with knowledge graphs can enhance their performance. However, existing methods often introduce noise in the retrieval and reasoning pipeline, hindering LLMs’ ability to effectively integrate external knowledge for complex multi-hop question answering. To address this, we propose RefKG, a novel framework designed to enhance the reasoning capabilities of LLMs through reflective engagement with knowledge graphs. RefKG autonomously conduct retrieval and reflection on knowledge graphs. It consists of three modules: Query Decoupling, LLM-Driven Knowledge Graph Exploration, and Inference with Knowledge Reconstruction. We also introduce a multi-task tuning strategy that not only integrates external knowledge into LLMs but also trains them to leverage this knowledge for answering questions. This significantly improves their performance on knowledge-intensive tasks. Experiments on fact verification and knowledge graph question answering demonstrate RefKG’s effectiveness.
        </div>
     
           <div id="bibtex" style="display:none">
@@ -1535,6 +1535,39 @@ Nowadays, publishers like Elsevier increasingly use graphical abstracts (i.e., a
       </div>
 
 </i> </li>
+
+
+
+<li > <strong>Scientific poster generation: A new dataset and approach</strong><br/>
+        <i>Xinyi Zhong, Zusheng Tan, <strong>Jing Li</strong>, Shen Gao, Jing Ma, Shanshan Feng, Billy Chiu<br/>
+      <span class="abbpaper">ELSEVIER PR</span>- Pattern Recognition, 2026. <br/>
+          <a class="file_link" href="https://www.sciencedirect.com/science/article/abs/pii/S0031320325001670"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href="https://github.com/kitman0000/Sci-PosterLayout-Data"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Automating poster creation from research papers saves scientists time. However, training models for this task is challenging due to limited datasets. Moreover, existing methods are mostly rule/template-based, which lack the flexibility to adapt to different content and design requirements in scientific posters. Our contributions aim to address these issues. We introduce Sci-PosterLayout, a dataset comprising 1,226 scientific posters with greater variety in content, layout and domains. Using a template-free method with a seq2seq model and Design Pattern Schema (DPS), we learn various content and design patterns for poster layout generation. Evaluations against existing methods and datasets show our approach produces high-quality posters with diverse layouts. Our work seeks to advance research in scientific poster generation by building a new dataset and proposing template-free methods that require minimal human intervention. The Sci-PosterLayout dataset will be publicly available at https://github.com/kitman0000/Sci-PosterLayout-Data. </div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@article{dps_pr26,
+  title={Scientific poster generation: A new dataset and approach},
+  author = {Xinyi Zhong and Zusheng Tan and Jing Li and Shen Gao and Jing Ma and Shanshan Feng and Billy Chiu},
+  booktitle = {Pattern Recognition},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </li>
 
 
 
