@@ -507,6 +507,369 @@ To update
 
 
 
+<confli > <strong>Backdoors in RLVR: Jailbreak Backdoors in LLMs From Verifiable Reward</strong><br/>
+        <i>Weiyang Guo, Zesheng Shi, Zeen Zhu, Yuan Zhou, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ACL-26</span>- The 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Reinforcement Learning with Verifiable Rewards (RLVR) is an emerging paradigm that significantly boosts a Large Language Model's (LLM's) reasoning abilities on complex logical tasks, such as mathematics and programming. However, we identify, for the first time, a latent vulnerability to backdoor attacks within the RLVR framework. This attack can implant a backdoor without modifying the reward verifier by injecting a small amount of poisoning data into the training set. Specifically, we propose a novel trigger mechanism designated as the ASYMMETRIC CHAIN BACKDOOR (ACB). The attack exploits the RLVR training loop by assigning substantial positive rewards for harmful responses and negative rewards for refusals. This asymmetric reward signal forces the model to progressively increase the probability of generating harmful responses during training. Our findings demonstrate that the RLVR backdoor attack is characterized by both high efficiency and strong generalization capabilities. Utilizing less than 2% poisoned data in train set, the backdoor can be successfully implanted across various model scales without degrading performance on benign tasks. Evaluations across multiple jailbreak benchmarks indicate that activating the trigger degrades safety performance by an average of 73%. Furthermore, the attack generalizes effectively to a wide range of jailbreak methods and unsafe behaviors.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{acb_acl26,
+  title = {Backdoors in RLVR: Jailbreak Backdoors in LLMs From Verifiable Reward},
+  author = {Weiyang Guo and Zesheng Shi and Zeen Zhu and Yuan Zhou and Min Zhang and Jing Li},
+  booktitle = {The 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Team-Based Self-Play With Dual Adaptive Weighting for Fine-Tuning LLMs</strong><br/>
+        <i>Wu Li, Yigeng Zhou, Zesheng Shi, Yequan Wang, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ACL-26</span>- The 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+While recent self-training approaches have reduced reliance on human-labeled data for aligning LLMs, they still face critical limitations: (i) sensitivity to synthetic data quality, leading to instability and bias amplification in iterative training; (ii) ineffective optimization due to a diminishing gap between positive and negative responses over successive training iterations. In this paper, we propose Team-based self-Play with dual Adaptive Weighting (TPAW), a novel self-play algorithm designed to improve alignment in a fully self-supervised setting. TPAW adopts a team-based framework in which the current policy model both collaborates with and competes against historical checkpoints, promoting more stable and efficient optimization. To further enhance learning, we design two adaptive weighting mechanisms: (i) a response reweighting scheme that adjusts the importance of target responses, and (ii) a player weighting strategy that dynamically modulates each team member’s contribution during training. Initialized from a SFT model, TPAW iteratively refines alignment without requiring additional human supervision. Experimental results demonstrate that TPAW consistently outperforms existing baselines across various base models and LLM benchmarks.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{tpaw_acl26,
+  title = {Team-Based Self-Play With Dual Adaptive Weighting for Fine-Tuning LLMs},
+  author = {Wu Li and Yigeng Zhou and Zesheng Shi and Yequan Wang and Min Zhang and Jing Li},
+  booktitle = {The 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+
+
+
+
+<confli > <strong>Personalizing LLMs with Binary Feedback: A Preference-Calibrated Optimization Framework</strong><br/>
+        <i>Xilai Ma, Liye Zhao, Weijun Yao, Haibing Di, Wenya Wang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ACL-26</span>- The 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large Language Model (LLM) personalization aims to align model behaviors with individual user preferences. Existing methods often focus on isolated user histories, neglecting the essential role of inter-user differences. We propose C-BPO, a framework that personalizes LLMs via preference-calibrated binary signals. By treating target user data as positive feedback and other users' data as an auxiliary set of implicit negative signals, C-BPO captures distinct inter-user differences. To mitigate the preference overlap issue, where shared task knowledge is erroneously penalized, we derive an objective grounded in Positive-Unlabeled (PU) learning theory. This approach purifies negative signals by subtracting ``positive bias'', ensuring alignment with unique idiosyncrasies without compromising general helpfulness. Empirical experiments across various personalization tasks and backbone LLMs show C-BPO consistently outperforms baselines, demonstrating the efficacy of preference-calibrated binary signals in modeling inter-user differences.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{cbpo_acl26,
+  title = {Personalizing LLMs with Binary Feedback: A Preference-Calibrated Optimization Framework},
+  author = {Xilai Ma and Liye Zhao and Weijun Yao and Haibing Di and Wenya Wang and Jing Li},
+  booktitle = {The 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+<confli > <strong>Vocabulary Hijacking in LVLMs: Unveiling Critical Attention Heads by Excluding Inert Tokens to Mitigate Hallucination</strong><br/>
+        <i>Yangneng Chen, Junlin Li, Weijun Yao, Xilai Ma, Guodong DU, Wenya Wang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ACL-26</span>- The 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large Vision-Language Models (LVLMs) have achieved remarkable progress in multimodal tasks, yet their reliability is persistently undermined by hallucinations—generating text that contradicts visual input. Recent studies often attribute these errors to inadequate visual attention. In this work, we analyze the attention mechanisms via the logit lens, uncovering a distinct anomaly we term Vocabulary Hijacking. We discover that specific visual tokens, defined as Inert Tokens, disproportionately attract attention. Crucially, when their intermediate hidden states are projected into the vocabulary space, they consistently decode to a fixed set of unrelated words (termed Hijacking Anchors) across layers, revealing a rigid semantic collapse. Leveraging this semantic rigidity, we propose Hijacking Anchor-Based Identification (HABI), a robust strategy to accurately localize these Inert Tokens. To quantify the impact of this phenomenon, we introduce the Non-Hijacked Visual Attention Ratio (NHAR), a novel metric designed to identify attention heads that remain resilient to hijacking and are critical for factual accuracy. Building on these insights, we propose Hijacking-Aware Visual Attention Enhancement (HAVAE), a training-free intervention that selectively strengthens the focus of these identified heads on salient visual content. Extensive experiments across multiple benchmarks demonstrate that HAVAE significantly mitigates hallucinations with no additional computational overhead, while preserving the model's general capabilities.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{habi_acl26,
+  title = {Vocabulary Hijacking in LVLMs: Unveiling Critical Attention Heads by Excluding Inert Tokens to Mitigate Hallucination},
+  author = {Yangneng Chen and Junlin Li and Weijun Yao and Xilai Ma and Guodong DU and Wenya Wang and Jing Li},
+  booktitle = {The 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+
+<confli > <strong>E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning</strong><br/>
+        <i>Weiyang Guo, Zesheng Shi, Liye Zhao, Jiayuan Ma, Zeen Zhu, Junxian He, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ACL-26</span>- Findings of the 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large Language Model (LLM) personalization aims to align model behaviors with individual user preferences. Existing methods often focus on isolated user histories, neglecting the essential role of inter-user differences. We propose C-BPO, a framework that personalizes LLMs via preference-calibrated binary signals. By treating target user data as positive feedback and other users' data as an auxiliary set of implicit negative signals, C-BPO captures distinct inter-user differences. To mitigate the preference overlap issue, where shared task knowledge is erroneously penalized, we derive an objective grounded in Positive-Unlabeled (PU) learning theory. This approach purifies negative signals by subtracting ``positive bias'', ensuring alignment with unique idiosyncrasies without compromising general helpfulness. Empirical experiments across various personalization tasks and backbone LLMs show C-BPO consistently outperforms baselines, demonstrating the efficacy of preference-calibrated binary signals in modeling inter-user differences.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{e3tir_acl26,
+  title = {E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning},
+  author = {Weiyang Guo and Zesheng Shi and Liye Zhao and Jiayuan Ma and Zeen Zhu and Junxian He and Min Zhang and Jing Li},
+  booktitle = {Findings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>D-QRELO: Training- and Data-Free Delta Compression for Large Language Models via Quantization and Residual Low-Rank Approximation</strong><br/>
+        <i>Junlin Li, Shuangyong Song, Guodong DU, Ngai Wong, Xuebo Liu, Yongxiang Li, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup>, Xuelong Li <br/>
+      <span class="abbpaper">ACL-26</span>- Findings of the 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Supervised Fine-Tuning (SFT) accelerates task-specific large language models (LLMs) development, but the resulting proliferation of fine-tuned models incurs substantial memory overhead. Delta compression addresses this by retaining a single pre-trained LLM with multiple compressed delta weights. However, existing methods fail on models fine-tuned with large-scale datasets. We find that larger SFT data scale amplifies delta parameter magnitude, singular values, and entropy, exacerbating compression errors. To tackle this, we propose D-QRELO (delta Compression via  quantization and rsidual low-Rank), a novel training- and data-free delta compression method. It combines coarse-grained one-bit quantization to capture the dominant structure of the delta, followed by compensated residual low-rank approximation to recover fine-grained details from the smaller residual error. Experiments on various LLMs spanning dense and MoE architectures across multiple domains under this challenging setting demonstrate that D-QRELO outperforms existing methods. Moreover, we establish key design principles for delta compression through extensive empirical analysis, demonstrating how task difficulty, architecture, and layer positioning create predictable patterns that can guide optimal compression strategies in production systems.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{dqrelo_acl26,
+  title = {D-QRELO: Training- and Data-Free Delta Compression for Large Language Models via Quantization and Residual Low-Rank Approximation},
+  author = {Junlin Li and Shuangyong Song and Guodong DU and Ngai Wong and Xuebo Liu and Yongxiang Li and  Min Zhang and Jing Li and Xuelong Li},
+  booktitle = {Findings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+<confli > <strong>LLM Inductive Reasoning Through Multi-Agent Enhanced Monte Carlo Tree Search</strong><br/>
+        <i>Xiang Li, Yucheng Zhou, Xiangzhi Wei, Zesheng Shi, Haiyuan Wan, Gong Yifan, Fangming Liu, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">ACL-26</span>- Findings of the 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Recent research reveals challenges in the inductive reasoning capabilities of large language models (LLMs). To address this challenge, we propose MATSIR, a test-time framework combining Multi-Agents and Monte Carlo Tree Search to strengthen LLM Inductive Reasoning. MATSIR coordinates three agents (Inductor, Deductor, and Judge) that iteratively generate, validate, and refine hypotheses in a tree-search process, incorporating Deduction Rewards and Judgment Rewards to guide the reasoning process. Experiments on four models and five benchmarks show that MATSIR outperforms prior methods, improving Deepseek-V3 by +15.8% on average. Our analysis reveals that MATSIR reduces the hypothesis space, converges toward optimal solutions, and leverages complementary rewards of the three agents, which leads to an obvious improvement of the inductive reasoning capability of LLMs. 
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{MATSIR_acl26,
+  title = {LLM Inductive Reasoning Through Multi-Agent Enhanced Monte Carlo Tree Search},
+  author = {Xiang Li and Yucheng Zhou and Xiangzhi Wei and Zesheng Shi and Haiyuan Wan and Gong Yifan and Fangming Liu and Jing Li},
+  booktitle = {Findings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Skill Weaving: Efficient LLM Improvement via Modular Skillpacks</strong><br/>
+        <i>Zhuo Li, Guodong DU, Zesheng Shi, Weiyang Guo, Weijun Yao, Yuan Zhou, Jiabo Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ACL-26</span>- Findings of the 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+In this work, we introduce SkillWeave, a modular improvement framework that enables large language models to specialize under fixed memory budgets. SkillWeave partitions full capabilities of a general-purpose model into domain-specific skillpacks—lightweight, domain-specific delta modules—that reorganize and refine the model’s internal knowledge. To ensure deployment efficiency, SkillWeave incorporates SkillZip, a compression component that transforms specialized parameters into lightweight, inference-ready skillpacks. Together, these components allow SkillWeave to achieve strong multi-domain performance and inference-efficient execution. On multi-task and agentic benchmarks, a 9B SkillWeave model outperforms task-specific baselines and even surpasses a 32B monolithic LLM, while achieving up to 4× speedup.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{SkillWeave_acl26,
+  title = {Skill Weaving: Efficient LLM Improvement via Modular Skillpacks},
+  author = {Zhuo Li and Guodong DU and Zesheng Shi and Weiyang Guo and Weijun Yao and Yuan Zhou and Jiabo Zhang and Jing Li},
+  booktitle = {Findings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+<confli > <strong>FADE: Mitigating Hallucinations by Reducing Language Priors Dominance in Large Vision-Language Models</strong><br/>
+        <i>Yichen Guo, Kai Tang, Jinhao You, Hongyang Cheng, <strong>Jing Li</strong>, Fubing Yang, Siyu Chen, Shanghang Zhang, Wenya Wang<br/>
+      <span class="abbpaper">ACL-26</span>- Findings of the 64th Annual Meeting of the Association for Computational Linguistics, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+In this work, we introduce SkillWeave, a modular improvement framework that enables large language models to specialize under fixed memory budgets. SkillWeave partitions full capabilities of a general-purpose model into domain-specific skillpacks—lightweight, domain-specific delta modules—that reorganize and refine the model’s internal knowledge. To ensure deployment efficiency, SkillWeave incorporates SkillZip, a compression component that transforms specialized parameters into lightweight, inference-ready skillpacks. Together, these components allow SkillWeave to achieve strong multi-domain performance and inference-efficient execution. On multi-task and agentic benchmarks, a 9B SkillWeave model outperforms task-specific baselines and even surpasses a 32B monolithic LLM, while achieving up to 4× speedup.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{fade_acl26,
+  title = {FADE: Mitigating Hallucinations by Reducing Language Priors Dominance in Large Vision-Language Models},
+  author = {Yichen Guo and Kai Tang and Jinhao You and Hongyang Cheng and Jing Li and Fubing Yang and Siyu Chen and Shanghang Zhang and Wenya Wang},
+  booktitle = {Findings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+
+<confli > <strong>Visual-RAG: Benchmarking Text-to-Image Retrieval Augmented Generation for Visual Knowledge Intensive Queries</strong><br/>
+        <i>Yin Wu, Quanyu Long, <strong>Jing Li</strong>, Jianfei Yu and Wenya Wang <br/>
+      <span class="abbpaper">SIGIR-26</span>- The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href="https://github.com/visual-rag/visual-rag"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Retrieval-augmented generation (RAG) augments large language models (LLMs) with external knowledge to tackle knowledge-intensive question answering. While several benchmarks evaluate multimodal LLMs (MLLMs) under multimodal RAG settings, they predominantly retrieve from textual corpora and do not explicitly assess how models exploit visual evidence during answer generation. Consequently, there still lacks benchmark that cleanly isolates and measures the contribution of retrieved images in a visual knowledge-intensive RAG pipeline. We introduce Visual-RAG, a question-answering benchmark that targets visually-grounded, knowledge-intensive questions in a visual evidence-centric manner. Unlike prior work, Visual-RAG requires text-to-image retrieval and the integration of retrieved clue images whose pixel content explicitly encodes the visual knowledge necessary for answer generation. With Visual-RAG, we evaluate five open-source and three proprietary MLLMs and find that current systems still substantially underutilize the visual information available in retrieved images. Despite clear opportunities for multimodal evidence integration, state-of-the-art models struggle to extract and exploit fine-grained visual knowledge, and text-to-image retrieval itself remains challenging even under constrained entity-level corpora. These results underscore the need for improved visual retrieval, grounding, and attribution in multimodal RAG.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{visualrag_sigir26,
+  title = {Team-Based Self-Play With Dual Adaptive Weighting for Fine-Tuning LLMs},
+  author = {Yin Wu and Quanyu Long and Jing Li and Jianfei Yu and Wenya Wang},
+  booktitle = {The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
 
 
 <confli > <strong>Multi-objective Large Language Model Alignment with Hierarchical Experts</strong><br/>
