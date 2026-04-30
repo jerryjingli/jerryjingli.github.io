@@ -506,6 +506,296 @@ To update
 
 
 
+<li > <strong>VLM-Guard: Defending Jailbreaks by Monitoring Only Hundreds of Safety-Critical Neurons</strong><br/>
+        <i>Jinyin Hu, Jiawei Zhou, Minshan Xie, Zhonghao Yang, <strong>Jing Li</strong>, Huadi Zheng, Jie Shi, Daojing He, and Yu Li <br/>
+      <span class="abbpaper">IEEE TIFS</span>- IEEE Transactions on Information Forensics and Security, 2026.<br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large Vision Language Models (VLMs) are shown to be vulnerable to jailbreak attacks. Current attack detection methods often fall short due to their inability to comprehensively monitor the large input-output space or to accurately monitor safety-critical neurons associated to harmful semantics, resulting in high false positives and false negatives. In this paper, we introduce VLM-Guard, a highly effective detection framework that defends against jailbreak attacks by precisely identifying critical neurons linked to unsafe behaviors. Leveraging a tailored differential analysis over a large corpus of activation values, VLM-Guard isolates a compact set of neurons—just a few hundred, comprising less than 0.2% of the total—that are strongly correlated with harmful semantics. This enables the design of a attack detector that is not only effective at monitoring adversarial behavior but also lightweight and training-free that no modifications were made to any of the models, making it wellsuited for practical deployment. Extensive evaluations demonstrate that VLM-Guard excels in detecting jailbreak attacks while preserving benign performance in attack-free settings, offering an effective and efficient solution for safeguarding VLMs. We will open-source our code upon acceptance.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@article{vlmguard_tifs26,
+  title={VLM-Guard: Defending Jailbreaks by Monitoring Only Hundreds of Safety-Critical Neurons},
+  author = {Jinyin Hu and Jiawei Zhou and Minshan Xie and Zhonghao Yang and Jing Li and Huadi Zheng and Jie Shi and Daojing He and and Yu Li},
+  booktitle = {IEEE Transactions on Information Forensics and Security},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </li>
+
+
+
+<confli > <strong>SuCo: Sufficiency-guided Continuous Adaptive Reasoning</strong><br/>
+        <i>Jiahao Wang, Bingyu Liang, Chenhao Hu, Longhui Zhang, Xuebo Liu, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup>，Xuelong Li <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Despite remarkable performance on complex tasks, Large Reasoning Models (LRMs) often generate excessively long Chain-of-Thoughts (CoT), inflating computational costs even for simple queries. Existing efforts to mitigate this inefficiency typically rely on discrete reasoning modes or fixed budget tiers, lacking a principled criterion of when reasoning is sufficient. In this work, we introduce Minimal Sufficient CoT (MSC), defined as the shortest prefix of a CoT trajectory which is adequate for producing the correct answer. We empirically show that MSC not only reduces reasoning tokens, but also improves accuracy across difficulty levels. Building on MSC, we propose Sufficiency-guided Continuous Adaptive Reasoning (SuCo), a two-stage training framework for autonomous reasoning control along a continuous spectrum. In stage 1, MSC-Aligned Fine-Tuning (MFT) constructs MSC data using problem-adaptive sufficiency thresholds that naturally scale with question difficulty, then fine-tunes the model to internalize concise yet sufficient reasoning patterns. In stage 2, Sufficiency-Aware Policy Optimization (SAPO) further optimizes the model through reinforcement learning with dynamic complexity tracking and sufficiency-aware rewards that penalize both over- and under-thinking. Extensive experiments across mathematics, code, and science benchmarks show that SuCo consistently achieves improvements in both accuracy and reasoning efficiency.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{suco_icml26,
+  title = {SuCo: Sufficiency-guided Continuous Adaptive Reasoning},
+  author = {Jiahao Wang, Bingyu Liang, Chenhao Hu, Longhui Zhang, Xuebo Liu, Min Zhang, Jing Li, Xuelong Li},
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+<confli > <strong>Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation</strong><br/>
+        <i>Longhui Zhang, Jiahao Wang, Chenhao Hu, Bingyu Liang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup>，Min Zhang <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+While large language models (LLMs) have greatly advanced the functional correctness of automated code translation systems, the runtime efficiency of translated programs has received comparatively little attention. With the waning of Moore’s law, runtime efficiency has become increasingly important for program quality, alongside functional correctness. Our preliminary study reveals that LLM-translated programs often run slower than human-written ones, and this issue cannot be remedied through prompt engineering alone. Therefore, our work proposes SwiftTrans, a code translation framework comprising two key stages: (1) Multi-Perspective Exploration, where MpTranslator leverages parallel in-context learning (ICL) to generate diverse translation candidates; and (2) Difference-Aware Selection, where DiffSelector identifies the optimal candidate by explicitly comparing differences between translations. We further introduce Hierarchical Guidance for MpTranslator and Ordinal Guidance for DiffSelector, enabling LLMs to better adapt to these two core components. To support the evaluation of runtime efficiency in translated programs, we extend existing benchmarks, CodeNet and F2SBench, and introduce a new benchmark, SwiftBench. Experimental results across all three benchmarks show that SwiftTrans achieves consistent improvements in both correctness and runtime efficiency.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{swifttrans_icml26,
+  title = {Bridging Functional Correctness and Runtime Efficiency Gaps in LLM-Based Code Translation},
+  author = {Longhui Zhang and Jiahao Wang and Chenhao Hu and Bingyu Liang and Jing Li and Min Zhang},
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+<confli > <strong>Modality-Decoupled Online Recursive Editing</strong><br/>
+        <i>Siyuan Li, Youyuan Zhang, Fangming Liu, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Online model editing for multimodal large language models (MLLMs) requires assimilating a stream of corrections under tight compute and memory budgets. Yet editors developed for text-only LLMs often degrade on MLLMs: visually dominant activations skew the statistics that shape updates, causing cross-modal conflict, while sequential writes become entangled in a shared edit space and amplify long-horizon interference, causing inter-edit interference. To address these, we propose M-ORE, a modality-decoupled online recursive editor for lifelong MLLM adaptation. M-ORE is derived from a unified proximal-projection formulation and admits a closed-form update with a Sherman-Morrison recursion, yielding constant per-edit overhead. It maintains module-wise locality statistics for the text stack and the visual projector to avoid visually dominated update shaping and performs continual updates in a fixed orthogonal low-rank edit subspace via a Sherman-Morrison recursion to mitigate long-horizon interference. Experiments on multiple MLLM backbones and online editing benchmarks show that our M-ORE method consistently improves reliability, generality, and locality over strong baselines, while achieving favorable quality-efficiency scaling.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{more_icml26,
+  title = {Modality-Decoupled Online Recursive Editing},
+  author = {Siyuan Li and Youyuan Zhang and Fangming Liu and Jing Li },
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+
+<confli > <strong>Language Bias in LVLMs: From In-Depth Analysis to Simple and Effective Mitigation</strong><br/>
+        <i>Yangneng Chen, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large Vision-Language Models (LVLMs) extend large language models with visual understanding, but remain vulnerable to hallucination, where outputs are fluent yet inconsistent with images. Recent studies link this issue to language bias—the tendency of LVLMs to over-rely on text while neglecting visual inputs. Yet most analyses remain empirical without uncovering its underlying cause. In this paper, we provide a systematic study of language bias and identify its root in modality misalignment during training. Our analysis shows that both Visual Instruction Tuning (VIT) and Direct Preference Optimization (DPO) often prioritize textual improvements, which may cause LVLMs to overly lean toward language modeling rather than balanced multimodal understanding. To address this, we propose two simple yet effective methods: Language Bias Regularization (LBR), which mitigates language bias through regularization during instruction tuning, and Language Bias Penalty (LBP), which penalizes language bias in the DPO training process. Extensive experiments across diverse models and benchmarks demonstrate the effectiveness of our approach. LBR consistently improves performance on over ten general benchmarks, while LBP significantly reduces hallucination and improves trustworthiness. Together, these methods not only mitigate language bias but also advance the overall alignment of LVLMs, all without introducing any additional data or auxiliary models.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{lbr_icml26,
+  title = {Language Bias in LVLMs: From In-Depth Analysis to Simple and Effective Mitigation},
+  author = {Yangneng Chen and Jing Li},
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+
+<confli > <strong>Transitivity Meets Cyclicity: Explicit Preference Decomposition for Dynamic Large Language Model Alignment</strong><br/>
+        <i>Yucong Huang, Xiucheng Li, Kaiqi Zhao, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Standard RLHF relies on transitive scalar rewards, failing to capture the cyclic nature of human preferences. While some approaches like the General Preference Model (GPM) address this, we identify a theoretical limitation: their implicit formulation entangles hierarchy with cyclicity, failing to guarantee dominant solutions. To address this, we propose the Hybrid Reward-Cyclic (HRC) model, which utilizes game-theoretic decomposition to explicitly disentangle preferences into orthogonal transitive (scalar) and cyclic (vector) components. Complementing this, we introduce Dynamic Self-Play Preference Optimization (DSPPO), which treats alignment as a time-varying game to progressively guide the policy toward the Nash equilibrium. Experiments on RewardBench 2 demonstrate that HRC consistently improves over both BT and GPM baselines (e.g., +1.23% on Gemma-2B). In particular, its superior performance in the \textit{Ties} domain empirically validates the model's robustness in handling complex, non-strict preferences. Furthermore, extensive evaluations on downstream generation tasks (AlpacaEval 2.0 and MT-Bench) confirm the efficacy of our framework. Notably, on Gemma-2B-it, HRC+DSPPO achieves a peak length-controlled win-rate of 44.75% against GPT-4-Turbo on AlpacaEval 2.0 (evaluated by GPT-4o-mini), significantly outperforming standard SPPO baselines trained with BT or GPM.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{hrc_icml26,
+  title = {Transitivity Meets Cyclicity: Explicit Preference Decomposition for Dynamic Large Language Model Alignment},
+  author = {Yucong Huang and Xiucheng Li and Kaiqi Zhao and Jing Li},
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
+<confli > <strong>AgentVocab: Structure-Aware Vocabulary Adaptation for Efficient LLM Agents</strong><br/>
+        <i>Kai Bian, Haosi Mo, Xuebo Liu, Shuangyong Song, <strong>Jing Li</strong>, Yongxiang Li, Min Zhang, Xuelong Li <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Recent large language models (LLMs) have demonstrated strong capabilities across challenging tasks, enabling their widespread adoption in agentic systems that interact with external tools. In such deployments, however, LLMs are typically trained with general-purpose tokenizers designed for broad language coverage, while their usage is dominated by narrow, structured tool-calling interactions. This training–deployment mismatch leads to inefficient tokenization, where repetitive structural patterns and frequent semantic units in function calls are fragmented into long sequences of low-level tokens, increasing decoding overhead. To address this gap, we introduce 
+, a structure-aware vocabulary adaptation framework for efficient LLM agents. AgentVocab derives specialized vocabulary entries from real tool-calling traces and adapts the model vocabulary to better reflect structural and semantic regularities, without task-specific schema engineering. Experiments on 
+ and -bench show that AgentVocab significantly improves decoding efficiency, reducing latency by approximately 15-25% relative to the vanilla baseline, while preserving tool-calling performance. Our approach is orthogonal to existing fine-tuning and agent-training methods and integrates seamlessly into standard agent pipelines. 
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{agentvocab_icml26,
+  title = {AgentVocab: Structure-Aware Vocabulary Adaptation for Efficient LLM Agents},
+  author = {Kai Bian and Haosi Mo and Xuebo Liu and Shuangyong Song and Jing Li and Yongxiang Li and Min Zhang and Xuelong Li},
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Unified Episodic and Semantic Memory via Modulating Transformer FeedForward Layers</strong><br/>
+        <i>Yiqun Yao, Xiang Li, Xin Jiang, Xuezhi Fang, Naitong Yu, Siwei Dong, Wenjia Ma, <strong>Jing Li</strong>, Aixin Sun, Yequan Wang <br/>
+      <span class="abbpaper">ICML-26</span>- The Forty-third International Conference on Machine Learning, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+It is widely recognized that, after generative pre-training, Transformer FeedForward layers implicitly function as semantic memory, encoding linguistic and factual knowledge, while the contexts in key–value (KV) cache contain raw events, serving as the source of models' episodic memory. In this work, we show that a same group of Transformer FeedForward-layer parameters can both be semantic and episodic memory, which is retrievable without explicitly attending to the related KV cache. To realize this idea, we introduce Hypermem, a hypernetwork that recurrently maps contexts into targeted updates of FeedForward parameters. We post-train the hypernetwork using continuation and random-access associative memory objectives, eliminating the need for test-time training. Extensive experiments demonstrate that our approach outperforms related methods, including MemoryLLM and generative adapter, on memory retrieval, long-context question answering, and personalization benchmarks, establishing a new state of the art for hypernetwork-based memory mechanisms. Our results suggest that directly bridging data and parameters provides a viable direction for exploring next-generation foundation models with more flexible and persistent memory capabilities.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{yiqun_icml26,
+  title = {Unified Episodic and Semantic Memory via Modulating Transformer FeedForward Layers},
+  author = {Yiqun Yao and Xiang Li and Xin Jiang and Xuezhi Fang and Naitong Yu and Siwei Dong and Wenjia Ma and Jing Li and Aixin Sun and Yequan Wang},
+  booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
 
 <confli > <strong>Backdoors in RLVR: Jailbreak Backdoors in LLMs From Verifiable Reward</strong><br/>
         <i>Weiyang Guo, Zesheng Shi, Zeen Zhu, Yuan Zhou, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
