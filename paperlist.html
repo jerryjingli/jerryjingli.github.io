@@ -246,6 +246,7 @@
   <dd><strong>FLM-101B: An Open LLM and How to Train It with $100K Budget </strong></dd> 
 
    <dd><i> Xiang Li, Yiqun Yao, Xin Jiang, Xuezhi Fang, Xuying Meng, Siqi Fan, Peng Han, <strong>Jing Li</strong>, Li Du, Bowen Qin, Zheng Zhang, Aixin Sun and Yequan Wang </i></dd> 
+       <dd><span class="abbpaper">Preprint</span>- Underreview, 2025.</dd> 
 
      <dd style="margin-bottom:3mm">
      <a class="file_link" href="https://arxiv.org/pdf/2309.03852.pdf"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
@@ -340,6 +341,7 @@ Aligning large language models (LLMs) to simultaneously satisfy multiple objecti
   <dd><strong>Jailbreak-R1: Exploring the Jailbreak Capabilities of LLMs via Reinforcement Learning </strong></dd> 
 
    <dd><i> Weiyang Guo, Zesheng Shi, Zhuo Li, Yequan Wang, Xuebo Liu, Wenya Wang, Fangming Liu, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> </i></dd> 
+      <dd><span class="abbpaper">Preprint</span>- Underreview, 2026.</dd> 
 
      <dd style="margin-bottom:3mm">
      <a class="file_link" href="https://arxiv.org/pdf/2506.00782"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
@@ -374,6 +376,87 @@ As large language models (LLMs) grow in power and influence, ensuring their safe
       </div>
 
     </dd> 
+
+
+
+
+ 
+ <dd><strong>Agent Reinforcement Learning via Pivotal-Aware Self-Feedback Retry</strong> </dd> 
+   <dd> <i>Weiyang Guo, Zesheng Shi, Longhui Zhang, Zeen Zhu, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">Preprint</span>- Underreview, 2026.<br/>
+          <a class="file_link" href="https://arxiv.org/pdf/2607.03702v1"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href="https://github.com/yuki-younai/PivoARL"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Large language model (LLM) agents have shown strong decision-making capabili-ties in long-horizon interactive tasks, yet they still struggle to effectively leverage failed trajectories: full retries incur high interaction costs, while experience retrieval tends to dilute critical experience signals. To address this, we propose PivoARL, a self-feedback retry framework for experience exploitation in LLM agents. PivoARL identifies the pivotal erroneous turn through structured reflection and performs local retry only from the corresponding pivotal state, thereby reusing the correct prefix and reducing redundant interactions. From an information-gain perspective, we further show that pivotal retry concentrates useful experience signals near the error boundary, mitigating the signal dilution caused by state-agnostic experience utilization. Based on this insight, we design a pivotal-aware credit assignment mechanism that rewards correct prefixes while isolating erroneous suffixes, and optimize reflection quality through implicit reflection returns. We conduct a systematic evaluation on 4 agent tasks and 7 search-based QA benchmarks. Results show that PivoARL achieves significant improvements on Pass@2/3 across all tasks, with an average gain of about 11.5% over MetaRL. Moreover, benefiting from contrastive preference signals induced by pivotal turns, PivoARL also consistently improves Pass@1 on over 80% of the tasks. On Minesweeper environment, PivoARL improves over GiGPO by more than 45% and reduces interaction turns by about 42% on average compared with full-retry methods. Code is available at https://github.com/yuki-younai/PivoARL.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@article{PivoARL_26,
+  title={Agent Reinforcement Learning via Pivotal-Aware Self-Feedback Retry},
+  author = {Weiyang Guo and Zesheng Shi and Longhui Zhang and Zeen Zhu and Min Zhang},
+  year={2026},
+  eprint={2607.03702},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2607.03702}, 
+}
+          </pre>
+          </div>
+    
+    </i> </li>
+
+   </dd> 
+
+
+
+<dd><strong>Multimodal Knowledge Edit-Scoped Generalization for Online Recursive MLLM Editing</strong> </dd> 
+   <dd> <i>Siyuan Li, Youyuan Zhang, Ruitong Liu, Junxi Wang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup> <br/>
+      <span class="abbpaper">Preprint</span>- Underreview, 2026.<br/>
+          <a class="file_link" href="https://arxiv.org/pdf/2607.01978"  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href="https://github.com/lab-klc/ScopeEdit"  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract_scope').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex_scope').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract_scope" class="verbatim" style="display:none">
+Online multimodal knowledge editing requires injecting a continual stream of visual-textual corrections into multimodal large language models (MLLMs) with bounded overhead and minimal disruption to unrelated behaviors. 
+Existing editors mainly emphasize edit reliability and long-horizon stability, but rarely control the semantic boundary of each edit. Our pilot analyses of post-edit behaviors and internal neuronal activities reveal a scope gap behind reliable edits: instance-level success neither guarantees transfer to valid cross-modal variants nor prevents leakage to unrelated inputs, while edit-related cross-modal responses concentrate in deeper semantic layers. Therefore, we formulate Edit-Scoped Generalization, reframing online MLLM editing from merely correcting an instance to controlling the propagation boundary of each edit. To this end, we propose ScopeEdit, a scope-aware online editor that decomposes each update into a modality-local absorption branch and an evidence-gated shared generalization branch. The local branch supports stable edit absorption, whereas the shared branch enables cross-modal propagation only when visual and textual evidence are sufficiently aligned. Both branches perform scope-separated write geometries in orthogonal low-rank spaces and maintain branch-wise preconditioners via Sherman--Morrison recursions, yielding constant per-edit overhead.
+Extensive experiments across diverse benchmarks, long-horizon edit streams, MLLM backbones, real-world VLKEB scenarios, and complex vision-language architectures show that ScopeEdit consistently improves the trade-off between in-scope cross-modal transfer and out-of-scope locality, while preserving edit reliability, stability and online efficiency. Our code is available at https://github.com/lab-klc/ScopeEdit.
+</div>
+    
+          <div id="bibtex_scope" style="display:none">
+            <pre class="verbatim">
+@article{ScopeEdit_26,
+  title={Multimodal Knowledge Edit-Scoped Generalization for Online Recursive MLLM Editing},
+  author = {Siyuan Li and Youyuan Zhang and Ruitong Liu and Junxi Wang and Jing Li},
+  booktitle = {arXiv preprint arXiv:2607.01978},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </li>
+
+   </dd> 
+</li>
+
 
 
 
@@ -576,6 +659,43 @@ Scientific papers follow structured facets (e.g., Introduction, Methods), and mo
 
 
 
+
+<confli > <strong>CET: Spectral Geometry for Mixed-Precision Quantization</strong><br/>
+        <i>Boyang Zhang, Daning Cheng, Mingyuan Wu, Yunquan Zhang, Meiqi Tu, Jiake Tian, <strong>Jing Li</strong>, Fangming Liu<br/>
+      <span class="abbpaper">ACM MM-26</span>- The 34th ACM International Conference on Multimedia, 2026. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+As deep models continue to scale, post-training quantization has become an important tool for efficient deployment. Compared with uniform quantization, mixed-precision quantization offers greater compression potential by assigning different bit-widths according to the quantization tolerance of different layers. However, existing methods mainly rely on layer-wise sensitivity ranking or discrete search for bit allocation, while making limited use of the directional differences of quantization perturbations in the local loss landscape. To address this limitation, we propose Compression Error Topography (CET), which models mixed-precision quantization as structured perturbations in parameter space and relates quantization perturbations to loss variation through a local second-order approximation. CET further leverages the spectral structure of the Hessian to characterize curvature variations across perturbation directions, identify low-curvature geometric subspaces that are more compression-friendly, and use them to guide layer-wise mixed-precision allocation. Extensive experiments across vision, language, and generative models demonstrate that CET achieves competitive compression–accuracy trade-offs, with particularly strong performance in mixed-precision and ultra-low-bit regimes.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{cet_mm26,
+  title = {CET: Spectral Geometry for Mixed-Precision Quantization},
+  author = {Boyang Zhang and Daning Cheng and Mingyuan Wu and Yunquan Zhang and Meiqi Tu and Jiake Tian and Jing Li and Fangming Liu},
+  booktitle = {The 34th ACM International Conference on Multimedia (ACM MM)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
 <confli > <strong>Few-Shot Synthetic Image Attribution: Identifying Unseen Generators with Limited Samples</strong><br/>
         <i>Shiyu Wu, Shuyan Li, <strong>Jing Li</strong>, Jing Liu, Yequan Wang <br/>
       <span class="abbpaper">ECCV-26</span>- The 19th European Conference on Computer Vision, 2026. <br/>
@@ -599,7 +719,7 @@ AI-generated image (AIGI) attribution presents a pressing challenge that goes be
             <pre class="verbatim">
 @inproceedings{OmniDFA_eccv26,
   title = {Few-Shot Synthetic Image Attribution: Identifying Unseen Generators with Limited Samples},
-  author = {Shiyu Wu, Shuyan Li, Jing Li, Jing Liu, Yequan Wang},
+  author = {Shiyu Wu and Shuyan Li and Jing Li and Jing Liu and Yequan Wang},
   booktitle = {The 19th European Conference on Computer Vision (ECCV)},
   year={2026}
 }
@@ -634,7 +754,7 @@ Despite remarkable performance on complex tasks, Large Reasoning Models (LRMs) o
             <pre class="verbatim">
 @inproceedings{suco_icml26,
   title = {SuCo: Sufficiency-guided Continuous Adaptive Reasoning},
-  author = {Jiahao Wang, Bingyu Liang, Chenhao Hu, Longhui Zhang, Xuebo Liu, Min Zhang, Jing Li, Xuelong Li},
+  author = {Jiahao Wang and Bingyu Liang and Chenhao Hu and Longhui Zhang and Xuebo Liu and Min Zhang and Jing Li and Xuelong Li},
   booktitle = {The Forty-third International Conference on Machine Learning (ICML)},
   year={2026}
 }
