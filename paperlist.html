@@ -589,6 +589,184 @@ Green fuels are essential for decarbonizing transportation sectors, requiring ac
 
 
 
+<confli > <strong>FPCO-Dialog: A Multi-Turn False-Premise Benchmark for Correction and Cooperation in Vision-Language Models</strong><br/>
+        <i>Jiayuan Ma, Yuqi Lu, Weiyang Guo, Chenrui Wang, Junyi Shu, Xuebo Liu, Min Zhang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">EMNLP-26</span>- The 2026 Conference on Empirical Methods in Natural Language Processing. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Vision-language models (VLMs) are increasingly deployed in multi-turn settings where users may describe visual content with incorrect assumptions. Yet existing evaluations rarely isolate how models respond when the same visually grounded false premise persists across dialogue turns. We introduce FPCO-Dialog, a benchmark for evaluating correction and cooperation behavior in VLMs under repeated false premises. FPCO-Dialog contains 1,080 images and 10,800 question turns, stratified by visual complexity, object category, and false-premise class, and uses a 10-turn protocol in which a correct dialogue prefix is followed by repeated false-premise referring expressions. We evaluate 20 commercial and open-source VLMs with a model-agnostic protocol and CorrTP@K, a correction-rate metric over false-premise turns, scored by two independent detectors. FPCO-Dialog reveals substantial differences across model families and scales, stable correction tendencies across dialogue turns, and systematic variation across different types of false premises. We will release the dataset, evaluation protocol, model outputs, detector labels, and code.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{fpcodialog_emnlp26,
+  title = {FPCO-Dialog: A Multi-Turn False-Premise Benchmark for Correction and Cooperation in Vision-Language Models},
+  author = {Jiayuan Ma and Yuqi Lu and Weiyang Guo and Chenrui Wang and Junyi Shu and Xuebo Liu and Min Zhang and Jing Li},
+  booktitle = {The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Identify, Classify, Act: Per-Instruction Controlled Compliance for LLMs over External Data</strong><br/>
+        <i>Zesheng Shi, Xue Li, Chenrui Dai, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">EMNLP-26</span>- The 2026 Conference on Empirical Methods in Natural Language Processing. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+LLMs over external data face a per-instruction tension: a single document or tool return often interleaves legitimate directives with adversarial prompt injections, and the model must follow the former while rejecting the latter. Existing defenses suppress or trust all external instructions, collapsing the safety-utility frontier and forcing a choice between over-refusal and over-compliance. We argue the missing capability is per-instruction credit attribution and formalize it as External-Data Instruction Classification, an identify-classify-act decision over each embedded directive. We propose EDIC, a decomposed reward framework for per-instruction compliance. A scene-grounded pipeline injects mixed beneficial and harmful instructions with counterfactual filtering, while a generative judge is initialized by SFT and refined with GRPO to attribute compliance at the instruction level. The judge then produces a reward that separately encourages beneficial compliance and penalizes harmful compliance for RL training. Across two backbones and five benchmarks, EDIC improves both safety and utility over the strongest prior defense, lifting harmful-rejection by up to 7.7% and Arena-Hard-Auto utility by 12.5% on Qwen3-4B.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{EDIC_emnlp26,
+  title = {Identify, Classify, Act: Per-Instruction Controlled Compliance for LLMs over External Data},
+  author = {Zesheng Shi and Xue li and Chenrui Dai and Jing Li},
+  booktitle = {The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Trust Your Guide Only When Certain: Uncertainty-Aware Sparse Alignment at Inference Time</strong><br/>
+        <i>Zeen Zhu, Zhuo Li, Weiyang Guo, Liye Zhao, Haibing Di, Yequan Wang, <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">EMNLP-26</span>- Findings of the 2026 Conference on Empirical Methods in Natural Language Processing. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+A prominent paradigm in inference-time alignment employs lightweight supervisors to steer Large Language Models (LLMs). Through empirical analysis, we identify a structural mismatch in this paradigm: weak supervisors exhibit pervasive high entropy across the vast majority of tokens, yet prevailing dense intervention approaches mandate supervision at every decoding step. This leads to frequent low-confidence interventions that can disrupt valid base-model reasoning and incur substantial utility costs. To resolve this, we propose TUSA (Trust-based Uncertainty Sparse Alignment). Moving away from continuous oversight, TUSA reframes alignment as a dynamic arbitration process, introducing an uncertainty-aware arbiter that authorizes intervention only when two conditions are met: the supervisor is confident and the token is semantically salient. This mechanism effectively filters out uncertainty-driven noise and redundant supervision. Extensive experiments across multiple models and benchmarks show that TUSA consistently improves both safety alignment and general helpfulness. By bypassing approximately 50% of alignment steps, it not only enhances safety preference by up to 15.6%, but also boosts general preference rates by up to 12.0% compared to the dense baseline, demonstrating that selective, high-precision alignment can outperform continuous supervision.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{tusa_emnlp26,
+  title = {Trust Your Guide Only When Certain: Uncertainty-Aware Sparse Alignment at Inference Time},
+  author = {Zeen Zhu and Zhuo Li and Weiyang Guo and Liye Zhao and Haibing Di and Yequan Wang and Jing Li},
+  booktitle = {Findings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+<confli > <strong>Toward Robust Personalized Alignment for LLMs: Mitigating Persona Drift in Multi-Turn Dialogue</strong><br/>
+        <i>Youyuan Zhang, Siyuan Li, Fangming Liu,  <strong>Jing Li</strong> <sup><i style="color:#FF00FF" class="fa fa-envelope-o fa-1x"/></i></sup><br/>
+      <span class="abbpaper">EMNLP-26</span>- Findings of the 2026 Conference on Empirical Methods in Natural Language Processing. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Personalized language models must adapt to users over long interactions, while avoiding the premature internalization of ambiguous, transient, or socially pressured cues. We study this challenge as persona drift: an update-control failure in which unreliable observations are written into the maintained user state and gradually overwrite grounded preferences. We propose CORE, a controlled persona-revision framework that separates turn-local evidence inference from long-term belief update. CORE maintains slot-factorized persona beliefs, estimates observation uncertainty, and routes evidence through commit, defer, and ignore before performing selective revision. We also introduce PRISM, a held-out stress benchmark for evaluating personalized alignment under ambiguity, conflict, and social influence. Experiments on ALOE, PersonaChat, and PRISM show that CORE improves response alignment, belief fidelity, update decisions, and robustness under pressure. Ablations and human audits further show that these gains come from controlling when persona states change, rather than from stronger generation, larger memory, or additional intermediate traces alone.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{core_emnlp26,
+  title = {Toward Robust Personalized Alignment for LLMs: Mitigating Persona Drift in Multi-Turn Dialogue},
+  author = {Youyuan Zhang and Siyuan Li and Fangming Liu and Jing Li},
+  booktitle = {Findings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+<confli > <strong>Mining or Synthesis? Rethinking Exploration Efficiency in Iterative Alignment of Mathematical Reasoning</strong><br/>
+        <i>Jun Rao, Zixiong Yu, Xuebo Liu, Guhan Chen, <strong>Jing Li</strong>, Hejin Wang, Jiansheng Wei, Xiaojun Meng, Min Zhang<br/>
+      <span class="abbpaper">EMNLP-26</span>- Findings of the 2026 Conference on Empirical Methods in Natural Language Processing. <br/>
+          <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-file-pdf-o"></i> PDF</a>  &nbsp 
+    
+             <a class="file_link" href=""  target="_blank" style="text-decoration:none;"> <i class="fa fa-code-fork"></i> Code</a>  &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" href="javascript:void(0);" style="text-decoration:none;" onclick="$('#abstract').slideToggle('fast');return false;">
+                                 <i class="fa fa-file-text-o"></i> Abstract</a> &nbsp 
+    
+          <a class="file_link" data-toggle="dropdown" style="text-decoration:none;" href="javascript:void(0);" onclick="$('#bibtex').slideToggle('fast');return false;"> <i class="fa fa-book"></i> BibTex</a> 
+    
+    
+          <br/>
+    
+          <div id="abstract" class="verbatim" style="display:none">
+Iterative Direct Preference Optimization (DPO) has emerged as a widely used paradigm for aligning Large Language Models on reasoning tasks. Existing approaches typically rely on Best-of-N sampling to mine positive trajectories from the distribution tail. In this work, we show that in mathematical reasoning, increasing N yields diminishing returns while increasing verifier-induced false-positive risk and the distribution shift required for policy updates. To address this, we introduce PACE (Proximal Alignment via Corrective Exploration), a generation-based corrective framework that replaces exhaustive mining with low-budget exploration. Rather than searching for increasingly rare positive samples, PACE synthesizes high-fidelity preference pairs from failed explorations through corrective hindsight refinement and verification-guided filtering. Empirically, PACE matches or exceeds the performance of DPO-R1 while using about 1/5 of the compute, and remains robust under 20% label corruption, where high-N baselines exhibit substantially higher noise exploitation.
+</div>
+    
+          <div id="bibtex" style="display:none">
+            <pre class="verbatim">
+@inproceedings{pace_emnlp26,
+  title = {Mining or Synthesis? Rethinking Exploration Efficiency in Iterative Alignment of Mathematical Reasoning},
+  author = {Jun Rao and Zixiong Yu and Xuebo Liu and Guhan Chen and Jing Li and Hejin Wang and Jiansheng Wei and Xiaojun Meng and Min Zhang},
+  booktitle = {Findings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year={2026}
+}
+          </pre>
+          </div>
+    
+    </i> </confli>
+
+
+
+
+
+
 <li > <strong>VLM-Guard: Defending Jailbreaks by Monitoring Only Hundreds of Safety-Critical Neurons</strong><br/>
         <i>Jinyin Hu, Jiawei Zhou, Minshan Xie, Zhonghao Yang, <strong>Jing Li</strong>, Huadi Zheng, Jie Shi, Daojing He, and Yu Li <br/>
       <span class="abbpaper">IEEE TIFS</span>- IEEE Transactions on Information Forensics and Security, 2026.<br/>
